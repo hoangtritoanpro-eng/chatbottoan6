@@ -1,0 +1,70 @@
+#13
+| Phân số | Đọc | Tử số | Mẫu số |
+| --- | --- | --- | --- |
+| $\frac{5}{7}$ | ? | ? | ? |
+| $\frac{-6}{11}$ | ? | ? | ? |
+| ? | Âm hai phần ba | ? | ? |
+| ? | ? | $9$ | $-11$ |
+#14
+| Phân số | Đọc | Tử số | Mẫu số |
+| --- | --- | --- | --- |
+| $\frac{5}{7}$ | Năm phần bảy | $5$ | $7$ |
+| $\frac{-6}{11}$ | Âm sáu phần mười một | $-6$ | $11$ |
+| $\frac{-2}{3}$ | Âm hai phần ba | $-2$ | $3$ |
+| $\frac{9}{-11}$ | Chín phần âm mười một | $9$ | $-11$ |
+#15
+a) $\frac{1}{2} = \frac{?}{8}$
+
+b) $\frac{-6}{9} = \frac{18}{?}$
+#16
+$\frac{1}{2} = \frac{(?)}{8}$
+#17
+$\frac{-6}{9} = \frac{18}{(?)}$
+#18
+$\frac{1}{2} = \frac{(?)}{8}$
+#19
+$\frac{1}{2} = \frac{1 \cdot 4}{2 \cdot 4} = \frac{4}{8}$ (nhân cả tử và mẫu với $4$)
+#20
+$\frac{-6}{9} = \frac{18}{(?)}$
+#21
+$\frac{-6}{9} = \frac{(-6) \cdot (-3)}{9 \cdot (-3)} = \frac{18}{-27}$ (nhân cả tử và mẫu với $-3$)
+#22
+$\frac{8}{-11}; \ \frac{-5}{-9}$
+#23
+Ta có: $\frac{8}{-11} = \frac{8 \cdot (-1)}{(-11) \cdot (-1)} = \frac{-8}{11}$ (tính chất cơ bản của phân số)
+
+$\frac{-5}{-9} = \frac{(-5) \cdot (-1)}{(-9) \cdot (-1)} = \frac{5}{9}$ (tính chất cơ bản của phân số)
+#24
+$\frac{-12}{-4}; \ \frac{7}{-35}; \ \frac{-9}{27}$
+#25
++) $\frac{-12}{-4} = \frac{(-12) : (-4)}{(-4) : (-4)} = \frac{3}{1} = 3$ (tính chất cơ bản của phân số)
+
++) $\frac{7}{-35} = \frac{7 : (-7)}{(-35) : (-7)} = \frac{-1}{5}$ (tính chất cơ bản của phân số)
+
+Phân số $\frac{-1}{5}$ là phân số tối giản vì tử và mẫu đều không có ước chung nào khác $1$ và $-1$.
+
++) $\frac{-9}{27} = \frac{(-9) : 9}{27 : 9} = \frac{-1}{3}$ (tính chất cơ bản của phân số)
+
+Phân số $\frac{-1}{3}$ là phân số tối giản vì tử và mẫu đều không có ước chung nào khác $1$ và $-1$.
+#26
++) $15$ phút $= \frac{15}{60}$ giờ; $\frac{15}{60} = \frac{15 : 15}{60 : 15} = \frac{1}{4}$ (tính chất cơ bản của phân số). Phân số $\frac{1}{4}$ là phân số tối giản vì tử và mẫu đều không có ước chung nào khác $1$ và $-1$.
+
++) $90$ phút $= \frac{90}{60}$ giờ; $\frac{90}{60} = \frac{90 : 30}{60 : 30} = \frac{3}{2}$ (tính chất cơ bản của phân số). Phân số $\frac{3}{2}$ là phân số tối giản vì tử và mẫu đều không có ước chung nào khác $1$ và $-1$.
+
+Vậy $15$ phút $= \frac{1}{4}$ giờ; $90$ phút $= \frac{3}{2}$ giờ.
+#27
+$\frac{10}{40} = \frac{10 : 10}{40 : 10} = \frac{1}{4}$ (bể)
+
+Vậy sau $10$ phút, lượng nước đã chảy chiếm $\frac{1}{4}$ bể.
+#28
+$\frac{80\,000}{200\,000} = \frac{80\,000 : 40\,000}{200\,000 : 40\,000} = \frac{2}{5}$
+#29
+$\frac{2}{5}$
+#30
+$\frac{-3}{4}; \ \frac{5}{9}; \ \frac{2}{3}$
+#31
++) Ta có: $\frac{-3}{4} = \frac{(-3) \cdot 9}{4 \cdot 9} = \frac{-27}{36}$; $\frac{5}{9} = \frac{5 \cdot 4}{9 \cdot 4} = \frac{20}{36}$; $\frac{2}{3} = \frac{2 \cdot 12}{3 \cdot 12} = \frac{24}{36}$
+#32
+a) $\frac{-2}{9} \ \boxed{?} \ \frac{-7}{9}$;
+
+b) $\frac{5}{7} \ \boxed{?} \ \frac{-10}{7}$

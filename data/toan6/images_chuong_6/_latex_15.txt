@@ -1,0 +1,36 @@
+#170
+$1 - \frac{9}{20} = \frac{20}{20} - \frac{9}{20} = \frac{11}{20}$ (phần)
+#171
+$1\,000 \cdot \frac{11}{20} = \frac{1\,000 \cdot 11}{20} = 50 \cdot 11 = 550$ (ml)
+#172
+$\frac{11}{20}$
+#173
+$20 : \frac{2}{5} = 20 \cdot \frac{5}{2} = \frac{20 \cdot 5}{2} = 10 \cdot 5 = 50$ (kg)
+#174
+Đổi $365 \frac{1}{4}$ ngày = $\frac{365 \cdot 4 + 1}{4} = \frac{1460 + 1}{4} = \frac{1461}{4}$ ngày
+#175
+$\frac{1461}{4} : 8 = \frac{1461}{4} \cdot \frac{1}{8} = \frac{1461 \cdot 1}{4 \cdot 8} = \frac{1461}{32}$ (ngày)
+#176
+$\frac{1461}{32}$
+#177
+$\frac{1}{8}; \frac{1}{20}; \frac{-1}{40}; \frac{-1}{10}; ...$
+#178
+$40 \vdots 8, 40 \vdots 20, 40 \vdots 10$
+#179
++) $\frac{1}{8} = \frac{1 \cdot 5}{8 \cdot 5} = \frac{5}{40}$
+
++) $\frac{1}{20} = \frac{1 \cdot 2}{20 \cdot 2} = \frac{2}{40}$
+
++) $\frac{-1}{10} = \frac{(-1) \cdot 4}{10 \cdot 4} = \frac{-4}{40}$
+
+Do đó ta có dãy số: $\frac{5}{40}; \frac{2}{40}; \frac{-1}{40}; \frac{-4}{40}; ...$
+#180
+Do đó ta được 2 phân số tiếp của dãy số trên là: $\frac{-7}{40}; \frac{-10}{40}$
+
+Vậy ta có dãy số: $\frac{5}{40}; \frac{2}{40}; \frac{-1}{40}; \frac{-4}{40}; \frac{-7}{40}; \frac{-10}{40}$
+#181
+Hình ảnh chiếc cân với một đĩa có 1 viên gạch, đĩa kia có $\frac{3}{5}$ viên gạch và quả cân 1kg.
+#182
+$1 - \frac{3}{5} = \frac{5}{5} - \frac{3}{5} = \frac{5 - 3}{5} = \frac{2}{5}$ (viên gạch)
+#183
+$1 : \frac{2}{5} = 1 \cdot \frac{5}{2} = \frac{5}{2} = 2,5$ (kg)

@@ -1,0 +1,74 @@
+#1
+a) $4 : 9 = \frac{4}{9}$
+
+b) $(-2) : 7 = \frac{-2}{7}$
+
+c) $8 : (-3) = \frac{8}{-3}$
+#2
+a) $\frac{-3}{5}$ và $\frac{9}{-15}$
+
+b) $\frac{-1}{-4}$ và $\frac{1}{4}$
+#3
+a) $\frac{-3}{5}$ và $\frac{9}{-15}$
+
+Ta có: $(-3) \cdot (-15) = 3 \cdot 15 = 45$ và $5 \cdot 9 = 45$
+
+Vì $45 = 45$ nên $(-3) \cdot (-15) = 5 \cdot 9$
+
+Vậy $\frac{-3}{5} = \frac{9}{-15}$
+
+b) $\frac{-1}{-4}$ và $\frac{1}{4}$
+
+Ta có: $(-1) \cdot 4 = -(1 \cdot 4) = -4$
+
+$1 \cdot (-4) = -(1 \cdot 4) = -4$
+
+Vì $-4 = -4$ nên $(-1) \cdot 4 = 1 \cdot (-4)$
+
+Vậy $\frac{-1}{-4} = \frac{1}{4}$
+#4
+$\frac{1}{5}; \ \frac{-10}{55}; \ \frac{3}{15}; \ \frac{-2}{11}$
+#5
++) $\frac{1}{5} = \frac{1 \cdot 3}{5 \cdot 3} = \frac{3}{15}$ (tính chất cơ bản của phân số)
+
++) $\frac{-10}{55} = \frac{-10 : 5}{55 : 5} = \frac{-2}{11}$ (tính chất cơ bản của phân số)
+
+Vậy các cặp phân số bằng nhau là: $\frac{1}{5} = \frac{3}{15}$; $\frac{-10}{55} = \frac{-2}{11}$
+#6
+$\frac{11}{23}; \ \frac{-24}{15}$
+#7
+$\frac{11}{23}$
+#8
+$\frac{-24}{15} = \frac{-24 : 3}{15 : 3} = \frac{-8}{5}$.
+#9
+$\frac{-8}{5}$
+#10
+$\frac{-3}{4}$
+#11
+@@FIG Sơ đồ trò chơi dò đường (lưới 3 × 3, các ô nối với nhau theo đường kẻ). Hàng dưới (từ trái sang phải): Bắt đầu – $\frac{-9}{12}$ – $\frac{-27}{36}$. Hàng giữa: $\frac{-9}{14}$ – $\frac{-15}{20}$ – $\frac{6}{13}$. Hàng trên: $\frac{-16}{25}$ – $\frac{-33}{44}$ – Kho báu.
+#12
++) Ở ô bắt đầu, Việt có thể đi đến ô chứa phân số $\frac{-9}{12}$ hoặc $\frac{-9}{14}$
+
+Vì $\frac{-3}{4} = \frac{(-3) \cdot 3}{4 \cdot 3} = \frac{-9}{12}$
+
+Ta có: $(-3) \cdot 14 = -42$; $4 \cdot (-9) = -36$ nên $(-3) \cdot 14 \neq 4 \cdot (-9)$ do đó $\frac{-3}{4} \neq \frac{-9}{14}$
+
+Vì thế Việt chỉ có thể đi đến ô chứa phân số $\frac{-9}{12}$
+
++ Từ ô $\frac{-9}{12}$, Việt có thể đi đến ô chứa phân số $\frac{-15}{20}$ hoặc $\frac{-27}{36}$
+
+Ta có: $\frac{-3}{4} = \frac{(-3) \cdot 9}{4 \cdot 9} = \frac{-27}{36}$; $\frac{-3}{4} = \frac{(-3) \cdot 5}{4 \cdot 5} = \frac{-15}{20}$
+
+Do đó Việt có thể đi tiếp đến ô chứa phân số $\frac{-27}{36}$ hoặc $\frac{-15}{20}$
+
+- Nếu Việt đi đến ô chứa phân số $\frac{-27}{36}$ thì Việt đi đến ô chứa phân số $\frac{6}{13}$
+
+Nhưng $\frac{6}{13} \neq \frac{-3}{4}$ (do $6 \cdot 4 \neq 13 \cdot (-3)$)
+
+Do đó Việt không thể đi qua ô chứa phân số $\frac{6}{13}$.
+
+- Nếu Việt đi đến ô chứa phân số $\frac{-15}{20}$ thì tiếp theo Việt sẽ đi đến ô $\frac{-33}{44}$
+
+Ta lại có: $\frac{-3}{4} = \frac{-3 \cdot 11}{4 \cdot 11} = \frac{-33}{44}$ nên Việt đi tiếp đến ô chứa phân số $\frac{-33}{44}$ rồi đến kho báu.
+
+Vậy đường đi của Việt là: Bắt đầu $\rightarrow \frac{-9}{12} \rightarrow \frac{-15}{20} \rightarrow \frac{-33}{44} \rightarrow$ Kho báu.

@@ -1,0 +1,42 @@
+#125
+| a | $\frac{9}{25}$ | $12$ | $\frac{-5}{6}$ |
+|---|---|---|---|
+| b | $1$ | $\frac{-9}{8}$ | $3$ |
+| a . b | $\frac{9}{25}$ | $\frac{-27}{2}$ | $\frac{-5}{2}$ |
+| a : b | $\frac{9}{25}$ | $\frac{-32}{3}$ | $\frac{-5}{18}$ |
+#126
+a) $\frac{7}{8} + \frac{7}{8} : \frac{1}{8} - \frac{1}{2}$; b) $\frac{6}{11} + \frac{11}{3} \cdot \frac{3}{22}$.
+#127
+a) $\frac{7}{8} + \frac{7}{8} : \frac{1}{8} - \frac{1}{2}$
+
+$= \frac{7}{8} \cdot 1 + \frac{7}{8} \cdot 8 - \frac{1}{2}$
+
+$= \frac{7}{8}(1 + 8) - \frac{1}{2}$ (tính chất phân phối của phép nhân đối với phép cộng)
+
+$= \frac{7}{8} \cdot 9 - \frac{1}{2}$
+
+$= \frac{7 \cdot 9}{8} - \frac{1 \cdot 4}{2 \cdot 4}$
+
+$= \frac{63}{8} - \frac{4}{8}$
+
+$= \frac{63 - 4}{8}$
+
+$= \frac{59}{8}$
+#128
+b) $\frac{6}{11} + \frac{11}{3} \cdot \frac{3}{22}$
+
+$= \frac{6}{11} + \frac{11 \cdot 3}{3 \cdot 22}$
+
+$= \frac{6}{11} + \frac{11}{22}$
+
+$= \frac{6 \cdot 2}{11 \cdot 2} + \frac{11}{22}$
+
+$= \frac{12}{22} + \frac{11}{22}$
+
+$= \frac{12 + 11}{22}$
+
+$= \frac{23}{22}$
+#129
+a) $\frac{3}{4} \cdot \frac{1}{13} - \frac{3}{4} \cdot \frac{14}{13}$;
+
+b) $\frac{5}{13} \cdot \frac{-3}{10} \cdot \frac{-13}{5}$.

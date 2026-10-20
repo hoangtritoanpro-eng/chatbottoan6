@@ -1,0 +1,326 @@
+[
+ {
+  "lesson": "Bài 38. Dữ liệu và thu thập dữ liệu",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-38-du-lieu-va-thu-thap-du-lieu.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập 1 trang 69 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-1-trang-69-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 1 trang 69 Toán lớp 6 Tập 2: Cho hai dãy dữ liệu như sau:\n\n(1) Số học sinh các lớp 6 trong trường:\n\n35 42 87 38 40 41 38.\n\n(2) Tên món ăn yêu thích của các thành viên trong gia đình:\n\nBánh chưng, pizza, canh cua, gà rán, rau muống luộc, cá kho, rượu vang.\n\na) Trong các dãy dữ liệu trên, dãy nào là dãy số liệu?\n\nb) Hãy tìm dữ liệu không hợp lí (nếu có) trong mỗi dãy dữ liệu trên.\n\nLời giải:\n\na) Dãy số liệu là dãy (1): 35 42 87 38 40 41 38\n\nb)\n\n(1) Theo quy định, mỗi lớp ở bậc THCS thường có không quá 45 học sinh. Thực tế, do điều kiện khó khăn một số lớp có số học sinh nhiều hơn 45 nhưng không lớp nào có 87 học sinh. Do đó 87 là số liệu không hợp lí.\n\n(2) “Rượu vang” là dữ liệu không hợp lí vì đây không phải là tên món ăn mà là tên một loại đồ uống."
+   },
+   {
+    "title": "Luyện Tập 2 trang 71 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-2-trang-71-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 2 trang 71 Toán lớp 6 Tập 2: Dựa vào bảng Hoa điểm tốt tháng Ba (H.9.1), hãy lập bảng số điểm 8 của các bạn trong tổ Một theo mẫu như hình bên.\n\nNgoài thông tin này, em còn thu được những thông tin nào khác từ bảng đó?\n\n| Tên | Số điểm 8 |\n| --- | --- |\n| Nam Anh | |\n| Thanh Hằng | |\n| Đức Minh | |\n\n[[IMG:luyen-tap-2-trang-71-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTừ bảng Hoa điểm tốt tháng Ba (Hình 9.1) ta có: Số điểm 8 của Nam Anh, Thanh Hằng, Đức Minh lần lượt là 2; 2; 1\n\nDo đó ta có bảng:\n\n| Tên | Số điểm 8 |\n| --- | --- |\n| Nam Anh | 2 |\n| Thanh Hằng | 2 |\n| Đức Minh | 1 |\n\nTừ bảng Hoa điểm tốt còn có thể thu được thông tin về số điểm 9, số điểm 10 của ba bạn trong tổ Một."
+   },
+   {
+    "title": "Bài 9.1 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-1-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.1 trang 72 Toán lớp 6 Tập 2: Trong các dữ liệu sau, dữ liệu nào là số liệu, dữ liệu nào không phải là số liệu?\n\n(1) Cân nặng của trẻ sơ sinh ( đơn vị tính là gam)\n\n(2) Quốc tịch của học sinh trong một trường quốc tế;\n\n(3) Chiều cao trung bình của một số loại cây thân gỗ ( đơn vị tính là mét)\n\nLời giải:\n\n(1). Cân nặng của trẻ sơ sinh được biểu thị bằng số như 2700 gam, 3200 gam, … nên dữ liệu này là số liệu\n\n(2). Quốc tịch của các bạn trong một trường quốc tế, chẳng hạn như: Việt Nam, Hàn Quốc, Nhật Bản, Anh, Nga,… Do đó dữ liệu này không là số liệu.\n\n(3). Chiều cao trung bình của một số loại cây thân gỗ như là: 3m, 2,5 m, 1,2m, … Do đó dữ liệu này là số liệu."
+   },
+   {
+    "title": "Bài 9.2 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-2-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.2 trang 72 Toán lớp 6 Tập 2: Bản tin sau được trích từ báo điện tử Vietnamnet ngày 18-3-2020:\n\n\"Như vậy, chỉ trong 12 ngày, Việt Nam đã ghi nhận thêm 60 ca mắc mới Covid -19, trong đó có 24 người nước ngoài. Hiện Hà Nội là địa phương có nhiều ca mắc mới nhất, với 20 trường hợp, kế đó là Bình Thuận 9 ca, Thành phố Hồ Chí Minh 9 ca\"\n\nThay dấu \"?\" trong bảng sau bằng số liệu thống kê sốca mắc mới Covid -19 tại các địa phương tính đến ngày 18-3-2020.\n\n| Địa phương | Số ca mắc mới Covid-19 |\n| --- | --- |\n| Hà Nội | ? |\n| Bình Thuận | ? |\n| Thành phố Hồ Chí Minh | ? |\n\nLời giải:\n\nVì Hà Nội có 20 ca, Bình Thuận có 9 ca, Thành phố Hồ Chí Minh có 9 ca mắc Covid – 19 nên ta có bảng sau:\n\n| Địa phương | Số ca mắc mới Covid-19 |\n| --- | --- |\n| Hà Nội | 20 |\n| Bình Thuận | 9 |\n| Thành phố Hồ Chí Minh | 9 |\n| | |\n| --- | --- |"
+   },
+   {
+    "title": "Bài 9.3 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-3-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.3 trang 72 Toán lớp 6 Tập 2: Bảng sau cho biết số anh chị em ruột trong gia đình của 35 học sinh lớp 6A.\n\n| Số anh chị em ruột | 0 | 1 | 2 | 3 |\n| --- | --- | --- | --- | --- |\n| Số học sinh | 18 | 12 | 5 | 1 |\n\nHãy tìm điểm không hợp lí trong bảng thống kê trên.\n\nLời giải:\n\nTổng số học sinh trong bảng thống kê trên là:\n\n18 + 12 + 5 + 1 = 36 (học sinh)\n\nMà lớp 6A có 35 học sinh nên điều này là không hợp lí."
+   },
+   {
+    "title": "Bài 9.4 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-4-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.4 trang 72 Toán lớp 6 Tập 2: Hãy tìm dữ liệu không hợp lí ( nếu có) trong dãy dữ liệu sau.\n\nThủ đô của một số quốc gia châu Á:\n\nHà Nội, Bắc Kinh, Paris, Tokyo, Đà Nẵng\n\nLời giải:\n\nDữ liệu không hợp lý là:\n\n+) Đà Nẵng vì Đà Nẵng không là thủ đô của quốc gia châu Á nào.\n\n+) Paris vì Paris là thủ đô của Pháp không thuộc châu Á."
+   },
+   {
+    "title": "Bài 9.5 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-5-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.5 trang 72 Toán lớp 6 Tập 2: Để hoàn thành bảng sau, em sẽ sử dụng phương pháp thu thập dữ liệu nào?\n\n| Cây | Môi trường sống | Dạng thân | Kiểu lá |\n| --- | --- | --- | --- |\n| Đậu | | | |\n| Bèo tây | | | |\n\nLời giải:\n\nĐể hoàn thiện bảng, ta sử dụng phương pháp thu nhập dữ liệu từ: SGK, sách, báo, hỏi thầy cô, bố mẹ, quan sát, thí nghiệm, lấy thông tin từ những nguồn có sẵn..."
+   },
+   {
+    "title": "Bài 9.6 trang 72 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-6-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.6 trang 72 Toán lớp 6 Tập 2: Hãy lập phiếu hỏi để thu thập dữ liệu về phương tiện đến trường của các thầy, cô giáo trong trường em.\n\nLời giải:\n\nCó nhiều cách tạo phiếu hỏi khác nhau, dưới đây là một ví dụ:\n\nPHIẾU HỎI\n\nThầy (cô) đi phương tiện gì đến trường?\n\n[[IMG:bai-9-6-trang-72-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]"
+   }
+  ]
+ },
+ {
+  "lesson": "Bài 39. Bảng thống kê và biểu đồ tranh",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-39-bang-thong-ke-va-bieu-do-tranh.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập 1 trang 74 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-1-trang-74-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 1 trang 74 Toán lớp 6 Tập 2:\n\n(1) Cho các loại cây: bưởi, lúa, hồng xiêm, tỏi, hoa huệ, mít, ổi. Hãy xác định loại rễ (rễ cọc, rễ chùm) của mỗi cây rồi lập bảng thông kê về số lượng cây theo loại rễ.\n\n(2) Trong một kì thi quốc tế, các thành viên đội tuyển Việt Nam đạt được số điểm lần lượt là:\n\n26 18 36 28 21 32\n\nBiết rằng người ta phân loại huy chương theo điểm số như sau:\n\nTừ 15 đến dưới 24 điểm: Huy chương đồng;\n\nTừ 24 đến dưới 31 điểm: Huy chương bạc;\n\nTừ 31 điểm trở lên: Huy chương vàng.\n\nEm hãy lập bảng thống kê số lượng huy chương của đội tuyển Việt Nam trong kì thi này theo mẫu sau:\n\n| Huy chương | Vàng | Bạc | Đồng |\n| --- | --- | --- | --- |\n| Số học sinh | | | |\n\nLời giải:\n\n1) Theo sách báo, hoặc tìm hiểu trên Internet, ta có:\n\nRễ cọc : bưởi , hồng xiêm , mít , ổi\n\nRễ chùm : lúa ; tỏi ; hoa huệ.\n\nTa có bảng thống kê:\n\n| Loại rễ | Rễ cọc | Rễ chùm |\n| --- | --- | --- |\n| Số lượng cây | 4 | 3 |\n\n2)\n\n+) Điểm từ 15 đến dưới 24 điểm là: điểm 18; 21 (huy chương đồng)\n\n+) Từ 24 đến dưới 31 điểm là: điểm 26; 28 (huy chương bạc)\n\n+) Từ 31 điểm trở lên là: điểm 32; 36 (huy chương vàng)\n\nDo đó ta có bảng thống kê sau:\n\n| Huy chương | Vàng | Bạc | Đồng |\n| --- | --- | --- | --- |\n| Số học sinh | 2 | 2 | 2 |"
+   },
+   {
+    "title": "Luyện Tập 2 trang 75 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-2-trang-75-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 2 trang 75 Toán lớp 6 Tập 2: Biểu đồ tranh ở bên cho biết món ăn sáng yêu thích của các bạn trong lớp.\n\n[[IMG:luyen-tap-2-trang-75-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLập bảng thống kê biểu diễn số lượng học sinh trong lớp yêu thích mỗi món ăn.\n\nLời giải:\n\nSố lượng học sinh trong lớp yêu thích phở là:\n\n5. 2 = 10 ( học sinh)\n\nSố lượng học sinh trong lớp yêu thích bánh mì là:\n\n5. 4 = 20 ( học sinh)\n\nSố lượng học sinh trong lớp yêu thích bún là:\n\n5. 1 = 5 ( học sinh)\n\nSố lượng học sinh trong lớp yêu thích phở là:\n\n5. 2 = 10 ( học sinh)\n\nTa có bảng thống kê sau:\n\n| Tên món ăn | Phở | Bánh mì | Bún | Xôi |\n| --- | --- | --- | --- | --- |\n| Số lượng học sinh | 10 | 20 | 5 | 10 |"
+   },
+   {
+    "title": "Vận dụng trang 75 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/van-dung-trang-75-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Vận dụng trang 75 Toán lớp 6 Tập 2: Một cuộc điều tra về vệ sinh trường học cho thấy có 50 học sinh có sử dụng xà phòng rửa tay, 30 học sinh chỉ rửa tay bằng nước sạch, 10 học sinh không rửa tay trước khi ăn.\n\na) Lập bảng thống kê biểu diễn dữ liệu đã thu thập;\n\nb) Cho mỗi [[IMG:van-dung-trang-75-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]] ứng với 10 học sinh. Vẽ biểu đồ tranh cho bảng thống kê thu được từ câu a.\n\nLời giải:\n\na) Bảng thống kê biểu diễn dữ liệu trên là:\n\n| Dụng cụ rửa tay | Xà phòng | Nước sạch | Không rửa tay |\n| --- | --- | --- | --- |\n| Số học sinh | 50 | 30 | 10 |\n\nb)\n\nSố học sinh rửa tay có sử dụng xà phòng rửa tay ứng với: 50: 10 = 5 (biểu tượng)\n\nSố học sinh chỉ rửa tay bằng nước sạch ứng với: 30: 10 = 3 (biểu tượng)\n\nSố học sinh không rửa tay trước khi ăn ứng với: 10: 10 = 1 (biểu tượng)\n\nTa có biểu đồ tranh sau đây:\n\n[[IMG:van-dung-trang-75-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   },
+   {
+    "title": "Bài 9.7 trang 76 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-7-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.7 trang 76 Toán lớp 6 Tập 2: Một phường lắp đặt hệ thống lấy ý kiến đánh giá của nhân dân về thái độ phục vụ của cán bộ phường.\n\nBiểu đồ tranh dưới đây là kết quả đánh giá của người dân về một cán bộ trong một tuần làm việc ( mỗi biểu tượng thể hiện kết quả một lần đánh giá, hài lòng: [[IMG:bai-9-7-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]] , bình thường: [[IMG:bai-9-7-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]] , không hài lòng: [[IMG:bai-9-7-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-3.png]] ).\n\n[[IMG:bai-9-7-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-4.png]]\n\nCả tuần có bao nhiêu lượt người cho ý kiến đánh giá về cán bộ này? Có bao nhiêu lượt đánh giá hài lòng, bình thường, không hài lòng?\n\nLời giải:\n\nSố lượt đánh giá cán bộ từng ngày trong một tuần làm việc được thống kê ở bảng dưới đây:\n\n| Số lượt đánh giá | Hài lòng | Bình thường | Không hài lòng |\n| --- | --- | --- | --- |\n| Thứ Hai | 3 | 5 | 2 |\n| Thứ Ba | 4 | 3 | 1 |\n| Thứ Tư | 4 | 3 | 2 |\n| Thứ Năm | 2 | 6 | 2 |\n| Thứ Sáu | 1 | 3 | 2 |\n| Tổng | 14 | 20 | 9 |\n\nTổng số lượt đánh giá hài lòng trong tuần là: 3 + 4 + 4 + 2 + 1 = 14 (lần)\n\nTổng số lượt đánh giá bình thường trong tuần là: 5 + 3 + 3 + 6 + 3 = 20 (lần)\n\nTổng số lượt đánh giá không hài lòng trong tuần là: 2 + 1 + 2 + 2 + 2 = 9 (lần)\n\nSố lượt người đánh giá về cán bộ này trong cả tuần là: 14 + 20 + 9 = 43 (lượt người)"
+   },
+   {
+    "title": "Bài 9.8 trang 76 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-8-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.8 trang 76 Toán lớp 6 Tập 2: Biểu đồ tranh sau đây cho biết số lượt ô tô vào gửi tại một bãi đỗ xe vào các ngày trong một tuần.\n\n[[IMG:bai-9-8-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nHãy lập bảng thống kê biểu diễn số ô tô vào gửi tại bãi đỗ xe vào các ngày trong tuần.\n\nLời giải:\n\nSố ô tô gửi vào bãi đỗ xe vào thứ Hai là:\n\n3. 5 = 15 (ô tô)\n\nSố ô tô gửi vào bãi đỗ xe vào thứ Ba là:\n\n3. 7 = 21 (ô tô)\n\nSố ô tô gửi vào bãi đỗ xe vào thứ Tư là:\n\n3. 3 = 9 (ô tô)\n\nSố ô tô gửi vào bãi đỗ xe vào thứ Năm là:\n\n3. 4 = 12 (ô tô)\n\nSố ô tô gửi vào bãi đỗ xe vào thứ Sáu là:\n\n3. 6 = 18 (ô tô)\n\nDo vậy, ta có bảng thống kê sau:\n\n| Thứ | Hai | Ba | Tư | Năm | Sáu |\n| --- | --- | --- | --- | --- | --- |\n| Số ô tô gửi bãi đỗ xe | 15 | 21 | 9 | 12 | 18 |"
+   },
+   {
+    "title": "Bài 9.9 trang 76 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-9-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.9 trang 76 Toán lớp 6 Tập 2: Lớp 6A lấy ý kiến của các bạn trong lớp về việc tham gia các câu lạc bộ ngoại ngữ với 3 lựa chọn:\n\nA. Tiếng Anh\n\nB. Tiếng Pháp\n\nC. Tiếng Nga\n\nMỗi học sinh chỉ được chọn tham gia một trong ba câu lạc bộ. Kết quả khảo sát như sau:\n\nA B B C C B A C A A A A B A B A A A B B A\n\nB B B A C A A B A B A A A C C\n\na) Lập bảng thống kê biểu diễn số lượng học sinh đăng kí tham gia mỗi câu lạc bộ;\n\nb) Vẽ biểu đồ tranh cho bảng thống kê ở câu a.\n\nLời giải:\n\na)\n\n+) Có tổng số chữ A qua khảo sát trên là 18 nghĩa là có 18 bạn tham gia câu lạc bộ tiếng Anh\n\n+) Có tổng số chữ B qua khảo sát trên là 12 nghĩa là có 12 bạn tham gia câu lạc bộ tiếng Pháp\n\n+) Có tổng số chữ C qua khảo sát trên là 6 nghĩa là có 6 bạn tham gia câu lạc bộ tiếng Nga\n\nTa có bảng thống kê sau:\n\n| Câu lạc bộ | Tiếng Anh | Tiếng Pháp | Tiếng Nga |\n| --- | --- | --- | --- |\n| Số lượng học sinh tham gia | 18 | 12 | 6 |\n\nb) Vì ƯCLN(18, 12, 6) = 6 nên ta sẽ dùng mỗi biểu tượng @ biểu diễn 6 học sinh tham gia câu lạc bộ\n\nSố học sinh tham gia câu lạc bộ tiếng Anh ứng với: 18: 6 = 3 (biểu tượng)\n\nSố học sinh tham gia câu lạc bộ tiếng Pháp ứng với: 12: 6 = 2 (biểu tượng)\n\nSố học sinh tham gia câu lạc bộ tiếng Nga ứng với: 6: 6 = 1 (biểu tượng)\n\nTa có biểu đồ tranh dưới đây:\n\n| Câu lạc bộ | Tiếng Anh | Tiếng Pháp | Tiếng Nga |\n| --- | --- | --- | --- |\n| Số lượng học sinh tham gia | @@@ | @@ | @ |"
+   },
+   {
+    "title": "Bài 9.10 trang 76 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-10-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.10 trang 76 Toán lớp 6 Tập 2: Bảng thống kê sau cho biết số lượng tin nhắn một người nhận được vào các ngày làm việc trong tuần.\n\n| Ngày | Số tin nhắn |\n| --- | --- |\n| Thứ hai | 6 |\n| Thứ ba | 4 |\n| Thứ tư | 4 |\n| Thứ Năm | 2 |\n| Thứ Sáu | 8 |\n\nDùng mỗi biểu tượng [[IMG:bai-9-10-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]] ứng với 2 tin nhắn, hãy vẽ biểu đồ tranh biểu diễn bảng thống kê trên.\n\nLời giải:\n\nSố tin nhắn của một người nhận được vào thứ Hai ứng với: 6: 2 = 3 (biểu tượng)\n\nSố tin nhắn của một người nhận được vào thứ Ba ứng với: 4: 2 = 2 (biểu tượng)\n\nSố tin nhắn của một người nhận được vào thứ Tư ứng với: 4: 2 = 2 (biểu tượng)\n\nSố tin nhắn của một người nhận được vào thứ Năm ứng với: 2: 2 = 1 (biểu tượng)\n\nSố tin nhắn của một người nhận được vào thứ Sáu ứng với: 8: 2 = 4 (biểu tượng)\n\nTa có biểu đồ tranh dưới đây:\n\n[[IMG:bai-9-10-trang-76-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   }
+  ]
+ },
+ {
+  "lesson": "Bài 40. Biểu đồ cột",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-40-bieu-do-cot.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập 1 trang 78 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-1-trang-78-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 1 trang 78 Toán lớp 6 Tập 2: (1) Để chuẩn bị cho việc xây dựng tủ sách lớp học, lớp trưởng làm một phiếu hỏi về thể loại văn học dân gian yêu thích của các bạn trong lớp và thu được\n\nKết quả như Bảng 9.3 (mỗi gạch ứng với một bạn).\n\n[[IMG:luyen-tap-1-trang-78-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\na) Lập bảng thống kê số học sinh yêu thích các thể loại văn học dân gian từ Bảng 9.3;\n\nb) Vẽ biểu đồ Hình 9.7 vào vở rồi hoàn thiện biểu đồ cột biểu diễn bảng thống kê ở câu a.\n\n[[IMG:luyen-tap-1-trang-78-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\n(2) Mai đếm số cánh hoa của một số loài hoa và thống kê theo Bảng 9.4.\n\nEm hãy vẽ biểu đồ cột cho bảng thống kê này.\n\n| Tên loài hoa | Sen | Tulip | Mai | Dã quỳ |\n| --- | --- | --- | --- | --- |\n| Số cánh hoa | 8 | 6 | 5 | 13 |\n\nBảng 9.4\n\nLời giải:\n\n(1)\n\na) Cột số bạn yêu thích thể loại thần thoại có 10 gạch nên có 10 bạn yêu thích thể loại thần thoại.\n\n+) Cột số bạn yêu thích thể loại truyền thuyết nên có 20 bạn yêu thích thể loại truyền thuyết\n\n+) Cột số bạn yêu thích thể loại cổ tích nên có 15 bạn yêu thích thể loại cổ tích.\n\nTa có bảng thống kê sau:\n\n| Thể loại | Thần thoại | Truyền thuyết | Cổ tích |\n| --- | --- | --- | --- |\n| Số bạn yêu thích | 10 | 20 | 15 |\n\nb)\n\nVới mỗi thể loại văn học trên trục ngang, ta vẽ một hình chữ nhật có chiều cao bằng số bạn yêu thích thể loại văn học (chiều rộng là đoạn thẳng màu đỏ) có sẵn trên hình vẽ\n\nTa được biểu đồ cột như sau:\n\n[[IMG:luyen-tap-1-trang-78-toan-lop-6-tap-2-ket-noi-tri-thuc-3.png]]\n\n(2)\n\nBước 1: Vẽ trục ngang biểu diễn tên các loài hoa. Vẽ trục đứng biểu diễn số cánh hoa\n\nBước 2: Với mỗi loài hoa trên trục ngang, ta vẽ một hình chữ nhật có chiều cao bằng số cánh hoa của loài hoa (chiều rộng của các hình chữ nhật bằng nhau)\n\nBước 3: Đặt tên cho biểu đồ, tô màu xanh cho các cột để hoàn thiện biểu đồ ta được:\n\n[[IMG:luyen-tap-1-trang-78-toan-lop-6-tap-2-ket-noi-tri-thuc-4.png]]"
+   },
+   {
+    "title": "Luyện Tập 2 trang 79, 80 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-2-trang-79-80-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 2 trang 79, 80 Toán lớp 6 Tập 2:\n\n(1) Biểu đồ cột ở Hình 9.9 cho biết tốc độ tốc độ tối đa của một số loài động vật (đơn vị là dặm/giờ; dặm (mile) là một đơn vị đo độ dài; 1 dặm = 1,609 km).\n\n[[IMG:luyen-tap-2-trang-79-80-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\na) Trong các nhận xét dưới đây, nhận xét nào phù hợp với thông tin từ biểu đồ (H.9.9)? Vì sao?\n\n[[IMG:luyen-tap-2-trang-79-80-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\nb) Trong biểu đồ trên, em thấy những loài động vật nào có tốc độ tối đa từ 10 đến 19, từ 40 đến 49 (dặm/giờ)?\n\n(2) Cho biểu đồ cột Hình 9.10.\n\n[[IMG:luyen-tap-2-trang-79-80-toan-lop-6-tap-2-ket-noi-tri-thuc-3.png]]\n\na) Thay dấu \"?\" trong biểu đồ trên bằng số liệu thích hợp nếu biết GDP của Việt Nam năm 2014 là 186 tỉ đô la;\n\nb) Từ năm 2014 đến năm 2017, GDP của Việt Nam có xu hướng tăng hay giảm?\n\nLời giải:\n\n(1)\n\na) Quan sát biểu đồ ta có:\n\n+ Cột biểu diễn tốc độ của Nai là cao nhất là 45 dặm/giờ nên Nai chạy nhanh nhất do đó bạn Vuông nói đúng và bạn Pi sai.\n\n+ Tốc độ tối đa của sóc là 12 (dặm/giờ)\n\nHai lần tốc độ tối đa của sóc bằng: 2. 12 = 24 (dặm/giờ)\n\nTốc độ tối đa của thỏ là 35 (dặm/ giờ)\n\nVì 24 khác 35 nên hai lần tốc độ tối đa của sóc không bằng tốc độ tối đa của thỏ.\n\nDo đó tốc độ tối đa của thỏ gấp khoảng 2 lần tốc độ tối đa của sóc là sai nên bạn Tròn nói sai.\n\nVậy nhận xét của bạn Vuông là phù hợp, nhận xét của bạn Pi và bạn Tròn là không phù hợp.\n\nb) Từ biểu đồ cột ở hình 9.9, ta có:\n\nLoài có tốc độ tối đa từ 10 đến 19 dặm/giờ là: Sóc (12 dặm/giờ); Gà rừng (15 dặm/ giờ)\n\nLoài có tốc độ tối đa từ 40 đến 49 dặm/giờ là: Ngựa vằn (40 dặm/ giờ); Nai (45 dặm/ giờ)\n\n(2)\n\na) Vì GDP của Việt Nam năm 2014 là 186 tỉ đô la nên thay dấu “?” bằng số 186.\n\nKhi đó ta có biểu đồ:\n\n[[IMG:luyen-tap-2-trang-79-80-toan-lop-6-tap-2-ket-noi-tri-thuc-4.png]]\n\nb) Vì 186 < 193 < 205 < 224 nên GDP của Việt Nam có xu hướng tăng từ năm 2014 đến năm 2017."
+   },
+   {
+    "title": "Thử thách nhỏ trang 80 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/thu-thach-nho-trang-80-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Thử thách nhỏ trang 80 Toán lớp 6 Tập 2: Bảng 9.5 cho biết lợi nhuận của một cửa hàng trong quý I năm 2020.\n\n| Tháng | 1 | 2 | 3 |\n| --- | --- | --- | --- |\n| Lợi nhuận ( triệu đồng) | -10 | -8 | 5 |\n\nBảng 9.5\n\nMinh vẽ biểu đồ cột để biểu diễn bảng thống kê này như Hình 9.11. Theo em, biểu đồ Minh vẽ có hợp lí không? Các cột nằm dưới trục ngang thể hiện điều gì?\n\n[[IMG:thu-thach-nho-trang-80-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTheo em, biểu đồ mà Minh vẽ hợp lí vì có đầy đủ các thông tin số liệu lợi nhuận (triệu đồng) trên bản đồ. Các cột nằm dưới trục ngang biểu diễn số âm thể hiện số tiền bị lỗ trong tháng của cửa hàng."
+   },
+   {
+    "title": "Bài 9.11 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-11-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.11 trang 81 Toán lớp 6 Tập 2: Ngày nào trong tuần An dành thời gian tự học ở nhà nhiều nhất?\n\n[[IMG:bai-9-11-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTừ biểu đồ Hình 9.12, ta thấy cột thứ sáu cao nhất nên thứ sáu An dành thời gian tự học ở nhà nhiều nhất là 120 phút."
+   },
+   {
+    "title": "Bài 9.12 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-12-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.12 trang 81 Toán lớp 6 Tập 2: Ngày nào trong tuần An không tự học ở nhà?\n\n[[IMG:bai-9-12-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTừ biểu đồ hình 9.12 ta thấy chủ nhật cột biểu đồ thấp nhất là 0 nên chủ nhật An không tự học ở nhà."
+   },
+   {
+    "title": "Bài 9.13 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-13-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.13 trang 81 Toán lớp 6 Tập 2: Tổng thời gian trong tuần An tự học ở nhà là bao nhiêu phút?\n\n[[IMG:bai-9-13-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTừ biểu đồ hình 9.12 ta thấy:\n\nThời gian An tự học ở nhà từ thứ hai đến chủ nhật lần lượt là: 80 phút, 100 phút, 60 phút, 80 phút, 120 phút, 90 phút, 0 phút\n\nTổng số thời gian trong tuần An tự học ở nhà là:\n\n80 + 100 + 60 + 80 + 120 + 90 + 0 = 530 (phút)\n\nVậy tổng thời gian trong tuần An tự học 530 phút."
+   },
+   {
+    "title": "Bài 9.14 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-14-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.14 trang 81 Toán lớp 6 Tập 2: Hoàn thiện biểu đồ nếu ngày Chủ nhật An dành 50 phút tự học ở nhà.\n\n[[IMG:bai-9-14-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nNếu ngày chủ nhật An dành 50 phút tự học ở nhà nên ta có biểu đồ là:\n\n[[IMG:bai-9-14-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   },
+   {
+    "title": "Bài 9.15 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-15-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.15 trang 81 Toán lớp 6 Tập 2: Lập bảng thống kê thời gian tự học ở nhà của An vào các ngày trong tuần.\n\n[[IMG:bai-9-15-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTa có bảng thống kê sau:\n\n| Ngày trong tuần | Thứ 2 | Thứ 3 | Thứ 4 | Thứ 5 | Thứ 6 | Thứ 7 | Chủ nhật |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Thời gian (phút) | 80 | 100 | 60 | 80 | 120 | 90 | 0 |"
+   },
+   {
+    "title": "Bài 9.16 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-16-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.16 trang 81 Toán lớp 6 Tập 2: Bảng sau cho biết số lượng các bạn lớp Khoa hâm mộ ba câu lạc bộ bóng đá ở giải Ngoại hạng Anh (mỗi gạch ứng với một bạn).\n\n[[IMG:bai-9-16-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLập bảng thống kê và vẽ biểu đồ cột biểu diễn bảng thống kê đó.\n\nLời giải:\n\n+) Ở cột Manchester City có 12 gạch nên có 12 bạn hâm mộ\n\n+) Ở cột Manchester United có 13 gạch nên có 13 bạn hâm mộ\n\n+) Ở cột Liverpool có 15 gạch nên có 15 bạn hâm mộ\n\nTa có bảng thống kê sau:\n\n| Câu lạc bộ bóng đá | Manchester City | Manchester United | Liverpool |\n| --- | --- | --- | --- |\n| Số lượng các bạn hâm mộ | 12 | 13 | 15 |\n\nCác bước vẽ biểu đồ cột là:\n\nBước 1: Vẽ trục ngang biểu diễn tên các câu lạc bộ. Vẽ trục đứng biểu diễn số học sinh hâm mộ\n\nBước 2: Với mỗi câu lạc bộ trên trục ngang, ta vẽ một hình chữ nhật có chiều cao bằng số học sinh hâm mộ của mỗi câu lạc bộ (chiều rộng của các hình chữ nhật bằng nhau)\n\nBước 3: Đặt tên cho biểu đồ là số lượng các bạn hâm mộ câu lạc bộ bóng đá lớp Khoa, tô màu xanh cho các cột để hoàn thiện biểu đồ ta được:\n\n[[IMG:bai-9-16-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   },
+   {
+    "title": "Bài 9.17 trang 81 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-17-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.17 trang 81 Toán lớp 6 Tập 2: Cho bảng thống kê sau:\n\n| Thể loại phim | Hành động | Khoa học viễn tưởng | Hoạt hình | Hài |\n| --- | --- | --- | --- | --- |\n| Số lượng bạn yêu thích | 6 | 5 | 12 | 8 |\n\nHãy vẽ biểu đồ cột biểu diễn bảng thống kê trên.\n\nLời giải:\n\nCác bước vẽ biểu đồ cột là:\n\nBước 1: Vẽ trục ngang biểu diễn thể loại phim yêu thích. Vẽ trục đứng biểu diễn số lượng học sinh yêu thích\n\nBước 2: Với mỗi thể loại trên trục ngang, ta vẽ một hình chữ nhật có chiều cao bằng số học sinh yêu thích của mỗi thể loại phim (chiều rộng của các hình chữ nhật bằng nhau)\n\nBước 3: Đặt tên cho biểu đồ là thể loại phim yêu thích, tô màu xanh cho các cột để hoàn thiện biểu đồ ta được:\n\n[[IMG:bai-9-17-trang-81-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]"
+   }
+  ]
+ },
+ {
+  "lesson": "Bài 41. Biểu đồ cột kép",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-41-bieu-do-cot-thep.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập 1 trang 83 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-1-trang-83-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 1 trang 83 Toán lớp 6 Tập 2: Bảng thống kê 9.7 cho biết số bé trai và bé gái được sinh ra trong ba ngày đầu năm 2020 tại một bệnh viện địa phương.\n\n| | Ngày 1 | Ngày 2 | Ngày 3 |\n| --- | --- | --- | --- |\n| Bé trai | 9 | 6 | 7 |\n| Bé gái | 5 | 6 | 4 |\n\nTừ Bảng 9.7, em hãy thay các dấu \"?\" trong Hình 9.18 bằng số liệu phù hợp.\n\n[[IMG:luyen-tap-1-trang-83-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTừ bảng thống kê trên ta thấy:\n\n+) Số bé trai được sinh ra trong ba ngày 1; 2; 3 lần lượt là 9, 6, 7 bé (được thể hiện ở cột màu xanh)\n\n+) Số bé gái được sinh ra trong ba ngày 1; 2; 3 lần lượt là 5, 6, 4 bé (được thể hiện ở cột màu hồng)\n\n[[IMG:luyen-tap-1-trang-83-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   },
+   {
+    "title": "Luyện Tập 2 trang 84, 85 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-2-trang-84-85-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 2 trang 84, 85 Toán lớp 6 Tập 2:\n\n(1) Biểu đồ Hình 9.20 cho biết lượng mưa trung bình các tháng trong năm 2018 tại hai trạm Tuyên Quang và Nha Trang.\n\n[[IMG:luyen-tap-2-trang-84-85-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\na) Quan sát biểu đồ và cho biết cột màu nào biểu diễn lượng mưa trung bình các tháng năm 2018 tại hai trạm Tuyên Quang và Nha Trang;\n\nb) Kể tên ba tháng có lượng mưa lớn nhất ở mỗi trạm. Từ đó dự đoán thời gian mùa mưa ở các địa phương này.\n\n(2) Quan sát biểu đồ Hình 9.21 và trả lời câu hỏi:\n\na) Nước nào có chiều cao trung bình của nam cao nhất, thấp nhất?\n\nb) Nước nào có chiều cao trung bình của nữ cao nhất, thấp nhất?\n\nc) Sự chênh lệch chiều cao giữa nam và nữ ở nước nào lớn nhất?\n\n[[IMG:luyen-tap-2-trang-84-85-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\nLời giải:\n\n1.\n\na) Cột màu xanh và màu cam lần lượt biểu diễn lượng mưa trung bình của các tháng năm 2018 ở Tuyên Quang và Nha Trang.\n\nb)\n\n+) 3 cột biểu đồ cao nhất thể hiện lượng mưa ở Tuyên Quang là: tháng 5, tháng 7, tháng 8 nên ba tháng có lượng mưa lớn nhất ở trạm Tuyên Quang là : tháng 5, tháng 7, tháng 8.\n\nThời gian mùa mưa ở Tuyên quang vào mùa các tháng 5, 7, 8.\n\n+) 3 cột biểu đồ cao nhất thể hiện lượng mưa ở Nha Trang là: tháng 10, tháng 11, tháng 12 nên ba ba tháng có lượng mưa lớn nhất ở trạm Nha Trang là : tháng 10 , tháng 11 , tháng 12.\n\nThời gian mùa mưa của Nha Trang là 10 , 11 , 12.\n\n2.\n\na) Nhìn vào cột màu xanh thể hiện chiều cao trung bình của nam ở một số quốc gia châu Á, vì 162, 5 < 170, 7 < 171 < 172 nước có chiều cao trung bình của nam cao nhất là: Nhật Bản\n\nNước có chiều cao trung bình của nam thấp nhất là : Việt Nam\n\nb) Nhìn vào cột màu xanh thể hiện chiều cao trung bình của nữ ở một số quốc gia châu Á, vì 152,2 < 157,4 < 158 < 160 nên nước có chiều cao trung bình của nữ cao nhất là: Singapore\n\nNước có chiều cao trung bình của nữ thấp nhất là : Việt Nam\n\nc) Việt Nam có sự chênh lệch chiều cao trung bình giữa nam và nữ là:\n\n162,1 – 152,2 = 9,9 (cm)\n\nSingapore có sự chênh lệch chiều cao trung bình giữa nam và nữ là:\n\n171 – 160 = 11 (cm)\n\nNhật Bản có sự chênh lệch chiều cao trung bình giữa nam và nữ là:\n\n172 – 158 = 14 (cm)\n\nHàn Quốc có sự chênh lệch chiều cao trung bình giữa nam và nữ là:\n\n170,7 – 157, 4 = 13, 3 (cm)\n\nVì 9,9 < 11 < 13,3 < 14 nên nước có sự chênh lệch chiều cao giữa nam và nữ lớn nhất là Nhật Bản."
+   },
+   {
+    "title": "Bài 9.18 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-18-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.18 trang 86 Toán lớp 6 Tập 2: Liệt kê ba tháng cửa hàng bán được nhiều quạt trần nhất.\n\nBiểu đồ Hình 9.23 cho biết số lượng quạt trần và quạt cây bán được tại một cửa hàng điện máy trong năm 2018.\n\n[[IMG:bai-9-18-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nĐể tìm ra ba tháng cửa hàng bán được nhiều quạt trần nhất ta chú ý đến các cột màu vàng\n\nTa thấy cột biểu đồ ở các tháng 5, 6, 7 cao nhất biểu đồ nên ba tháng cửa hàng bán được nhiều quạt trần nhất là: 5, 6, 7 với số lượng quạt trần tương ứng là 35; 41; 37."
+   },
+   {
+    "title": "Bài 9.19 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-19-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.19 trang 86 Toán lớp 6 Tập 2: Liệt kê ba tháng cửa hàng bán được nhiều quạt cây nhất.\n\nBiểu đồ Hình 9.23 cho biết số lượng quạt trần và quạt cây bán được tại một cửa hàng điện máy trong năm 2018.\n\n[[IMG:bai-9-19-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nĐể tìm ra ba tháng cửa hàng bán được nhiều quạt cây nhất ta chú ý đến các cột biểu đồ màu xanh.\n\nTa thấy cột biểu đồ ở các tháng 4, 5, 6 cao nhất biểu đồ nên ba tháng cửa hàng bán được nhiều quạt trần nhất là: 4, 5, 6, với số máy bán được tương ứng là 39, 51, 49."
+   },
+   {
+    "title": "Bài 9.20 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-20-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.20 trang 86 Toán lớp 6 Tập 2: Tính tổng số lượng quạt cả hai loại bán được trong ba tháng 5, 6, 7 và ba tháng 10, 11, 12 rồi so sánh.\n\nBiểu đồ Hình 9.23 cho biết số lượng quạt trần và quạt cây bán được tại một cửa hàng điện máy trong năm 2018.\n\n[[IMG:bai-9-20-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nTổng số lượng quạt cả hai loại bán được trong 3 tháng 5,6,7 là:\n\n35 + 51 + 41+ 49 + 37 + 32 = 245 (chiếc)\n\nTổng số lượng quạt cả hai loại bán được trong 3 tháng 10,11,12 là:\n\n15 + 13 + 17 + 23 + 20 + 17 = 105 (chiếc )\n\nVì 105 < 245 nên tổng số lượng quạt cả hai loại bán được trong 3 tháng 10,11,12 ít hơn tổng số lượng quạt cả hai loại bán được trong 3 tháng 5,6,7."
+   },
+   {
+    "title": "Bài 9.21 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-21-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.21 trang 86 Toán lớp 6 Tập 2: Các loại quạt có xu hướng bán chạy hơn vào mùa nào trong năm?\n\nBiểu đồ Hình 9.23 cho biết số lượng quạt trần và quạt cây bán được tại một cửa hàng điện máy trong năm 2018.\n\n[[IMG:bai-9-21-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nLời giải:\n\nTừ biểu đồ cột trên ta nhận thấy, cột ở tháng 5, 6, 7 cao nhất nên các loại quạt có xu hướng bán chạy hơn vào các tháng 5, 6, 7 trong năm."
+   },
+   {
+    "title": "Bài 9.22 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-22-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.22 trang 86 Toán lớp 6 Tập 2: Từ biểu đồ, không thực hiện tính toán, hãy cho biết loại quạt nào bán được với số lượng nhiều hơn tại cửa hàng điện máy.\n\nBiểu đồ Hình 9.23 cho biết số lượng quạt trần và quạt cây bán được tại một cửa hàng điện máy trong năm 2018.\n\n[[IMG:bai-9-22-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nLời giải:\n\nTừ biểu đồ cột trên ta nhận thấy ở hầu hết các tháng thì biểu đồ cột màu xanh cao hơn biểu đồ cột màu vàng nên loại quạt bán được với số lượng nhiều hơn tại cửa hàng điện máy là: quạt cây."
+   },
+   {
+    "title": "Bài 9.23 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-23-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.23 trang 86 Toán lớp 6 Tập 2: Vẽ biểu đồ cột kép biểu diễn bảng thống kê số lượng học sinh đạt điểm giỏi môn Ngữ văn và Toán của các lớp khối 6.\n\n| | 6A | 6B | 6C | 6D |\n| --- | --- | --- | --- | --- |\n| Ngữ Văn | 9 | 11 | 16 | 12 |\n| Toán | 8 | 7 | 12 | 15 |\n\nLời giải:\n\nĐể vẽ biểu đồ cột kép biểu diễn bảng thống kê ở trên, em thực hiện theo các bước sau:\n\nBước 1: Vẽ các trục biểu diễn số lượng học sinh và các lớp 6.\n\nBước 2: Với mỗi lớp 6, vẽ hai hình chữ nhật cạnh nhau với chiều rộng bằng nhau và chiều cao bằng số lượng học sinh giỏi mỗi môn Văn và Toán\n\nBước 3: Tô màu xanh lam cho cột học sinh giỏi Văn mỗi lớp, màu cam cho cột học sinh giỏi Toán mỗi lớp và ghi chú thích. Đặt tên cho biểu đồ là số lượng học sinh đạt điểm giỏi môn Văn và Toán của các lớp khối 6 để hoàn thiện biểu đồ dưới đây:\n\n[[IMG:bai-9-23-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]"
+   },
+   {
+    "title": "Bài 9.24 trang 86 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-24-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.24 trang 86 Toán lớp 6 Tập 2: Bảng thống kê sau đây cho biết số lượng các bạn nam, nữ trong lớp yêu thích một số môn thể thao.\n\n| | Bóng đá | Cầu lông | Cờ vua | Bón bàn |\n| --- | --- | --- | --- | --- |\n| Nam | 20 | 15 | 10 | 17 |\n| Nữ | 5 | 6 | 12 | 9 |\n\nTừ bảng trên, em hãy thay dấu \"?\" bằng dữ liệu thích hợp để hoàn thiện biểu đồ ở Hình 9.24.\n\n[[IMG:bai-9-24-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nLời giải:\n\nỞ bảng thống kê và hình 9.24 số lượng học sinh nam yêu thích môn bóng đá, cầu lông, cờ vua và bóng bàn lần lượt là 20; 15; 10; 17 (ở cột màu cam)\n\n+) số lượng học sinh nữ yêu thích môn bóng đá, cầu lông, cờ vua và bóng bàn lần lượt là 5; 6; 12; 9 (ở cột màu xanh)\n\n[[IMG:bai-9-24-trang-86-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   }
+  ]
+ },
+ {
+  "lesson": "Luyện tập chung trang 87",
+  "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-chung-trang-87.jsp",
+  "items": [
+   {
+    "title": "Thực hành trang 87, 88 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-chung-trang-87.jsp",
+    "text": "Thực hành trang 87, 88 Toán lớp 6 Tập 2: Em đã tưởng tượng gì về công việc của mình trong tương lai?\n\n[[IMG:luyen-tap-chung-trang-87-1.png]]\n\n[[IMG:luyen-tap-chung-trang-87-2.png]]\n\nEm có muốn biết ước mơ về công việc trong tương lai của các bạn trong lớp không?\n\nHãy cùng các bạn chia sẻ những ước mơ đó nhé!\n\nĐầu tiên, hãy chia lớp thành các nhóm. Mỗi nhóm sẽ thực hiện điều tra độc lập và chia sẻ lại dữ liệu của nhóm mình với các nhóm khác sau khi hoàn thành.\n\nBước 1. THU THẬP DỮ LIỆU\n\n(1) Mỗi nhóm lập phiếu hỏi (theo mẫu phiếu như hình bên).\n\nEm có thể lựa chọn một danh sách công việc khác để phù hợp với các bạn trong lớp mình.\n\n(2) Phát phiếu hỏi cho các bạn trong nhóm để thu thập dữ liệu.\n\n[[IMG:luyen-tap-chung-trang-87-3.png]]\n\nBước 2. LẬP BẢNG THỐNG KÊ\n\nThu phiếu hỏi trong nhóm và tổng hợp dữ liệu theo mẫu như bảng bên (mỗi gạch ứng với một bạn).\n\nTổng hợp dữ liệu của các nhóm thành dữ liệu chung của cả lớp.\n\nLập bảng thống kê biểu diễn số lượng nam, nữ yêu thích các nghề nghiệp.\n\n| Nghề nghiệp | Nam | Nữ |\n| --- | --- | --- |\n| Bác sĩ | // | / |\n| Ca sĩ | | |\n| … | | |\n| Khác | | |\n\nBước 3. VẼ BIỂU ĐỒ\n\n- Vẽ biểu đồ cột theo mẫu như Hình 9.25a biểu diễn số học sinh theo lựa chọn nghề nghiệp.\n\n- Vẽ biểu đồ cột kép theo mẫu Hình 9.2Bb biểu diễn số học sinh nam, nữ theo lựa chọn nghề nghiệp.\n\n[[IMG:luyen-tap-chung-trang-87-4.png]]\n\nBước 4. PHÂN TÍCH DỮ LIỆU :\n\nTrả lời các câu hỏi sau dựa trên dữ liệu và các biểu đồ thu được.\n\n1. Công việc nào được nhiều bạn lựa chọn nhất? Nhiều bạn nam lựa chọn nhất? Nhiều bạn nữ lựa chọn nhât?\n\n2. Các bạn nam có xu hướng chọn những công việc nào?\n\n3. Các bạn nữ có xu hướng chọn những công việc nào?\n\nLời giải:\n\nThực hành với mỗi lớp học của các em.\n\nDưới đây là một bài mẫu của một lớp 6 có 40 học sinh gồm 25 nam, 15 nữ chia thành 4 nhóm, mỗi nhóm có 10 học sinh.\n\n*Bước 1:* Phát phiếu hỏi cho các bạn trong nhóm tờ phiếu dưới đây:\n\nGiới tính:\n\n[[IMG:luyen-tap-chung-trang-87-5.png]]\n\n*Bước 2:* Lập bảng thống kê\n\nThu lại phiếu hỏi 4 nhóm và tổng hợp dữ liệu cả lớp ta được:\n\n| Nghề nghiệp | Nam | Nữ |\n| --- | --- | --- |\n| Bác sĩ | / / / / / / / / / / / / | / |\n| Giáo viên | / / | / / / / / / / / / / |\n| Ca sĩ | / | / |\n| Công an | / / / / / / / | / |\n| Nhà báo | | / |\n| .... | | |\n| Khác | /// | / |\n\nBảng thống kê biểu diễn số lượng nam, nữ lựa chọn các nghề nghiệp trong tương lai:\n\n| Số bạn | Bác sĩ | Giáo viên | Ca sĩ | Công an | Nhà báo | Khác |\n| --- | --- | --- | --- | --- | --- | --- |\n| Nam | 12 | 2 | 1 | 7 | 0 | 3 |\n| Nữ | 1 | 10 | 1 | 1 | 1 | 1 |\n| Tổng số học sinh | 13 | 12 | 2 | 8 | 1 | 4 |\n\n*Bước 3:* Vẽ biểu đồ\n\n*Biểu đồ 1:* Biểu diễn số học sinh theo lựa chọn nghề nghiệp\n\n[[IMG:luyen-tap-chung-trang-87-6.png]]\n\n*Biểu đồ 2:* Biểu diễn số học sinh nam, nữ theo lựa chọn nghề nghiệp.\n\n[[IMG:luyen-tap-chung-trang-87-7.png]]\n\n*Bước 4:* Phân tích dữ liệu\n\n1. Ở biểu đồ 1, ta thấy cột bác sĩ cao nhất với số lượng 13 nên công việc được nhiều bạn lựa chọn nhất là bác sĩ.\n\nỞ biểu đồ 2, ta thấy ở cột màu vàng thể hiện số học sinh nam, cột bác sĩ vẫn cao nhất với số lượng 12 nên công việc được nhiều bạn nam lựa chọn nhất là bác sĩ; còn ở cột màu xanh thể hiện số học sinh nữ, cột giáo viên cao nhất với số lượng 10 nên công việc được nhiều bạn nữ lựa chọn nhất là giáo viên.\n\n2. Do sự phân tích ở ý 2 nên các bạn nam có xu hướng lựa chọn nghề nghiệp bác sĩ còn các bạn nữ có xu hướng lựa chọn nghề giáo viên."
+   }
+  ]
+ },
+ {
+  "lesson": "Bài 42. Kết quả có thể và sự kiện trong trò chơi, thí nghiệm",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-42-ket-qua-co-the-va-su-kien-trong-tro-choi-thi-nghiem.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập 1 trang 91 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-1-trang-91-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 1 trang 91 Toán lớp 6 Tập 2: Chiếc nón kì diệu từng là một trò chơi truyền hình nổi tiếng ở Việt Nam .\n\nQuan sát Hình 9.27 và liệt kê tất cả các kết quả có thể khi quay chiếc nón kì diệu.\n\n[[IMG:luyen-tap-1-trang-91-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nLời giải:\n\nKết quả có thể nhận được khi quay là: mất lượt ; mất điểm ; phần thưởng ; may mắn ; chia đôi; gấp đôi; 100 ; 200 ; 300 ; 400 ; 500 ; 600 ; 700 ; 800 ; 900 ."
+   },
+   {
+    "title": "Luyện Tập 2 trang 92 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-2-trang-92-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập 2 trang 92 Toán lớp 6 Tập 2: Minh quay tấm bìa và thấy mũi tên chỉ vào ô số 3 như hình bên.\n\nHãy cho biết sự kiện nào sau đây xảy ra:\n\n(1) Mũi tên chỉ vào ô ghi số 3 hoặc 5.\n\n(2) Mũi tên chỉ vào ô ghi số 4:\n\n(3) Mũi tên chỉ vào ô ghi số lớn hơn 5.\n\n[[IMG:luyen-tap-2-trang-92-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nLời giải:\n\nVì mũi tên chỉ vào ô ghi số 3 nên:\n\n(1). Sự kiện xảy ra\n\n(2). Sự kiện không xảy ra\n\n(3). Sự kiện không xảy ra"
+   },
+   {
+    "title": "Thử thách nhỏ trang 92 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/thu-thach-nho-trang-92-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Thử thách nhỏ trang 92 Toán lớp 6 Tập 2: Một hộp kín đựng 5 viên bi xanh, 3 viên bi đỏ và 2 viên bi vàng có cùng kích thước. Mỗi lượt chơi, Minh và Khoa lần lượt lấy ra một viên bi từ hộp. Quan sát và ghi lại màu của viên bi rồi trả lại viên bi vào hộp.\n\nMàu của các viên bi trong mỗi lượt lấy được Minh và Khoa ghi lại như hình bên (X: xanh, Ð: đỏ, V: vàng).\n\n[[IMG:thu-thach-nho-trang-92-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nNgười thắng là người lấy được nhiều viên bi đỏ hơn sau 10 lượt chơi. Sự kiện Minh thắng có xảy ra không?\n\nLời giải:\n\nMinh lấy được 3 viên bi đỏ trong khi Khoa lấy được 4 viên bi đỏ\n\nMà 3 < 4 nên sự kiện “Minh thắng” không xảy ra."
+   },
+   {
+    "title": "Bài 9.25 trang 93 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-25-trang-93-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.25 trang 93 Toán lớp 6 Tập 2: Gieo một con xúc xắc.\n\na) Liệt kê các kết quả có thể để sự kiện số chấm xuất hiện là số nguyên tố xảy ra;\n\nb) Nếu số chấm xuất hiện là 5 thì sự kiện số chấm xuất hiện không phải là 6 có xảy ra hay không?\n\nLời giải:\n\na. Khi gieo con xúc xắc số, các kết quả số chấm xuất hiện có thể là: 1; 2; 3; 4; 5; 6 chấm\n\nVậy các kết quả có thể để sự kiện số chấm xuất hiện là số nguyên tố xảy ra là:\n\n2, 3, 5 chấm\n\nb. Do 5 khác 6 nên nếu số chấm xuất hiện là 5 thì sự kiện số chấm xuất hiện không phải là 6 có xảy ra."
+   },
+   {
+    "title": "Bài 9.26 trang 93 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-26-trang-93-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.26 trang 93 Toán lớp 6 Tập 2: Quay tấm bìa như hình sau và xem mũi tên chỉ vào ô nào khi tấm bìa dừng lại.\n\n[[IMG:bai-9-26-trang-93-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\na) Liệt kê các kết quả có thể của thí nghiệm này;\n\nb) Liệt kê các kết quả có thể để sự kiện Mũi tên không chỉ vào ô Nai xảy ra;\n\nc) Nếu mũi tên chỉ vào ô Nai như hình vẽ thì sự kiện Mũi tên chỉ vào ô Gấu hoặc Nai có xảy ra không?\n\nLời giải:\n\na. Các kết quả có thể của thí nghiệm này là: Nai; Cáo; Gấu.\n\nb. Các kết quả có thể để sự kiện Mũi tên không chỉ vào ô Nai xảy ra là: Cáo; Gấu\n\nc. Nếu mũi tên chỉ vào ô Nai như hình vẽ thì sự kiện Mũi tên chỉ vào ô Gấu hoặc Nai có xảy ra vì khi quay tấm bìa trên mũi tên giữ nguyên nhưng các ô thay đổi nên các ô Cáo, Gấu sẽ đến cái mũi tên chỉ."
+   },
+   {
+    "title": "Bài 9.27 trang 93 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-27-trang-93-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.27 trang 93 Toán lớp 6 Tập 2: Trò chơi dành cho hai người chơi. Mỗi người chơi chọn một trong sáu số 1, 2, 3, 4, 5, 6 rồi gieo con xúc xắc năm lần liên tiếp\n\nMỗi lần gieo, nếu xuất hiện mặt có số chấm bằng số đã chọn thì được 10 điểm, ngược lại bì trừ 5 điểm. Ai được nhiều điểm hơn sẽ thắng.\n\nAn và Bình cùng chơi. An chọn số 3 và Bình chọn số 4. Kết quả gieo của An và Bình lần lượt là 2, 3, 6, 4, 3 và 4, 3, 4, 5, 4. Hỏi An hay Bình là người thắng?\n\nLời giải:\n\nTa có bảng thống kê các kết quả gieo của An mỗi lần gieo bị trừ 5 điểm hay cộng 10 điểm:\n\n| Lần | Lần 1 | Lần 2 | Lần 3 | Lần 4 | Lần 5 |\n| --- | --- | --- | --- | --- | --- |\n| Kết quả | 2 khác 3 | 3 = 3 | 6 khác 3 | 4 khác 3 | 3 = 3 |\n| Kết quả | Trừ 5 | Cộng 10 | Trừ 5 | Trừ 5 | Cộng 10 |\n\nDo đó số điểm của An là:\n\n-5 + 10 - 5 - 5 + 10 = 5 (điểm)\n\nTa có bảng thống kê các kết quả gieo của Bình mỗi lần gieo bị trừ hay cộng:\n\n| Lần | Lần 1 | Lần 2 | Lần 3 | Lần 4 | Lần 5 |\n| --- | --- | --- | --- | --- | --- |\n| Kết quả | 4 = 4 | 3 khác 4 | 4 = 4 | 5 khác 4 | 4 = 4 |\n| Kết quả | Cộng 10 | Trừ 5 | Cộng 10 | Trừ 5 | Cộng 10 |\n\nDo đó số điểm của An là:\n\n10 – 5 + 10 - 5 + 10 = 20 (điểm)\n\nVì 20 > 5 nên số điểm của Bình nhiều hơn của An\n\nVậy Bình thắng."
+   },
+   {
+    "title": "Bài 9.28 trang 93 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-28-trang-93-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.28 trang 93 Toán lớp 6 Tập 2: Mai và Linh cùng chơi, mỗi người gieo một đồng xu liên tiếp 30 lần được kết quả như sau ( S: sấp; N: ngửa)\n\nMai: S N N S S N S N S N S N N S S N N S S N N N S S S N N N S S .\n\nLinh: N S S N N S N S N S S S S N S N N S S S N N N S S S N N S S.\n\nNgười chơi được một điểm khi có đúng ba lần liên tiếp đồng xu ra mặt ngửa. người nào được nhiều điểm hơn là người thắng.\n\nSự kiện Mai thắng có xảy ra hay không?\n\nLời giải:\n\n+) Ở kết quả gieo đồng xu của Mai:\n\nSố lần gieo có được kết quả 3 lần liên tiếp đều là mặt ngửa là 2 là:\n\nMai: S N N S S N S N S N S N N S S N N S S N N N S S S N N N S S .\n\nDo đó Mai được 2 điểm.\n\n+) Ở kết quả gieo đồng xu của Linh:\n\nSố lần gieo có được kết quả 3 lần liên tiếp đều là mặt ngửa là 1 là:\n\nLinh: N S S N N S N S N S S S S N S N N S S S N N N S S S N N S S\n\nDo đó Mai được 1 điểm.\n\nVì 2 > 1 nên Mai đã thắng Linh.\n\nVậy sự kiện Mai thắng có xảy ra."
+   }
+  ]
+ },
+ {
+  "lesson": "Bài 43. Xác suất thực nghiệm",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-43-xac-suat-thuc-nghiem.jsp",
+  "items": [
+   {
+    "title": "Luyện Tập trang 95 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-trang-95-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Luyện Tập trang 95 Toán lớp 6 Tập 2: An gieo hai con xúc xắc cùng lúc 80 lần. Ở mỗi lần gieo, An cộng số chấm xuất hiện ở hai xúc xắc và ghi lại kết quả như bảng sau:\n\n| Tổng số chấm | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Số lần | 2 | 5 | 6 | 8 | 11 | 14 | 12 | 9 | 6 | 4 | 3 |\n\nNếu tổng số chấm xuất hiện ở hai con xúc xắc lớn hơn 6 thì An thắng. Tính xác suất thực nghiệm của sự kiện An thắng.\n\nLời giải:\n\nTổng số lần gieo xúc xắc là: n = 80 (lần)\n\nVì tổng số chấm xuất hiện ở hai con xúc xắc lớn hơn 6 thì An thắng nên số lần An thắng (số lần xuất hiện ở hai con xúc xắc có từ 7 chấm đến 12 chấm) là:\n\nk = 14 + 12 + 9 + 6 + 4 + 3 = 48 (lần)\n\nXác suất thực nghiệm của sự kiện An thắng là:\n\n[[IMG:luyen-tap-trang-95-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nVậy xác suất thực nghiệm An thắng là 60%"
+   },
+   {
+    "title": "Bài 9.29 trang 96 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-29-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.29 trang 96 Toán lớp 6 Tập 2: Minh gieo một con xúc xắc 100 lần và ghi lại số chấm xuất hiện ở mỗi lần gieo được kết quả như sau:\n\n| Số chấm xuất hiện | 1 | 2 | 3 | 4 | 5 | 6 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Số lần | 15 | 20 | 18 | 22 | 10 | 15 |\n\nTính xác suất thực nghiệm của các sự kiện sau:\n\na) Số chấm xuất hiện là số chẵn;\n\nb) Số chấm xuất hiện lớn hơn 2.\n\nLời giải:\n\na) Số chấm xuất hiện là số chẵn là số lần xuất hiện số chấm 2, 4 và 6\n\n20 + 22 + 15 = 57\n\nXác suất thực nghiệm của sự kiện số chấm xuất hiện là số chẵn là:\n\n[[IMG:bai-9-29-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\nb) Số chấm xuất hiện lớn hơn 2 là số lần xuất hiện số chấm 3, 4, 5, 6\n\n18 + 22 + 10 + 15 = 65\n\nXác suất thực nghiệm của sự kiện số chấm xuất hiện lớn hơn 2 là:\n\n[[IMG:bai-9-29-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nVậy xác suất thực nghiệm của sự kiện số chấm xuất hiện là số chẵn; số chấm xuất hiện lớn hơn 2 lần lượt là 0,57 và 0,65."
+   },
+   {
+    "title": "Bài 9.30 trang 96 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-30-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.30 trang 96 Toán lớp 6 Tập 2: An quay tấm bìa như Hình 9.30 một số lần và ghi kết quả dưới dạng bảng như sau:\n\n[[IMG:bai-9-30-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\na) An đã quay tấm bìa bao nhiêu lần?\n\nb) Có bao nhiêu lần mũi tên chỉ vào ô màu xanh, bao nhiêu lần mũi tên chỉ vào ô màu vàng?\n\nc) Tính xác suất thực nghiệm của sự kiện Mũi tên chỉ vào ô màu xanh.\n\nLời giải:\n\na) Mỗi lần quay tương ứng với 1 gạch, ta đếm được có 24 gạch.\n\nVậy An đã quay tấm bìa 24 lần.\n\nb) Ta đếm được ở ô màu xanh có 17 gạch nên có 17 lần mũi tên chỉ vào ô màu xanh\n\nTa đếm được ở ô màu vàng có 7 gạch nên có 7 lần mũi tên chỉ vào ô màu vàng.\n\nc) Xác suất thực nghiệm của sự kiện Mũi tên chỉ vào ô màu xanh là: [[IMG:bai-9-30-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]"
+   },
+   {
+    "title": "Bài 9.31 trang 96 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-31-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.31 trang 96 Toán lớp 6 Tập 2: Trong túi có một số viên bi màu đen và một số viên bi màu đỏ có cùng kích thước.\n\nThực hiện lấy ngẫu nhiên một viên bi từ túi, xem viên bi màu gì rồi trả lại viên bi vào túi. Khoa thực hiện thí nghiệm 30 lần. Số lần lấy được viên bi màu đỏ là 13. Hãy tính xác suất thực nghiệm của sự kiện Khoa lấy được viên bi màu đỏ.\n\nLời giải:\n\nXác suất thực nghiệm của sự kiện Khoa lấy được viên bi màu đỏ là: [[IMG:bai-9-31-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]"
+   },
+   {
+    "title": "Bài 9.32 trang 96 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-32-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.32 trang 96 Toán lớp 6 Tập 2:\n\nMột chiếc thùng kín có một số quả bóng màu xanh, đỏ, tím, vàng có cùng kích thước. Trong một trò chơi, người chơi lấy ngẫu nhiên một quả bóng, ghi lại màu rồi trả lại bóng vào thùng. Bình thực hiện trò chơi 100 lần và được kết quả như bảng sau:\n\n| Màu | Số lần |\n| --- | --- |\n| Xanh | 43 |\n| Đỏ | 22 |\n| Tím | 18 |\n| Vàng | 17 |\n\nTính xác suất thực nghiệm của các sự kiện sau:\n\na) Bình lấy được quả bóng màu xanh;\n\nb) Quả bóng được lấy ra không là màu đỏ.\n\nLời giải:\n\na) Xác suất thực nghiệm của các sự kiện Bình lấy được quả bóng màu xanh là:\n\n[[IMG:bai-9-32-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nb) Để lấy ra được quả bóng không là màu đỏ nghĩa là lấy được các màu còn lại xanh, tím và vàng\n\nSố lần lấy được quả bóng không phải là màu đỏ là: 100 – 22 = 78 (lần)\n\nXác suất thực nghiệm của các sự kiện quả bóng được lấy ra không là màu đỏ là: [[IMG:bai-9-32-trang-96-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\nVậy xác suất thực nghiệm của các sự kiện Bình lấy được quả bóng màu xanh; Quả bóng được lấy ra không là màu đỏ lần lượt là 0,43 và 0,78."
+   }
+  ]
+ },
+ {
+  "lesson": "Luyện tập chung trang 97",
+  "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-chung-trang-97.jsp",
+  "items": [
+   {
+    "title": "Trò chơi xúc xắc trang 97 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/luyen-tap-chung-trang-97.jsp",
+    "text": "Trò chơi xúc xắc trang 97 Toán lớp 6 Tập 2:\n\nChuẩn bị: Hai con xúc xắc xanh và đỏ.\n\nCách chơi:\n\n- Hai người chơi bốc thăm hoặc oẳn tù tì để chọn người chơi trước và mang tên E (Even number), người chơi sau mang tên O (Odd number).\n\n- Hai người chơi lần lượt gieo đồng thời hai con xúc xắc. Ở mỗi lần gieo, nếu tích số chấm xuât hiện trên hai con xúc xắc là số lẻ thì O được 1 điểm, là số chẵn thì E được 1 điểm.\n\n- Ai được 20 điểm trước là người thắng.\n\n[[IMG:luyen-tap-chung-trang-97-1.png]]\n\n1. Em đọc luật chơi trên và dự đoán xem trong hai người chơi, ai là người có khả năng thắng cuộc cao hơn.\n\n2. Chia lớp thành từng cặp hai người chơi. Mỗi cặp chơi một ván (tức là chơi đến lúc có người thắng) và ghi lại kết quả theo mẫu Bảng 9.9.\n\n[[IMG:luyen-tap-chung-trang-97-2.png]]\n\n3. Tổng hợp lại kết quả chơi của cả lớp theo mẫu Bảng 9.10.\n\n| Cặp chơi số | E thắng | O thắng |\n| --- | --- | --- |\n| 1 | X | |\n| 2 | | X |\n| … | | |\n\nBảng 9.10\n\n4. Từ dữ liệu Bảng 9.10, hãy tính xác suất thực nghiệm của các sự kiện E thắng, O thắng. Dựa vào kết quả tính được, khả năng E hay O thắng là cao hơn? Dự đoán ban đầu của em có chính xác không?\n\nLời giải:\n\n1. Dự đoán Even number (E) có khả năng thắng cuộc cao hơn.\n\n2. Ví dụ về một cặp đôi chơi một ván:\n\n| Lần tung | Số chấm xuất hiện | Số điểm |\n| --- | --- | --- | --- |\n| E | O |\n| 1 | 1; 4 | 1 | 0 |\n| 2 | 1; 5 | 1 | 1 |\n| 3 | 2; 3 | 2 | 0 |\n| 4 | 1; 6 | 3 | 0 |\n| 5 | 3; 5 | 0 | 2 |\n| 6 | 3; 4 | 4 | 0 |\n| 7 | 3; 5 | 0 | 3 |\n| 8 | 2; 6 | 5 | 0 |\n| 9 | 3; 1 | 0 | 4 |\n| 10 | 1; 6 | 6 | 0 |\n| 11 | 2; 5 | 7 | 0 |\n| 12 | 3; 4 | 8 | 0 |\n| 13 | 3; 5 | 0 | 5 |\n| 14 | 2; 5 | 9 | 0 |\n| 15 | 2; 6 | 10 | 0 |\n| 16 | 1; 5 | 0 | 6 |\n| 17 | 3; 4 | 11 | 0 |\n| 18 | 5; 6 | 12 | 0 |\n| 19 | 1; 2 | 13 | 0 |\n| 20 | 6; 5 | 14 | 0 |\n| 21 | 1; 3 | 0 | 7 |\n| 22 | 3; 5 | 0 | 8 |\n| 23 | 4; 2 | 15 | 0 |\n| 24 | 5; 6 | 16 | 0 |\n| 25 | 1; 6 | 17 | 0 |\n| 26 | 2; 3 | 18 | 0 |\n| 27 | 5; 1 | 0 | 9 |\n| 28 | 4; 6 | 19 | 0 |\n| 29 | 6; 5 | 20 | 0 |\n| Tổng điểm | | 20 | 8 |\n\nKết quả: E thắng.\n\n3. Tổng hợp lại kết quả chơi của cả lớp 40 học sinh thì có 20 cặp chơi ở bảng 9.10.\n\n| Cặp chơi số | E thắng | O thắng |\n| --- | --- | --- |\n| 1 | X | |\n| 2 | X | |\n| 3 | X | |\n| 4 | X | |\n| 5 | X | |\n| 6 | | X |\n| 7 | X | |\n| 8 | X | |\n| 9 | X | |\n| 10 | X | |\n| 11 | X | |\n| 12 | X | |\n| 13 | X | |\n| 14 | X | |\n| 15 | X | |\n| 16 | X | |\n| 17 | X | |\n| 18 | X | |\n| 19 | X | |\n| 20 | X | |\n\n4. Dựa vào bảng 9.10 ở trên:\n\nXác suất thực nghiệm của sự kiện E thắng là: [[IMG:luyen-tap-chung-trang-97-3.png]]\n\nXác suất thực nghiệm của sự kiện O thắng là: [[IMG:luyen-tap-chung-trang-97-4.png]]\n\nVì [[IMG:luyen-tap-chung-trang-97-5.png]] nên khả năng E thắng O.\n\nVậy dự đoán ban đầu là chính xác.\n\nGiải thích hiểu rõ hơn vì sao khả năng E thắng cao hơn O:\n\nGọi dòng 1 là số chấm xuất hiện trên con xúc xắc màu xanh.\n\nCột 1 là số chấm xuất hiện trên con xúc xắc màu đỏ.\n\nCác ô khác gồm 2 thông tin là: tích số chấm xuất hiện trên 2 con xúc xắc và kết quả luật chơi trong đó (O) là O thắng; (E) là E thắng.\n\n| Số chấm | 1 | 2 | 3 | 4 | 5 | 6 |\n| --- | --- | --- | --- | --- | --- | --- |\n| 1 | 1(O) | 2(E) | 3(O) | 4(E) | 5(O) | 6(E) |\n| 2 | 2(E) | 4(E) | 6(E) | 8(E) | 10(E) | 12(E) |\n| 3 | 3(O) | 6(E) | 9(O) | 12(E) | 15(O) | 18(E) |\n| 4 | 4(E) | 8(E) | 12(E) | 16(E) | 20(E) | 24(E) |\n| 5 | 5(O) | 10(E) | 15(O) | 20(E) | 25(E) | 30(E) |\n| 6 | 6(E) | 12(E) | 18(E) | 24(E) | 30(E) | 36(E) |"
+   }
+  ]
+ },
+ {
+  "lesson": "Bài tập ôn cuối chương 9",
+  "url": "https://vietjack.com/toan-6-ket-noi/bai-tap-on-cuoi-chuong-9-trang-99.jsp",
+  "items": [
+   {
+    "title": "Bài 9.33 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-33-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.33 trang 98 Toán lớp 6 Tập 2: Nam muốn tìm kiếm thông tin để trả lời các câu hỏi dưới đây.\n\nEm hãy gợi ý giúp Nam cách thu thập dữ liệu phù hợp cho mỗi câu hỏi:\n\na) Năm quốc gia nào có diện tích lớn nhất?\n\nb) Có bao nhiêu bạn trong lớp có đồng hồ đeo tay?\n\nc)Trong tuần trước, tổ nào trong lớp có nhiều lượt đi học muộn nhất?\n\nLời giải:\n\nHọc sinh có thể thu thập thông tin nhiều cách khác nhau. Dưới đây là ví dụ\n\na. Khảo sát qua mạng Internet\n\nb. Quan sát trực tiếp các bạn trong lớp\n\nc. Lập bảng thống kê từ tổ trưởng."
+   },
+   {
+    "title": "Bài 9.34 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-34-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.34 trang 98 Toán lớp 6 Tập 2: Việt muốn tìm hiểu về đội bóng yêu thích của một số bạn nam. Em hãy giúp Việt:\n\na) Lập phiếu hỏi để thu thập dữ liệu;\n\nb) Thu thập trong phạm vi lớp em và ghi lại kết quả dưới dạng bảng.\n\nTừ kết quả thu được em có kết luận gì?\n\nLời giải:\n\na) Lập phiếu hỏi:\n\nBạn yêu thích đội bóng nào?\n\n[[IMG:bai-9-34-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\n(Với mỗi dấu hỏi tích X vào 1 trong các lựa chọn)\n\nb) Bảng thống kê số lượng học sinh yêu thích đội bóng của các bạn nam trong lớp.\n\nVí dụ ở một lớp 6 có 20 bạn nam.\n\n| Đội bóng | Manchester United | Manchester City | Liverpool | Đội bóng khác |\n| --- | --- | --- | --- | --- |\n| Số học sinh | 10 | 5 | 3 | 2 |\n\nTừ kết quả bảng ta thấy:\n\nSố học sinh yêu thích đội Manchester United nhiều nhất là 10 chiếm một nửa số bạn nam trong lớp yêu thích."
+   },
+   {
+    "title": "Bài 9.35 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.35 trang 98 Toán lớp 6 Tập 2: Một túi đựng 2 quả bóng màu xanh, 4 quả bóng màu vàng và 1 quả bóng màu đỏ có cùng kích thước. Nam lấy một quả bóng mà không nhìn vào túi\n\n[[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\na) Quả bóng Nam lấy ra có thể có màu gì?\n\nb) Em hãy lấy một quả bóng từ túi đó 20 lần, sau mỗi lần ghi lại xem quả bóng lấy được có màu gì rồi trả bóng lại túi trước khi lấy lần sau. Hoàn thiện bảng thống kê sau:\n\n| Màu bóng | Xanh | Vàng | Đỏ |\n| --- | --- | --- | --- |\n| Số lần | ? | ? | ? |\n\nc) Vẽ biểu đồ cột biểu diễn bảng thống kê trên\n\nd) Tính xác suất thực nghiệm của các sự kiện Quả bóng lấy ra có màu\n\n(1) xanh ; (2) vàng; (3) đỏ.\n\nLời giải:\n\na) Quả bóng Nam lấy ra có thể có màu: Xanh; Vàng; Đỏ.\n\nb) Ví dụ khi thực hiện của một bạn nam lấy bóng từ túi, ta có được bảng thống kê dưới đây:\n\n| Màu bóng | Xanh | Vàng | Đỏ |\n| --- | --- | --- | --- |\n| Số lần | 7 | 9 | 4 |\n\nc)\n\n[[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nd)\n\nXác suất thực nghiệm của các sự kiện Quả bóng lấy ra có màu xanh là: [[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-2.png]]\n\nXác suất thực nghiệm của các sự kiện Quả bóng lấy ra có màu vàng là: [[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-3.png]]\n\nXác suất thực nghiệm của các sự kiện Quả bóng lấy ra có màu đỏ là: [[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-4.png]]\n\n[[IMG:bai-9-35-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]"
+   },
+   {
+    "title": "Bài 9.36 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-36-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.36 trang 98 Toán lớp 6 Tập 2: Bình khảo sát môn thể thao yêu thích của các bạn trong lớp, thu được kết quả như trong Bảng thống kê 9.11.\n\na) Vẽ biểu đồ cột kép biểu diễn bảng thống kê này;\n\nb) Môn thể thao nào được các bạn nam yêu thích nhất? Môn thể thao nào được các bạn nữ yêu thích nhất?\n\n| | Nữ | Nam |\n| --- | --- | --- |\n| Bóng đá | 3 | 6 |\n| Cầu lông | 5 | 5 |\n| Bơi lội | 7 | 2 |\n| Bóng rổ | 1 | 3 |\n| Khác | 0 | 2 |\n\nBảng 9.11\n\nLời giải:\n\na)\n\n[[IMG:bai-9-36-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.png]]\n\nb)\n\n+) Ở cột biểu đồ màu xanh dương thì cột bóng đá cao nhất nên môn thể thao được các bạn nam yêu thích nhất là: Bóng đá\n\n+) Ở cột biểu đồ màu xanh lá cây thì cột bơi lội cao nhất nên môn thể thao được các bạn nữ yêu thích nhất là: Bơi lội."
+   },
+   {
+    "title": "Bài 9.37 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-37-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.37 trang 98 Toán lớp 6 Tập 2: Minh bỏ 7 viên bi đen và 3 viên bi trắng có cùng kích thước vào một túi.\n\nMỗi lần Minh lấy ra ngẫu nhiên một viên bi từ túi, xem viên bi đó có màu gì rồi lại bỏ viên bi đó vào túi. Minh đã thực hiện 100 lần và thấy có 58 lần lấy được bi đen.\n\nTính xác suất thực nghiệm của sự kiện Minh lấy được viên bi màu đen.\n\nLời giải:\n\nXác suất thực nghiệm của sự kiện Minh lấy được viên bi màu đen là: [[IMG:bai-9-37-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc-1.png]]\n\nVậy xác suất thực nghiệm của sự kiện Minh lấy được viên bi màu đen là 0,58."
+   },
+   {
+    "title": "Bài 9.38 trang 98 Toán lớp 6 Tập 2:",
+    "url": "https://vietjack.com/toan-6-ket-noi/bai-9-38-trang-98-toan-lop-6-tap-2-ket-noi-tri-thuc.jsp",
+    "text": "Bài 9.38 trang 98 Toán lớp 6 Tập 2: Trong hộp có 5 phần thưởng gồm 2 chiếc bút chì và 3 chiếc bút bi. Quỳnh chọn ngẫu nhiên hai phần thưởng trong hộp. Em hãy liệt kê các kết quả có thể.\n\nLời giải:\n\nCác kết quả có thể là: Bút chì và Bút bi; Bút chì và Bút chì; Bút bi và Bút bi."
+   }
+  ]
+ }
+]

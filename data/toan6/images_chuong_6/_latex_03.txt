@@ -1,0 +1,82 @@
+#33
+Suy ra $\frac{-2}{9} > \frac{-7}{9}$
+
+Vậy ta điền: $\frac{-2}{9} \ \boxed{>} \ \frac{-7}{9}$
+#34
+Vì $5 > -10$ nên $\frac{5}{7} > \frac{-10}{7}$.
+
+Vậy ta điền $\frac{5}{7} \ \boxed{>} \ \frac{-10}{7}$.
+#35
+a) $\frac{7}{10}$ và $\frac{11}{15}$;
+
+b) $\frac{-1}{8}$ và $\frac{-5}{24}$.
+#36
++) $\frac{7}{10} = \frac{7 \cdot 3}{10 \cdot 3} = \frac{21}{30}$
+
++) $\frac{11}{15} = \frac{11 \cdot 2}{15 \cdot 2} = \frac{22}{30}$
+
+Vì $21 < 22$ nên $\frac{21}{30} < \frac{22}{30}$ hay $\frac{7}{10} < \frac{11}{15}$
+
+Vậy $\frac{7}{10} < \frac{11}{15}$.
+#37
++) $\frac{-1}{8} = \frac{(-1) \cdot 3}{8 \cdot 3} = \frac{-3}{24}$
+
++) $\frac{-5}{24} = \frac{-5}{24}$
+
+Vì $3 < 5$ nên $-3 > -5$ nên $\frac{-3}{24} > \frac{-5}{24}$ hay $\frac{-1}{8} > \frac{-5}{24}$.
+
+Vậy $\frac{-1}{8} > \frac{-5}{24}$.
+#38
+@@FIG Tranh hội thoại: Pi hỏi "Muốn so sánh $\frac{-15}{81}$ và $\frac{7}{90}$ ta làm thế nào nhỉ?"; Vuông nói "Ta phải tìm BCNN$(81, 90)$!"; Tròn nói "$\frac{-15}{81} < 0$ và $0 < \frac{7}{90}$ nên $\frac{-15}{81} < \frac{7}{90}$."
+#39
+$\frac{31}{32}$ và $\frac{-5}{57}$.
+#40
++) Vì $31$ và $32$ là hai số nguyên cùng dấu khác $0$ nên $\frac{31}{32} > 0$ $(1)$
+
++) Vì $-5$ và $57$ là hai số nguyên trái dấu khác $0$ nên $\frac{-5}{57} < 0$ $(2)$
+
+Từ $(1)$ và $(2)$ ta có: $\frac{31}{32} > \frac{-5}{57}$
+
+Vậy $\frac{31}{32} > \frac{-5}{57}$.
+#41
+a) Viết phân số $\frac{24}{7}$ dưới dạng hỗn số;
+
+b) Viết hỗn số $5\frac{2}{3}$ dưới dạng phân số.
+#42
+a) Thực hiện phép chia: $24 : 7 = 3$ (dư $3$)
+
+$\rightarrow \frac{24}{7} = 3 + \frac{3}{7} = 3\frac{3}{7}$
+
+b) $5\frac{2}{3} = \frac{5 \cdot 3 + 2}{3} = \frac{15 + 2}{3} = \frac{17}{3}$
+#43
+a) $\frac{2}{3}$ và $\frac{-6}{7}$
+
+b) $\frac{5}{2^2 \cdot 3^2}$ và $\frac{-7}{2^2 \cdot 3}$
+#44
++) $\frac{2}{3} = \frac{2 \cdot 7}{3 \cdot 7} = \frac{14}{21}$
+
++) $\frac{-6}{7} = \frac{(-6) \cdot 3}{7 \cdot 3} = \frac{-18}{21}$
+#45
++) $\frac{5}{2^2 \cdot 3^2} = \frac{5}{36}$
+
++) $\frac{-7}{2^2 \cdot 3} = \frac{-7}{12} = \frac{(-7) \cdot 3}{12 \cdot 3} = \frac{-21}{36}$
+#46
+a) $\frac{-11}{8}$ và $\frac{1}{24}$
+
+b) $\frac{3}{20}$ và $\frac{6}{15}$
+#47
++) $\frac{-11}{8} = \frac{(-11) \cdot 3}{8 \cdot 3} = \frac{-33}{24}$
+
++) $\frac{1}{24}$
+
+Vì $-33 < 1$ nên $\frac{-33}{24} < \frac{1}{24}$ hay $\frac{-11}{8} < \frac{1}{24}$
+
+Vậy $\frac{-11}{8} < \frac{1}{24}$.
+#48
+Phân số $\frac{-11}{8}$ có tử số là $-11 < 0$ và mẫu số là $8 > 0$ nên $\frac{-11}{8} < 0$;
+
+Phân số $\frac{1}{24}$ có tử và mẫu số đều dương nên $\frac{1}{24} > 0$.
+
+Do đó $\frac{-11}{8} < \frac{1}{24}$.
+
+Vậy $\frac{-11}{8} < \frac{1}{24}$.

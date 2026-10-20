@@ -1,0 +1,128 @@
+[
+  {
+    "chapter": 1,
+    "title": "Chương 1: Tập hợp các số tự nhiên",
+    "file": "de_bai_loi_giai_chuong_1.md",
+    "size_kb": 57.8,
+    "char_count": 59182,
+    "exercise_count": 101,
+    "sample_exercises": [
+      "Luyện tập 1 trang 6 Toán lớp 6 Tập 1:",
+      "Câu hỏi trang 7 Toán lớp 6 Tập 1:",
+      "Luyện tập 2 trang 7 Toán lớp 6 Tập 1:",
+      "Luyện tập 3 trang 7 Toán lớp 6 Tập 1:"
+    ]
+  },
+  {
+    "chapter": 2,
+    "title": "Chương 2: Tính chia hết trong tập hợp các số tự nhiên",
+    "file": "de_bai_loi_giai_chuong_2.md",
+    "size_kb": 108.1,
+    "char_count": 110644,
+    "exercise_count": 192,
+    "sample_exercises": [
+      "Câu hỏi 1 trang 30 Toán lớp 6 Tập 1:",
+      "Câu hỏi 2 trang 30 Toán lớp 6 Tập 1:",
+      "Câu hỏi 1 trang 30 Toán lớp 6 Tập 1:",
+      "Câu hỏi 2 trang 30 Toán lớp 6 Tập 1:"
+    ]
+  },
+  {
+    "chapter": 3,
+    "title": "Chương 3: Số nguyên",
+    "file": "de_bai_loi_giai_chuong_3.md",
+    "size_kb": 35.4,
+    "char_count": 36259,
+    "exercise_count": 89,
+    "sample_exercises": [
+      "Bài tập",
+      "Luyện tập 1 trang 58 Toán lớp 6 Tập 1:",
+      "Câu hỏi 1 trang 59 Toán lớp 6 Tập 1:",
+      "Vận dụng 1 trang 59 Toán lớp 6 Tập 1:"
+    ]
+  },
+  {
+    "chapter": 4,
+    "title": "Chương 4: Một số hình phẳng trong thực tiễn",
+    "file": "de_bai_loi_giai_chuong_4.md",
+    "size_kb": 24.0,
+    "char_count": 24533,
+    "exercise_count": 71,
+    "sample_exercises": [
+      "Bài tập",
+      "Luyện tập trang 80 Toán lớp 6 Tập 1:",
+      "Vận dụng trang 81 Toán lớp 6 Tập 1:",
+      "Câu hỏi trang 81 Toán lớp 6 Tập 1:"
+    ]
+  },
+  {
+    "chapter": 5,
+    "title": "Chương 5: Tính đối xứng của hình phẳng trong tự nhiên",
+    "file": "de_bai_loi_giai_chuong_5.md",
+    "size_kb": 10.4,
+    "char_count": 10668,
+    "exercise_count": 33,
+    "sample_exercises": [
+      "Bài tập",
+      "Bài 5.1 trang 102 Toán lớp 6 Tập 1:",
+      "Bài 5.2 trang 102 Toán lớp 6 Tập 1:",
+      "Bài 5.3 trang 102 Toán lớp 6 Tập 1:"
+    ]
+  },
+  {
+    "chapter": 6,
+    "title": "Chương 6: Phân số",
+    "file": "de_bai_loi_giai_chuong_6.md",
+    "size_kb": 44.4,
+    "char_count": 45417,
+    "exercise_count": 57,
+    "sample_exercises": [
+      "Bài tập Chương 6",
+      "Thử thách nhỏ trang 8 Toán lớp 6 Tập 2:",
+      "Bài 6.1 trang 8 Toán lớp 6 Tập 2:",
+      "Bài 6.2 trang 8 Toán lớp 6 Tập 2:"
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Chương 7: Số thập phân",
+    "file": "de_bai_loi_giai_chuong_7.md",
+    "size_kb": 27.1,
+    "char_count": 27788,
+    "exercise_count": 42,
+    "sample_exercises": [
+      "Vận dụng trang 30 Toán lớp 6 Tập 2:",
+      "Bài 7.1trang 30 Toán lớp 6 Tập 2:",
+      "Bài 7.2trang 30 Toán lớp 6 Tập 2:",
+      "Bài 7.3trang 30 Toán lớp 6 Tập 2:"
+    ]
+  },
+  {
+    "chapter": 8,
+    "title": "Chương 8: Những hình hình học cơ bản",
+    "file": "de_bai_loi_giai_chuong_8.md",
+    "size_kb": 53.2,
+    "char_count": 54432,
+    "exercise_count": 53,
+    "sample_exercises": [
+      "Vận dụng trang 46 Toán lớp 6 Tập 2:",
+      "Thử thách nhỏ trang 47 Toán lớp 6 Tập 2:",
+      "Bài 8.1trang 47 Toán lớp 6 Tập 2:",
+      "Bài 8.2trang 47 Toán lớp 6 Tập 2:"
+    ]
+  },
+  {
+    "chapter": 9,
+    "title": "Chương 9: Dữ liệu và xác suất thực nghiệm",
+    "file": "de_bai_loi_giai_chuong_9.md",
+    "size_kb": 48.8,
+    "char_count": 49943,
+    "exercise_count": 41,
+    "sample_exercises": [
+      "Luyện tập 1 trang 69 Toán lớp 6 Tập 2:",
+      "Bài 9.1 trang 72 Toán lớp 6 Tập 2:",
+      "Bài 9.2 trang 72 Toán lớp 6 Tập 2:",
+      "Bài 9.3 trang 72 Toán lớp 6 Tập 2:"
+    ]
+  }
+]

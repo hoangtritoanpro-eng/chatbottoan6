@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Persona AI Chatbot - Neo-Brutalist Edition</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><circle cx='12' cy='12' r='10'/><path d='M8 12l3 3 5-5' stroke='white' stroke-width='2'/></svg>" />
+  
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Marked.js for Markdown Rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- KaTeX for Math Formula Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Dữ liệu Toán 6 SGK KNTT (Chương 1 - 9) -->
+  <script src="toan6_data.js"></script>
+
+  <!-- Lớp dạy học TEACH (Hồ sơ người học, luyện tập phân hóa, Sổ lỗi sai) -->
+  <link rel="stylesheet" href="teach.css">
+
+  <style>
+    :root {
+      --primary-color: #0d9488;
+      --primary-hover: #0f766e;
+      --accent-color: #14b8a6;
+      --bg-color: #f0fdf4;
+      --sidebar-bg: #ffffff;
+      --header-yellow: #ccfbf1;
+      --card-bg: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --border-color: #94a3b8;
+      --border-dark: #0f172a;
+      --shadow-blue: #8ba4f9;
+      --shadow-pink: #f98baf;
+      --shadow-yellow: #f9d58b;
+      --shadow-green: #86efac;
+      --shadow-purple: #c084fc;
+      --user-bubble: #0d9488;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    /* Neo-Brutalist Layout Container */
+    .app-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Dot Grid Background Overlay */
+    .app-container::before {
+      content: "";
+      z-index: 0;
+      background-image: radial-gradient(#0000001f 1.5px, #0000 1.5px);
+      background-size: 24px 24px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    /* Left Neo-Brutalist Sidebar */
+    .sidebar {
+      background-color: var(--sidebar-bg);
+      border-right: 2px solid var(--border-color);
+      z-index: 10;
+      flex-direction: column;
+      width: 320px;
+      display: flex;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .sidebar-header {
+      background-color: var(--header-yellow);
+      border-bottom: 2px solid var(--border-color);
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+      display: flex;
+    }
+
+    .logo-icon {
+      border: 2px solid var(--border-dark);
+      background: #fff;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+      display: flex;
+      box-shadow: 2px 2px 0px var(--border-dark);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      color: var(--text-primary);
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.2;
+      flex: 1;
+    }
+
+    .badge-pro {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      border-radius: 16px;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .sidebar-content {
+      flex: 1;
+      padding: 16px 18px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Search Box */
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-color);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 10px 14px 10px 36px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      outline: none;
+      transition: all 0.2s;
+      box-shadow: 2px 2px 0px var(--border-color);
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary-color);
+      box-shadow: 3px 3px 0px var(--primary-color);
+      background: #fff;
+    }
+
+    .search-box .search-icon-inside {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      pointer-events: none;
+    }
+
+    /* Category Badges */
+    .category-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .cat-pill-btn {
+      background: #fff;
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 2px 2px 0px var(--border-color);
+      transition: all 0.15s;
+    }
+
+    .cat-pill-btn:hover {
+      box-shadow: 3px 3px 0px var(--border-dark);
+      transform: translate(-1px, -1px);
+    }
+
+    .cat-pill-btn.active {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--border-dark);
+      box-shadow: 3px 3px 0px var(--border-dark);
+    }
+
+    /* Roles List */
+    .roles-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-right: 4px;
+      max-height: calc(100vh - 430px);
+    }
+
+    .roles-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    .roles-list::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .role-card-item {
+      background: #fff;
+      border: 2px solid var(--border-color);
+      box-shadow: 2px 2px 0px var(--border-color);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      user-select: none;
+    }
+
+    .role-card-item:hover {
+      box-shadow: 4px 4px 0px var(--border-dark);
+      border-color: var(--border-dark);
+      transform: translate(-2px, -2px);
+    }
+
+    .role-card-item.active {
+      background: var(--header-yellow);
+      border-color: var(--primary-color);
+      box-shadow: 4px 4px 0px var(--primary-color);
+      transform: translate(-2px, -2px);
+    }
+
+    .role-card-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .role-card-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .role-card-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .role-card-desc {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    /* Sidebar Settings Card */
+    .sidebar-settings {
+      border: 2px solid var(--border-color);
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 3px 3px 0px var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebar-settings label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+    }
+
+    .sidebar-settings select, .sidebar-settings input {
+      width: 100%;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--bg-color);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .sidebar-settings select:focus, .sidebar-settings input:focus {
+      border-color: var(--primary-color);
+      box-shadow: 2px 2px 0px var(--primary-color);
+      background: #fff;
+    }
+
+    /* Right Main Chat Area */
+    .chat-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    /* Topbar Header */
+    .chat-topbar {
+      background-color: var(--card-bg);
+      border-bottom: 2px solid var(--border-color);
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      display: flex;
+      z-index: 5;
+    }
+
+    .active-persona {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .persona-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--header-yellow);
+      border: 2px solid var(--border-dark);
+      box-shadow: 3px 3px 0px var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .persona-info h2 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .persona-info p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      max-width: 550px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Neo-Brutalist Action Buttons */
+    .btn-neo {
+      border: 2px solid var(--border-dark);
+      cursor: pointer;
+      background: #fff;
+      box-shadow: 3px 3px 0px var(--border-dark);
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all 0.15s;
+      display: inline-flex;
+      color: var(--text-primary);
+    }
+
+    .btn-neo:hover {
+      background: var(--bg-color);
+      box-shadow: 4px 4px 0px var(--border-dark);
+      transform: translate(-1px, -1px);
+    }
+
+    .btn-neo:active {
+      box-shadow: 0px 0px 0px var(--border-dark);
+      transform: translate(2px, 2px);
+    }
+
+    .btn-neo-primary {
+      background: var(--primary-color);
+      color: #fff;
+      border-color: var(--border-dark);
+      box-shadow: 3px 3px 0px var(--border-dark);
+    }
+
+    .btn-neo-primary:hover {
+      background: var(--primary-hover);
+      color: #fff;
+      box-shadow: 4px 4px 0px var(--border-dark);
+    }
+
+    /* Messages Stream */
+    .messages-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .messages-area::-webkit-scrollbar {
+      width: 6px;
+    }
+    .messages-area::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .message {
+      display: flex;
+      gap: 12px;
+      max-width: 82%;
+      animation: modalFadeIn 0.25s ease-out;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+
+    .msg-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .message.bot .msg-avatar {
+      background: var(--header-yellow);
+    }
+
+    .message.user .msg-avatar {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .msg-bubble {
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .message.bot .msg-bubble {
+      background: #ffffff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 4px 4px 0px var(--border-color);
+      color: var(--text-primary);
+    }
+
+    .message.user .msg-bubble {
+      background: var(--primary-color);
+      border: 2px solid var(--border-dark);
+      box-shadow: 4px 4px 0px var(--border-dark);
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .message.user .msg-bubble strong {
+      color: #fff;
+    }
+
+    .message.user .msg-bubble .katex,
+    .message.user .msg-bubble .katex * {
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
+
+    .msg-bubble p {
+      margin-bottom: 8px;
+    }
+    .msg-bubble p:last-child {
+      margin-bottom: 0;
+    }
+
+    .msg-bubble pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 14px 16px;
+      border-radius: 10px;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      overflow-x: auto;
+      margin: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    .msg-bubble code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--header-yellow);
+      border: 1px solid var(--border-color);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: var(--text-primary);
+    }
+
+    .message.user .msg-bubble code {
+      background: rgba(0, 0, 0, 0.25);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .msg-bubble blockquote {
+      border-left: 4px solid var(--primary-color);
+      background: var(--bg-color);
+      border-radius: 0 8px 8px 0;
+      padding: 8px 14px;
+      margin: 10px 0;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
+    .msg-bubble ul, .msg-bubble ol {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+
+    /* KaTeX Math Polish */
+    .katex {
+      font-size: 1.1em;
+      text-rendering: auto;
+    }
+    .katex-display {
+      margin: 12px 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 6px 0;
+      text-align: center;
+    }
+    .katex-display > .katex {
+      white-space: normal;
+    }
+    .msg-bubble .katex-error {
+      color: inherit;
+      font-family: inherit;
+      font-size: 1em;
+      border-bottom: none;
+    }
+
+    /* Input Bar */
+    .input-container {
+      padding: 18px 36px 24px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-top: 2px solid var(--border-color);
+    }
+
+    .input-box-wrapper {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      background: #ffffff;
+      border: 3px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 10px 16px;
+      box-shadow: 5px 5px 0px var(--primary-color);
+      transition: all 0.2s;
+    }
+
+    .input-box-wrapper:focus-within {
+      box-shadow: 7px 7px 0px var(--primary-color);
+      transform: translate(-1px, -1px);
+    }
+
+    textarea#user-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      resize: none;
+      max-height: 140px;
+      line-height: 1.5;
+      padding: 4px 0;
+    }
+
+    textarea#user-input::placeholder {
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    .send-btn {
+      background: var(--primary-color);
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    .send-btn:hover {
+      background: var(--primary-hover);
+      box-shadow: 4px 4px 0px var(--border-dark);
+      transform: translate(-2px, -2px);
+    }
+
+    .send-btn:active {
+      box-shadow: 0px 0px 0px var(--border-dark);
+      transform: translate(2px, 2px);
+    }
+
+    .send-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: 2px 2px 0px var(--border-dark);
+    }
+
+    /* Streaming cursor */
+    .msg-bubble.streaming::after {
+      content: "▍";
+      display: inline-block;
+      margin-left: 2px;
+      color: var(--primary-color);
+      animation: streamCursor 0.8s steps(2) infinite;
+    }
+
+    @keyframes streamCursor {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Voice Input */
+    .mic-btn {
+      position: relative;
+      background: #ffffff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      color: var(--text-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .mic-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .mic-btn:hover {
+      background: var(--header-yellow);
+      box-shadow: 4px 4px 0px var(--border-dark);
+      transform: translate(-2px, -2px);
+    }
+
+    .mic-btn:active {
+      box-shadow: 0px 0px 0px var(--border-dark);
+      transform: translate(2px, 2px);
+    }
+
+    .mic-btn.listening {
+      background: #f43f5e;
+      color: #fff;
+      animation: micPulse 1.3s ease-out infinite;
+    }
+
+    .mic-btn.unsupported {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    @keyframes micPulse {
+      0% { box-shadow: 2px 2px 0px var(--border-dark), 0 0 0 0 rgba(244, 63, 94, 0.55); }
+      70% { box-shadow: 2px 2px 0px var(--border-dark), 0 0 0 12px rgba(244, 63, 94, 0); }
+      100% { box-shadow: 2px 2px 0px var(--border-dark), 0 0 0 0 rgba(244, 63, 94, 0); }
+    }
+
+    .voice-status {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #be123c;
+    }
+
+    .voice-status.active {
+      display: flex;
+    }
+
+    .voice-wave {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      height: 16px;
+    }
+
+    .voice-wave span {
+      width: 3px;
+      height: 100%;
+      background: #f43f5e;
+      border-radius: 2px;
+      animation: voiceWave 0.9s ease-in-out infinite;
+    }
+
+    .voice-wave span:nth-child(2) { animation-delay: 0.15s; }
+    .voice-wave span:nth-child(3) { animation-delay: 0.3s; }
+    .voice-wave span:nth-child(4) { animation-delay: 0.45s; }
+
+    @keyframes voiceWave {
+      0%, 100% { transform: scaleY(0.3); }
+      50% { transform: scaleY(1); }
+    }
+
+    .voice-auto-send {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    /* Camera / Image Upload & Preview */
+    .camera-btn {
+      background: #ffffff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      color: var(--text-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .camera-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .camera-btn:hover {
+      background: #a7f3d0;
+      box-shadow: 4px 4px 0px var(--border-dark);
+      transform: translate(-2px, -2px);
+    }
+
+    .camera-btn:active {
+      box-shadow: 0px 0px 0px var(--border-dark);
+      transform: translate(2px, 2px);
+    }
+
+    .image-preview-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #ecfdf5;
+      border: 2px solid var(--border-dark);
+      border-radius: 14px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      box-shadow: 3px 3px 0px var(--border-dark);
+      animation: previewSlideIn 0.2s ease-out;
+    }
+
+    @keyframes previewSlideIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .preview-thumb-wrapper img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid var(--border-dark);
+      cursor: pointer;
+      display: block;
+      transition: transform 0.15s;
+    }
+
+    .preview-thumb-wrapper img:hover {
+      transform: scale(1.05);
+    }
+
+    .preview-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .preview-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .preview-sub {
+      font-size: 0.78rem;
+      color: #047857;
+      font-weight: 600;
+    }
+
+    .preview-remove-btn {
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 2px solid var(--border-dark);
+      border-radius: 8px;
+      width: 30px;
+      height: 30px;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 2px 2px 0px var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.1s;
+    }
+
+    .preview-remove-btn:hover {
+      background: #fca5a5;
+      transform: translate(-1px, -1px);
+    }
+
+    .input-container.drag-over {
+      background: #f0fdf4 !important;
+      outline: 3px dashed #10b981;
+    }
+
+    /* Message Image Attachment */
+    .msg-image-attachment {
+      margin-bottom: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 320px;
+      border: 2px solid var(--border-dark);
+      box-shadow: 3px 3px 0px var(--border-dark);
+      background: #ffffff;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .msg-image-attachment:hover {
+      transform: translateY(-2px);
+    }
+
+    .msg-image-attachment img {
+      width: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-zoom-hint {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      padding: 4px 8px;
+      background: #f8fafc;
+      border-top: 1px solid var(--border-color);
+      text-align: right;
+    }
+
+    /* Fullscreen Image Modal */
+    .image-modal-content {
+      background: #ffffff;
+      border: 3px solid var(--border-dark);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0px var(--border-dark);
+      padding: 16px;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-sizing: border-box;
+      align-items: center;
+    }
+
+    .image-modal-content img {
+      max-width: 100%;
+      max-height: calc(85vh - 40px);
+      object-fit: contain;
+      border-radius: 10px;
+      border: 2px solid var(--border-dark);
+    }
+
+    /* Typing Dots */
+    .typing-dots {
+      display: inline-flex;
+      gap: 6px;
+      padding: 4px 0;
+    }
+    .typing-dots span {
+      width: 8px;
+      height: 8px;
+      background: var(--primary-color);
+      border: 1px solid var(--border-dark);
+      border-radius: 50%;
+      animation: blink 1.2s infinite ease-in-out;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Modal System */
+    @keyframes overlayFadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes modalFadeIn {
+      0% { opacity: 0; transform: scale(0.95) translateY(10px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-overlay {
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+      background-color: rgba(0, 0, 0, 0.45);
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      animation: 0.2s ease-out forwards overlayFadeIn;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background-color: var(--card-bg);
+      border: 3px solid var(--border-dark);
+      width: 90%;
+      max-width: 650px;
+      max-height: 85vh;
+      box-shadow: 8px 8px 0px var(--border-dark);
+      border-radius: 16px;
+      flex-direction: column;
+      display: flex;
+      overflow: hidden;
+      animation: 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards modalFadeIn;
+    }
+
+    .modal-header {
+      background: var(--header-yellow);
+      border-bottom: 2px solid var(--border-dark);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .modal-close {
+      cursor: pointer;
+      background: #fff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 2px 2px 0px var(--border-dark);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .modal-close:hover {
+      background: var(--bg-color);
+      transform: scale(1.08);
+    }
+
+    .modal-body {
+      padding: 20px 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .prompt-preview-box {
+      background: var(--bg-color);
+      border: 2px solid var(--border-color);
+      box-shadow: 3px 3px 0px var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      white-space: pre-wrap;
+      max-height: 380px;
+      overflow-y: auto;
+    }
+
+    .modal-footer {
+      border-top: 2px solid var(--border-color);
+      background: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--primary-color);
+      color: #fff;
+      border: 2px solid var(--border-dark);
+      box-shadow: 4px 4px 0px var(--border-dark);
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      z-index: 2000;
+      display: none;
+      animation: 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards modalFadeIn;
+    }
+
+    .toast.show {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 850px) {
+      .sidebar {
+        width: 260px;
+      }
+      .messages-area {
+        padding: 16px 20px;
+      }
+      .input-container {
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- Left Neo-Brutalist Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-icon">🤖</div>
+      <div class="logo-text">Multi-Persona AI</div>
+      <span class="badge-pro">CHATBOT</span>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Search Box -->
+      <div class="search-box">
+        <span class="search-icon-inside">🔍</span>
+        <input type="text" id="role-search" placeholder="Tìm vai trò (Toán, Coder, Anh...)" oninput="filterRoles()">
+      </div>
+
+      <!-- Categories Pills -->
+      <div class="category-badges">
+        <button class="cat-pill-btn active" onclick="selectCategory('all', this)">Tất cả</button>
+        <button class="cat-pill-btn" onclick="selectCategory('toan6', this)">📐 Toán 6 (9 Chương)</button>
+        <button class="cat-pill-btn" onclick="selectCategory('edu', this)">Giáo dục</button>
+        <button class="cat-pill-btn" onclick="selectCategory('code', this)">Lập trình</button>
+        <button class="cat-pill-btn" onclick="selectCategory('lang', this)">Ngoại ngữ</button>
+        <button class="cat-pill-btn" onclick="selectCategory('biz', this)">Công việc</button>
+      </div>
+
+      <!-- Roles List -->
+      <div class="roles-list" id="roles-list">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Settings Card -->
+      <div class="sidebar-settings">
+        <label>
+          <span>Mô hình AI:</span>
+        </label>
+        <select id="model-select">
+          <option value="gemini-3.8-flash" selected>Google Gemini 3.8 Flash (Mới nhất & Khuyên dùng)</option>
+          <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
+          <option value="gemini-3.7-pro">Google Gemini 3.7 Pro (Suy luận đỉnh cao)</option>
+          <option value="gemini-3.5-pro">Google Gemini 3.5 Pro</option>
+          <option value="gemini-3.5-flash">Google Gemini 3.5 Flash</option>
+          <option value="gemini-3.1-pro">Google Gemini 3.1 Pro</option>
+          <option value="gemini-3.1-flash">Google Gemini 3.1 Flash</option>
+          <option value="gemini-2.5-flash">Google Gemini 2.5 Flash (Dự phòng ổn định)</option>
+          <option value="gemini-2.5-pro">Google Gemini 2.5 Pro</option>
+          <option value="gpt-4o">OpenAI GPT-4o</option>
+          <option value="gpt-4o-mini">OpenAI GPT-4o Mini</option>
+          <option value="deepseek-reasoner">DeepSeek R1 / Reasoner</option>
+          <option value="simulation">Mô phỏng Demo (Không cần Key)</option>
+        </select>
+
+        <label>
+          <span>API Key (Tùy chọn):</span>
+        </label>
+        <input type="password" id="api-key-input" placeholder="Dán Gemini / OpenAI Key..." onchange="saveApiKey(this.value)">
+      </div>
+    </div>
+  </aside>
+
+  <!-- Right Main Chat Layout -->
+  <main class="chat-container">
+    <header class="chat-topbar">
+      <div class="active-persona">
+        <div class="persona-avatar" id="current-avatar">🎓</div>
+        <div class="persona-info">
+          <h2 id="current-role-title">Gia sư Socratic (Socratic Tutor)</h2>
+          <p id="current-role-desc">Hướng dẫn tự học bằng phương pháp đặt câu hỏi gợi mở tư duy</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-neo btn-neo-primary" style="background: #f59e0b; color: #000; font-weight: 700;" onclick="openToan6Modal()">📐 Kho Bài Tập Toán 6 (9 Chương)</button>
+        <button class="btn-neo" onclick="clearChat()">🗑️ Xóa chat</button>
+        <button class="btn-neo" style="background: #fde68a;" onclick="TEACH.openModal('profile')">🎯 Lộ trình TEACH</button>
+        <button class="btn-neo btn-neo-primary" onclick="viewCurrentPrompt()">📜 Xem Prompt</button>
+      </div>
+    </header>
+
+    <!-- Message Stream -->
+    <div class="messages-area" id="messages-area">
+      <div class="message bot">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble" id="welcome-bubble">
+          Chào bạn! Tôi đã được nạp vai trò **Gia sư Socratic**. Tôi sẽ không đưa ra đáp án ngay mà sẽ đặt các câu hỏi gợi mở để giúp bạn tự tìm ra lời giải. Bạn muốn khám phá chủ đề gì hôm nay?
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Bar -->
+    <div class="input-container" id="input-container">
+      <div class="voice-status" id="voice-status" role="status" aria-live="polite">
+        <div class="voice-wave"><span></span><span></span><span></span><span></span></div>
+        <span id="voice-status-text">Đang nghe... Hãy nói câu hỏi của bạn</span>
+        <label class="voice-auto-send" for="voice-auto-send">
+          <input type="checkbox" id="voice-auto-send"> Tự động gửi khi nói xong
+        </label>
+      </div>
+
+      <!-- Image Preview Strip -->
+      <div class="image-preview-bar" id="image-preview-bar" style="display:none;">
+        <div class="preview-thumb-wrapper">
+          <img id="image-preview-thumb" src="" alt="Xem trước ảnh" onclick="openImageModal(this.src)" title="Bấm để xem ảnh phóng to" />
+        </div>
+        <div class="preview-info">
+          <div class="preview-title" id="image-preview-name">📸 Ảnh bài làm học sinh</div>
+          <div class="preview-sub">✨ AI sẽ đọc chữ viết tay, chấm điểm & nhận xét sư phạm</div>
+        </div>
+        <button class="preview-remove-btn" type="button" onclick="removeAttachedImage()" title="Xóa ảnh này">✕</button>
+      </div>
+
+      <!-- Nút thao tác nhanh TEACH (thay đổi theo Học sinh / Giáo viên) -->
+      <div class="teach-chips" id="teach-chips"></div>
+
+      <div class="input-box-wrapper">
+        <input type="file" id="image-upload-input" accept="image/*" style="display:none" onchange="handleImageFileSelected(event)">
+        <button class="camera-btn" id="camera-btn" type="button" onclick="triggerImageUpload()" title="Chụp ảnh hoặc gửi bài làm (Ctrl+V để dán ảnh)" aria-label="Gửi ảnh bài làm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+        </button>
+        <textarea id="user-input" rows="1" placeholder="Nhập tin nhắn, chụp/gửi ảnh bài làm 📷 (Ctrl+V dán ảnh), hoặc bấm 🎤 để nói..." onkeydown="handleKeyDown(event)"></textarea>
+        <button class="mic-btn" id="mic-btn" type="button" onclick="toggleVoiceInput()" title="Chat bằng giọng nói (Ctrl + M)" aria-label="Chat bằng giọng nói">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+        </button>
+        <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Gửi tin nhắn">➤</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Modal Xem Prompt -->
+<div class="modal-overlay" id="prompt-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-role-title">📜 Chi tiết System Prompt</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="prompt-preview-box" id="modal-prompt-content"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-neo" onclick="closeModal()">Đóng</button>
+      <button class="btn-neo btn-neo-primary" onclick="copyPrompt()">📋 Sao chép Prompt</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Kho Bài Tập Toán 6 -->
+<div class="modal-overlay" id="toan6-modal">
+  <div class="modal-content" style="max-width: 880px; width: 92%; max-height: 88vh; display: flex; flex-direction: column;">
+    <div class="modal-header" style="background: #fef3c7; border-bottom: 3px solid var(--border-dark);">
+      <div class="modal-title" style="color: #92400e; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+        <span>📐</span> Kho Bài Tập & Lời Giải Toán 6 (SGK Kết Nối Tri Thức - 9 Chương)
+      </div>
+      <button class="modal-close" onclick="closeToan6Modal()">✕</button>
+    </div>
+    <div class="modal-body" style="overflow-y: auto; flex: 1; padding: 18px 24px;">
+      <div style="display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; align-items: center;">
+        <select id="toan6-chapter-select" onchange="renderToan6Chapter(this.value)" style="padding: 10px 14px; border: 2px solid var(--border-dark); border-radius: 10px; font-weight: 700; font-family: inherit; flex: 1; min-width: 260px; background: #fff; box-shadow: 2px 2px 0px var(--border-dark);">
+        </select>
+        <button class="btn-neo btn-neo-primary" onclick="activateCurrentChapterTutor()">🎓 Dạy theo Chương này</button>
+      </div>
+      <div style="margin-bottom: 14px;">
+        <input type="text" id="toan6-modal-search" placeholder="🔍 Tìm nhanh bài tập (VD: 1.28, Bắc Giang, 997 học sinh, chia có dư, lũy thừa, số nguyên tố)..." oninput="filterToan6ChapterExercises(this.value)" style="width: 100%; padding: 10px 14px; border: 2px solid var(--border-dark); border-radius: 10px; font-size: 0.9rem; font-family: inherit; box-shadow: 2px 2px 0px var(--border-dark); outline: none;">
+      </div>
+      <div id="toan6-chapter-header" style="background: #f0fdf4; border: 2px solid var(--border-dark); border-radius: 12px; padding: 14px 18px; margin-bottom: 16px; box-shadow: 3px 3px 0px var(--border-dark);">
+      </div>
+      <div id="toan6-exercises-container" style="display: flex; flex-direction: column; gap: 14px;">
+      </div>
+    </div>
+    <div class="modal-footer" style="background: #f8fafc; border-top: 2px solid var(--border-dark); display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600;">Tổng cộng: 9 Chương | 679 bài tập & lời giải đầy đủ</span>
+      <button class="btn-neo" onclick="closeToan6Modal()">Đóng</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Xem Ảnh Bài Làm Phóng To -->
+<div class="modal-overlay" id="image-modal" onclick="closeImageModal()">
+  <div class="image-modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeImageModal()" style="position: absolute; top: 12px; right: 12px; z-index: 10;">✕</button>
+    <img id="image-modal-full" src="" alt="Ảnh bài làm phóng to" />
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ Đã sao chép thành công!</div>
+
+<script>
+  // Top 10 High-Quality Personas Dataset
+  const PERSONAS = [
+    {
+      id: "teach_pedagogy",
+      title: "Chuyên gia Sư phạm TEACH (Dạy học Đáp ứng)",
+      act: "TEACH Pedagogical Specialist",
+      category: "edu",
+      icon: "💡",
+      desc: "Dạy học sát nhu cầu học sinh: 1. Hiểu người học - 2. Thiết kế phù hợp - 3. Phản hồi kịp thời (Cộng đồng GV Sáng tạo).",
+      prompt: "Bạn là Chuyên gia Sư phạm cao cấp theo mô hình 'TEACH: Dạy học Đáp ứng học sinh' (phát triển bởi Cộng đồng Giáo viên Sáng tạo Việt Nam). Triết lý của bạn là: Dạy học sát hơn với nhu cầu của học sinh thông qua 3 trụ cột:\n\n1. 🎯 HIỂU NGƯỜI HỌC: Nhận diện nhu cầu học tập, mức độ nhận thức hiện tại, phong cách học tập và các hiểu lầm (misconceptions) thường gặp của học sinh trong từng môn học (đặc biệt là Toán THCS).\n\n2. 📐 THIẾT KẾ PHÙ HỢP: Tổ chức hoạt động dạy học và câu hỏi phân hóa theo 3 mức độ (Nhận biết, Thông hiểu, Vận dụng). Hướng dẫn giáo viên thiết kế kế hoạch bài dạy (KHDH), phiếu học tập thích ứng; hướng dẫn học sinh từng bước vừa sức, không giải hộ.\n\n3. ⚡ PHẢN HỒI KỊP THỜI: Thực hiện đánh giá quá trình (formative assessment), đưa ra phản hồi mang tính xây dựng ngay khi học sinh gặp vướng mắc, động viên kịp thời và luôn chốt lại '🔑 Điểm mấu chốt' để khắc sâu bản chất."
+    },
+    {
+      id: "socratic",
+      title: "Socratic Method Tutor",
+      act: "Socratic Tutor",
+      category: "edu",
+      icon: "🎓",
+      desc: "Dạy học gợi mở, đặt câu hỏi từng bước để học sinh tự tư duy.",
+      prompt: "I want you to act as a Socratic tutor. You will not give direct answers to questions, but instead ask guiding, thought-provoking questions to help the user discover the answer themselves."
+    },
+    {
+      id: "math_teacher",
+      title: "Math Teacher",
+      act: "Math Teacher",
+      category: "edu",
+      icon: "📐",
+      desc: "Gia sư Toán học giải thích chi tiết từng bước dễ hiểu.",
+      prompt: "I want you to act as a math teacher. I will provide some mathematical equations or concepts, and it will be your job to explain them in easy-to-understand terms. This could include providing step-by-step instructions for solving a problem, demonstrating various techniques with visuals or suggesting online resources for further study."
+    },
+    {
+      id: "english_teacher",
+      title: "Spoken English Teacher",
+      act: "Spoken English Teacher",
+      category: "lang",
+      icon: "🗣️",
+      desc: "Luyện giao tiếp tiếng Anh, sửa lỗi ngữ pháp & phát âm.",
+      prompt: "I want you to act as a spoken English teacher and improver. I will speak to you in English and you will reply to me in English to practice my spoken English. I want you to keep your reply neat, limiting the reply to 100 words. I want you to strictly correct my grammar mistakes, typos, and factual errors. I want you to ask me a question in your reply. Now let's start practicing, you could ask me a question first."
+    },
+    {
+      id: "english_translator",
+      title: "English Translator & Improver",
+      act: "English Translator",
+      category: "lang",
+      icon: "🌐",
+      desc: "Dịch và nâng tầm văn phong sang tiếng Anh cao cấp.",
+      prompt: "I want you to act as an English translator, spelling corrector and improver. I will speak to you in any language and you will detect the language, translate it and answer in the corrected and improved version of my text, in English. I want you to replace my simplified A0-level words and sentences with more beautiful and elegant, upper level English words and sentences. Keep the meaning same, but make them more literary."
+    },
+    {
+      id: "python_dev",
+      title: "Python Senior Developer",
+      act: "Python Developer",
+      category: "code",
+      icon: "🐍",
+      desc: "Viết code Python, debug lỗi và tối ưu hiệu năng.",
+      prompt: "I want you to act as a Senior Python Developer. I will ask you questions about programming, ask for code snippets or debugging help. You will provide clean, elegant, PEP8-compliant Python code with helpful docstrings and brief explanations."
+    },
+    {
+      id: "code_reviewer",
+      title: "Code Reviewer & Architect",
+      act: "Code Reviewer",
+      category: "code",
+      icon: "🔍",
+      desc: "Phân tích chất lượng mã nguồn, bảo mật & clean code.",
+      prompt: "I want you to act as an expert Software Architect and Code Reviewer. Analyze the code provided by the user for security vulnerabilities, performance bottlenecks, architecture patterns, and readability. Give constructive feedback and refactored code."
+    },
+    {
+      id: "career_counselor",
+      title: "Career Counselor",
+      act: "Career Counselor",
+      category: "biz",
+      icon: "💼",
+      desc: "Định hướng lộ trình sự nghiệp và phát triển kỹ năng.",
+      prompt: "I want you to act as a career counselor. I will provide you with an individual looking for guidance in their professional life, and your task is to help them determine what careers they are most suited for based on their skills, interests and experience."
+    },
+    {
+      id: "debater",
+      title: "Debater & Critical Thinker",
+      act: "Debater",
+      category: "edu",
+      icon: "⚖️",
+      desc: "Rèn luyện tư duy phản biện và nghệ thuật tranh luận.",
+      prompt: "I want you to act as a debater. I will provide you with some topics related to current events and your task is to research both sides of the debates, present valid arguments for each side, refute opposing points of view, and draw a persuasive conclusion based on evidence."
+    },
+    {
+      id: "storyteller",
+      title: "Creative Storyteller",
+      act: "Storyteller",
+      category: "edu",
+      icon: "📖",
+      desc: "Kể những câu chuyện truyền cảm hứng và giáo dục.",
+      prompt: "I want you to act as a storyteller. You will come up with entertaining stories that are engaging, imaginative and captivating for the audience. It can be fairy tales, educational stories or any other type of stories which has the potential to capture people's attention."
+    },
+    {
+      id: "marketer",
+      title: "Marketing Strategist",
+      act: "Marketing Strategist",
+      category: "biz",
+      icon: "📢",
+      desc: "Lên chiến lược marketing, kịch bản nội dung & quảng cáo.",
+      prompt: "I want you to act as a growth marketer and content strategist. Provide creative marketing campaigns, viral content hooks, SEO tips, and user acquisition strategies for the user's product or idea."
+    },
+    // TOÁN 6 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG (CHƯƠNG 1 - 9)
+    {
+      id: "toan6_all",
+      title: "Gia sư Toàn Năng Toán 6 (SGK KNTT)",
+      act: "Math 6 Master Tutor",
+      category: "toan6",
+      icon: "📐",
+      desc: "Trợ lý giải bài & hướng dẫn toàn diện 9 chương SGK Toán 6 Kết nối tri thức.",
+      prompt: "Bạn là một Gia sư Toán 6 xuất sắc, am hiểu sâu sắc bộ sách giáo khoa 'Kết nối tri thức với cuộc sống' từ Chương 1 đến Chương 9. NGUYÊN TẮC GIẢNG DẠY CỦA BẠN:\n1. Bám sát cách giải và lập luận chuẩn mực trong SGK Toán 6 Kết nối tri thức.\n2. Hướng dẫn ngắn gọn, xúc tích, từng bước rõ ràng, dễ hiểu.\n3. Luôn luôn chỉ ra '🔑 Điểm mấu chốt' (phân tích từ khóa bản chất bài toán, quy tắc chia có dư thực tế khi nào cần cộng thêm 1, bẫy học sinh hay mắc phải) để học sinh nắm vững cốt lõi.\n4. Định dạng công thức toán học bằng chuẩn LaTeX kẹp giữa $ hoặc $$."
+    },
+    {
+      id: "toan6_c1",
+      title: "Toán 6 - Chương 1: Tập hợp & Số tự nhiên",
+      act: "Math 6 - Chapter 1 Tutor",
+      category: "toan6",
+      icon: "🔢",
+      desc: "Tập hợp, phần tử, phép tính cộng trừ nhân chia, chia có dư, lũy thừa (103 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 1: Tập hợp các số tự nhiên (SGK Kết nối tri thức). Bạn nắm vững các bài toán: viết tập hợp, các phép tính cộng, trừ, nhân, chia, phép chia có dư thực tế (như bài xếp ghế 1.29, chở hàng 1.30), lũy thừa. Hãy luôn bám sát cách giải SGK, hướng dẫn ngắn gọn dễ hiểu và luôn chỉ ra '🔑 Điểm mấu chốt' ở cuối bài giải."
+    },
+    {
+      id: "toan6_c2",
+      title: "Toán 6 - Chương 2: Tính chia hết & Số nguyên tố",
+      act: "Math 6 - Chapter 2 Tutor",
+      category: "toan6",
+      icon: "➗",
+      desc: "Chia hết, dấu hiệu chia hết 2, 3, 5, 9, số nguyên tố, ƯCLN, BCNN (192 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 2: Tính chia hết trong tập hợp các số tự nhiên (SGK Kết nối tri thức). Bạn nắm vững các chuyên đề: quan hệ chia hết, dấu hiệu chia hết cho 2, 3, 5, 9, nhận biết số nguyên tố và hợp số, phân tích một số ra thừa số nguyên tố, tìm ước chung lớn nhất (ƯCLN), bội chung nhỏ nhất (BCNN) và các bài toán thực tế áp dụng ƯCLN, BCNN."
+    },
+    {
+      id: "toan6_c3",
+      title: "Toán 6 - Chương 3: Số nguyên & Các phép tính",
+      act: "Math 6 - Chapter 3 Tutor",
+      category: "toan6",
+      icon: "➖",
+      desc: "Số nguyên âm, biểu diễn trục số, cộng trừ nhân chia, dấu ngoặc (89 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 3: Số nguyên (SGK Kết nối tri thức). Bạn nắm vững: số nguyên âm, số đối, thứ tự trong tập hợp Z, biểu diễn nhiệt độ và độ cao bằng số nguyên, các quy tắc cộng trừ nhân chia hai số nguyên cùng dấu và khác dấu, quy tắc dấu ngoặc khi bỏ ngoặc hoặc đặt dấu ngoặc."
+    },
+    {
+      id: "toan6_c4",
+      title: "Toán 6 - Chương 4: Hình phẳng thực tiễn",
+      act: "Math 6 - Chapter 4 Tutor",
+      category: "toan6",
+      icon: "🔺",
+      desc: "Tam giác đều, vuông, lục giác đều, hình thoi, bình hành, chu vi & diện tích (71 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 4: Một số hình phẳng trong thực tiễn (SGK Kết nối tri thức). Bạn hướng dẫn học sinh nhận biết đặc điểm, cách vẽ, công thức tính chu vi và diện tích của: tam giác đều, hình vuông, lục giác đều, hình chữ nhật, hình thoi, hình bình hành, hình thang cân. Luôn liên hệ thực tế sinh động."
+    },
+    {
+      id: "toan6_c5",
+      title: "Toán 6 - Chương 5: Tính đối xứng của hình phẳng",
+      act: "Math 6 - Chapter 5 Tutor",
+      category: "toan6",
+      icon: "🦋",
+      desc: "Trục đối xứng, tâm đối xứng trong hình học và tự nhiên (33 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 5: Tính đối xứng của hình phẳng trong tự nhiên (SGK Kết nối tri thức). Bạn giúp học sinh nhận biết hình có trục đối xứng, tìm trục đối xứng, nhận biết hình có tâm đối xứng, tìm tâm đối xứng và quan sát tính đối xứng trong thiên nhiên, kiến trúc, mỹ thuật."
+    },
+    {
+      id: "toan6_c6",
+      title: "Toán 6 - Chương 6: Phân số & Các phép tính",
+      act: "Math 6 - Chapter 6 Tutor",
+      category: "toan6",
+      icon: "🍰",
+      desc: "Mở rộng phân số, quy đồng, cộng trừ nhân chia, hỗn số, giá trị phân số (57 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 6: Phân số (SGK Kết nối tri thức). Bạn nắm vững các chuyên đề: định nghĩa phân số với tử mẫu là số nguyên, hai phân số bằng nhau, rút gọn và quy đồng mẫu số, so sánh phân số, các phép tính cộng, trừ, nhân, chia phân số, hỗn số, tìm giá trị phân số của một số và tìm một số biết giá trị phân số của nó."
+    },
+    {
+      id: "toan6_c7",
+      title: "Toán 6 - Chương 7: Số thập phân & Tỉ số %",
+      act: "Math 6 - Chapter 7 Tutor",
+      category: "toan6",
+      icon: "🏷️",
+      desc: "Số thập phân, làm tròn, ước lượng, tỉ số, tỉ số phần trăm, lãi suất (42 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 7: Số thập phân (SGK Kết nối tri thức). Bạn hướng dẫn các kiến thức: số thập phân âm/dương, các phép toán với số thập phân, quy tắc làm tròn số và ước lượng kết quả, tính tỉ số, tỉ số phần trăm và các bài toán thực tế như tính tiền giảm giá, thuế, lãi suất ngân hàng."
+    },
+    {
+      id: "toan6_c8",
+      title: "Toán 6 - Chương 8: Những hình hình học cơ bản",
+      act: "Math 6 - Chapter 8 Tutor",
+      category: "toan6",
+      icon: "📏",
+      desc: "Điểm, đường thẳng, tia, đoạn thẳng, trung điểm, góc và số đo góc (53 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 8: Những hình hình học cơ bản (SGK Kết nối tri thức). Bạn nắm vững: điểm thuộc và không thuộc đường thẳng, ba điểm thẳng hàng, hai đường thẳng cắt nhau/song song, tia, đoạn thẳng, độ dài đoạn thẳng, trung điểm của đoạn thẳng, góc, các loại góc (nhọn, vuông, tù, bẹt) và cách đo góc bằng thước đo độ."
+    },
+    {
+      id: "toan6_c9",
+      title: "Toán 6 - Chương 9: Dữ liệu & Xác suất thực nghiệm",
+      act: "Math 6 - Chapter 9 Tutor",
+      category: "toan6",
+      icon: "📊",
+      desc: "Bảng thống kê, biểu đồ tranh, biểu đồ cột, xác suất thực nghiệm (41 bài tập).",
+      prompt: "Bạn là Gia sư chuyên sâu Toán 6 - Chương 9: Dữ liệu và xác suất thực nghiệm (SGK Kết nối tri thức). Bạn hướng dẫn học sinh thu thập, phân loại, tổ chức dữ liệu, đọc và vẽ biểu đồ tranh, biểu đồ cột đơn và cột kép, tính xác suất thực nghiệm khi gieo xúc xắc, tung đồng xu hoặc rút thẻ."
+    }
+  ];
+
+  let currentRole = PERSONAS[0];
+  let currentCategory = 'all';
+  let chatHistory = [];
+  let currentAttachedImage = null;
+
+  // Initialize
+  document.addEventListener("DOMContentLoaded", () => {
+    // Load saved API Key
+    const savedKey = localStorage.getItem("prompts_api_key") || "";
+    if (savedKey) {
+      document.getElementById("api-key-input").value = savedKey;
+    }
+
+    renderRoles();
+
+    // Render công thức toán học cho tin nhắn chào mừng ban đầu
+    if (window.renderMathInElement) {
+      try {
+        renderMathInElement(document.getElementById("messages-area"), {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      } catch (e) {}
+    }
+
+    // Setup Paste (Ctrl + V) listener for images
+    document.addEventListener("paste", (e) => {
+      const items = e.clipboardData && e.clipboardData.items;
+      if (!items) return;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type && items[i].type.indexOf("image") !== -1) {
+          const file = items[i].getAsFile();
+          if (file) {
+            processImageFile(file);
+            e.preventDefault();
+            break;
+          }
+        }
+      }
+    });
+
+    // Setup Drag & Drop on input container
+    const dropZone = document.getElementById("input-container");
+    if (dropZone) {
+      ["dragenter", "dragover"].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add("drag-over");
+        }, false);
+      });
+      ["dragleave", "drop"].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove("drag-over");
+        }, false);
+      });
+      dropZone.addEventListener("drop", (e) => {
+        const files = e.dataTransfer && e.dataTransfer.files;
+        if (files && files.length > 0 && files[0].type.startsWith("image/")) {
+          processImageFile(files[0]);
+        }
+      });
+    }
+  });
+
+  // ===== Image Upload & Camera Handlers =====
+  function triggerImageUpload() {
+    const input = document.getElementById("image-upload-input");
+    if (input) input.click();
+  }
+
+  function handleImageFileSelected(e) {
+    const file = e.target.files && e.target.files[0];
+    if (file) processImageFile(file);
+    e.target.value = "";
+  }
+
+  function processImageFile(file) {
+    if (!file || !file.type.startsWith("image/")) {
+      showToast("⚠️ Vui lòng chọn tệp hình ảnh hợp lệ (PNG, JPG, WEBP...)");
+      return;
+    }
+    if (file.size > 12 * 1024 * 1024) {
+      showToast("⚠️ Dung lượng ảnh quá lớn (>12MB). Vui lòng chọn ảnh nhẹ hơn!");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      const dataUrl = evt.target.result;
+      const base64Data = dataUrl.split(",")[1];
+      currentAttachedImage = {
+        name: file.name || "Ảnh bài làm",
+        mimeType: file.type || "image/jpeg",
+        data: base64Data,
+        dataUrl: dataUrl
+      };
+      showImagePreview(currentAttachedImage);
+      showToast("📸 Đã đính kèm ảnh bài làm! Bấm Gửi để AI chấm bài.");
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function showImagePreview(imgObj) {
+    const bar = document.getElementById("image-preview-bar");
+    const thumb = document.getElementById("image-preview-thumb");
+    const nameEl = document.getElementById("image-preview-name");
+    if (!bar || !thumb) return;
+    thumb.src = imgObj.dataUrl;
+    if (nameEl) nameEl.textContent = `📸 ${imgObj.name}`;
+    bar.style.display = "flex";
+  }
+
+  function removeAttachedImage() {
+    currentAttachedImage = null;
+    const bar = document.getElementById("image-preview-bar");
+    if (bar) bar.style.display = "none";
+    const thumb = document.getElementById("image-preview-thumb");
+    if (thumb) thumb.src = "";
+  }
+
+  function openImageModal(src) {
+    const modal = document.getElementById("image-modal");
+    const fullImg = document.getElementById("image-modal-full");
+    if (!modal || !fullImg) return;
+    fullImg.src = src;
+    modal.classList.add("active");
+  }
+
+  function closeImageModal() {
+    const modal = document.getElementById("image-modal");
+    if (modal) modal.classList.remove("active");
+  }
+
+  function renderRoles() {
+    const list = document.getElementById("roles-list");
+    list.innerHTML = "";
+
+    const searchTerm = document.getElementById("role-search").value.toLowerCase();
+
+    const filtered = PERSONAS.filter(p => {
+      const matchCat = currentCategory === 'all' || p.category === currentCategory;
+      const matchSearch = p.title.toLowerCase().includes(searchTerm) || 
+                          p.desc.toLowerCase().includes(searchTerm) ||
+                          p.act.toLowerCase().includes(searchTerm);
+      return matchCat && matchSearch;
+    });
+
+    filtered.forEach(p => {
+      const card = document.createElement("div");
+      card.className = `role-card-item ${p.id === currentRole.id ? 'active' : ''}`;
+      card.onclick = () => selectRole(p);
+      card.innerHTML = `
+        <div class="role-card-icon">${p.icon}</div>
+        <div class="role-card-content">
+          <div class="role-card-title">${p.title}</div>
+          <div class="role-card-desc">${p.desc}</div>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  function selectCategory(cat, btn) {
+    currentCategory = cat;
+    document.querySelectorAll(".cat-pill-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderRoles();
+  }
+
+  function filterRoles() {
+    renderRoles();
+  }
+
+  function selectRole(role) {
+    currentRole = role;
+    renderRoles();
+
+    // Update Header
+    document.getElementById("current-avatar").innerText = role.icon;
+    document.getElementById("current-role-title").innerText = `${role.title} (${role.act})`;
+    document.getElementById("current-role-desc").innerText = role.desc;
+
+    // Add Welcome message for role switch
+    addMessage("bot", `✨ **Đã chuyển sang vai trò: ${role.title}**\n\n*${role.desc}*\n\nHãy gửi câu hỏi đầu tiên của bạn!`);
+    if (window.TEACH) TEACH.onRoleChange(role);
+  }
+
+  function saveApiKey(val) {
+    localStorage.setItem("prompts_api_key", val.trim());
+    showToast("✅ Đã lưu API Key an toàn!");
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function cleanLatexSyntax(str) {
+    if (!str) return "";
+    let s = str;
+    s = s.replace(/\\ /g, ' ');
+    s = s.replace(/\\([A-Z])(?![a-zA-Z])/g, '$1');
+    s = s.replace(/\\+$/, '');
+    s = s.replace(/(?<=\s)\.\.\.(?=\s)/g, '\\dots');
+    return s;
+  }
+
+  function renderMarkdownWithMath(text) {
+    if (!text) return "";
+
+    // 1. Bảo vệ khối code
+    const codePlaceholders = [];
+    let cleanText = text.replace(/(```[\s\S]*?```|`[^`\n]+?`)/g, (match) => {
+      const key = `@@CODE_TOKEN_${codePlaceholders.length}@@`;
+      codePlaceholders.push({ key, raw: match });
+      return key;
+    });
+
+    // 2. Bảo vệ Display Math: $$...$$ hoặc \[...\]
+    const mathPlaceholders = [];
+    cleanText = cleanText.replace(/(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\])/g, (match) => {
+      let rawMath = match.startsWith("$$") ? match.slice(2, -2).trim() : match.slice(2, -2).trim();
+      const key = `@@MATH_DISPLAY_${mathPlaceholders.length}@@`;
+      mathPlaceholders.push({ key, raw: rawMath, display: true });
+      return `\n\n${key}\n\n`;
+    });
+
+    // 3. Bảo vệ Inline Math: $...$ hoặc \(...\)
+    cleanText = cleanText.replace(/(\\\([\s\S]*?\\\)|\$(?!\s)([^\$\n]+?)(?<!\s)\$)/g, (match, p1, p2) => {
+      let rawMath;
+      if (match.startsWith("\\(")) {
+        rawMath = match.slice(2, -2).trim();
+      } else {
+        rawMath = (p2 !== undefined ? p2 : match.slice(1, -1)).trim();
+      }
+      const key = `@@MATH_INLINE_${mathPlaceholders.length}@@`;
+      mathPlaceholders.push({ key, raw: rawMath, display: false });
+      return key;
+    });
+
+    // 4. Khôi phục lại code block
+    codePlaceholders.forEach(item => {
+      cleanText = cleanText.split(item.key).join(item.raw);
+    });
+
+    // 5. Biên dịch Markdown
+    let html = marked.parse(cleanText);
+
+    // 6. Biên dịch KaTeX vào vị trí placeholder
+    mathPlaceholders.forEach(item => {
+      let rendered;
+      if (typeof katex !== "undefined") {
+        try {
+          rendered = katex.renderToString(item.raw, {
+            displayMode: item.display,
+            throwOnError: true,
+            strict: false
+          });
+        } catch (e1) {
+          const autoCleaned = cleanLatexSyntax(item.raw);
+          try {
+            rendered = katex.renderToString(autoCleaned, {
+              displayMode: item.display,
+              throwOnError: true,
+              strict: false
+            });
+          } catch (e2) {
+            try {
+              rendered = katex.renderToString(autoCleaned, {
+                displayMode: item.display,
+                throwOnError: false,
+                strict: false
+              });
+            } catch (e3) {
+              rendered = `<code>${item.raw}</code>`;
+            }
+          }
+        }
+      } else {
+        rendered = item.display ? `$$\n${item.raw}\n$$` : `$${item.raw}$`;
+      }
+
+      if (item.display) {
+        html = html.split(`<p>${item.key}</p>`).join(rendered);
+      }
+      html = html.split(item.key).join(rendered);
+    });
+
+    return html;
+  }
+
+  function addMessage(sender, text, imageAttachment = null) {
+    const container = document.getElementById("messages-area");
+    const msgDiv = document.createElement("div");
+    msgDiv.className = `message ${sender}`;
+
+    const avatar = sender === "user" ? "👤" : currentRole.icon;
+    const renderedHtml = renderMarkdownWithMath(text);
+
+    let imageHtml = "";
+    if (imageAttachment) {
+      imageHtml = `
+        <div class="msg-image-attachment" onclick="openImageModal('${imageAttachment}')" title="Bấm để phóng to ảnh bài làm">
+          <img src="${imageAttachment}" alt="Ảnh bài làm" />
+          <span class="image-zoom-hint">🔍 Bấm để phóng to</span>
+        </div>
+      `;
+    }
+
+    msgDiv.innerHTML = `
+      <div class="msg-avatar">${avatar}</div>
+      <div class="msg-bubble">
+        ${imageHtml}
+        ${renderedHtml}
+      </div>
+    `;
+
+    applyAutoMath(msgDiv.querySelector('.msg-bubble'));
+
+    container.appendChild(msgDiv);
+    container.scrollTop = container.scrollHeight;
+    return msgDiv;
+  }
+
+  // Quét thêm lớp KaTeX auto-render nếu còn công thức sót
+  function applyAutoMath(el) {
+    if (!window.renderMathInElement || !el) return;
+    try {
+      renderMathInElement(el, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        throwOnError: false
+      });
+    } catch (e) {}
+  }
+
+  // ===== Tăng tốc phản hồi Gemini: streaming + giảm suy nghĩ + rút gọn lịch sử =====
+  const MAX_HISTORY_MESSAGES = 20;
+  const STREAM_RENDER_INTERVAL_MS = 80;
+  const unavailableModels = new Set();
+
+  function getRecentHistory() {
+    const recent = chatHistory.slice(-MAX_HISTORY_MESSAGES);
+    while (recent.length > 1 && recent[0].role !== "user") recent.shift();
+    return recent;
+  }
+
+  function getThinkingConfig(model) {
+    if (model.startsWith("gemini-3") && model.includes("flash")) return { thinkingLevel: "minimal" };
+    if (model.startsWith("gemini-3")) return { thinkingLevel: "low" };
+    if (model.startsWith("gemini-2.5-flash")) return { thinkingBudget: 0 };
+    return null;
+  }
+
+  function createStreamingBotMessage() {
+    const container = document.getElementById("messages-area");
+    const msgDiv = document.createElement("div");
+    msgDiv.className = "message bot";
+    msgDiv.innerHTML = `
+      <div class="msg-avatar">${currentRole.icon}</div>
+      <div class="msg-bubble streaming"></div>
+    `;
+    container.appendChild(msgDiv);
+    return msgDiv;
+  }
+
+  function renderStreamingBubble(msgDiv, text, isFinal) {
+    const container = document.getElementById("messages-area");
+    const nearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 120;
+    const bubble = msgDiv.querySelector(".msg-bubble");
+    if (window.TEACH) text = TEACH.stripMarkers(text); // Ẩn dòng [[SO_LOI]] / [[MUC_DO]] dành cho hệ thống
+    bubble.innerHTML = renderMarkdownWithMath(text);
+    if (isFinal) {
+      bubble.classList.remove("streaming");
+      applyAutoMath(bubble);
+    }
+    if (nearBottom || isFinal) container.scrollTop = container.scrollHeight;
+  }
+
+  async function streamGemini(model, apiKey, contents, systemText) {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse`;
+    const thinkingConfig = getThinkingConfig(model);
+    const doFetch = (withThinking) => {
+      const body = { contents, systemInstruction: { parts: [{ text: systemText }] } };
+      if (withThinking && thinkingConfig) body.generationConfig = { thinkingConfig };
+      return fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
+        body: JSON.stringify(body)
+      });
+    };
+
+    let res;
+    try {
+      res = await doFetch(true);
+      // Một số mô hình không hỗ trợ cấu hình thinking -> gửi lại không kèm thinkingConfig
+      if (res.status === 400 && thinkingConfig) {
+        const errText = await res.clone().text();
+        if (/thinking/i.test(errText)) res = await doFetch(false);
+      }
+    } catch (e) {
+      return { ok: false, retryable: true, error: e.message };
+    }
+
+    if (!res.ok) {
+      let message = `HTTP ${res.status}`;
+      try {
+        const data = await res.json();
+        message = data.error?.message || (Array.isArray(data) && data[0]?.error?.message) || message;
+      } catch (e) {}
+      return {
+        ok: false,
+        error: message,
+        leaked: message.toLowerCase().includes("leaked"),
+        notFound: res.status === 404 || /not found/i.test(message),
+        retryable: [404, 429, 500, 502, 503, 504].includes(res.status) || /high demand|not found|capacity|internal error|overloaded|unavailable/i.test(message)
+      };
+    }
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let text = "";
+    let msgDiv = null;
+    let lastRender = 0;
+
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop();
+        for (const line of lines) {
+          if (!line.startsWith("data:")) continue;
+          const payload = line.slice(5).trim();
+          if (!payload) continue;
+          try {
+            const chunk = JSON.parse(payload);
+            if (chunk.error) {
+              const errMsg = chunk.error.message || "Lỗi phản hồi từ máy chủ AI";
+              return {
+                ok: false,
+                error: errMsg,
+                leaked: errMsg.toLowerCase().includes("leaked"),
+                notFound: chunk.error.code === 404 || /not found/i.test(errMsg),
+                retryable: [404, 429, 500, 502, 503, 504].includes(chunk.error.code) || /high demand|not found|capacity|internal error|overloaded|unavailable/i.test(errMsg)
+              };
+            }
+            const parts = chunk.candidates?.[0]?.content?.parts || [];
+            for (const part of parts) {
+              if (part.text && !part.thought) text += part.text;
+            }
+          } catch (e) {}
+        }
+
+        if (text) {
+          if (!msgDiv) {
+            document.getElementById("typing-indicator")?.remove();
+            msgDiv = createStreamingBotMessage();
+          }
+          const now = performance.now();
+          if (now - lastRender > STREAM_RENDER_INTERVAL_MS) {
+            renderStreamingBubble(msgDiv, text, false);
+            lastRender = now;
+          }
+        }
+      }
+    } catch (e) {
+      if (!text) return { ok: false, retryable: true, error: e.message };
+      text += "\n\n*⚠️ Kết nối bị gián đoạn, câu trả lời có thể chưa đầy đủ.*";
+    }
+
+    if (!text) return { ok: false, retryable: true, error: "Mô hình không trả về nội dung." };
+
+    renderStreamingBubble(msgDiv, text, true);
+    return { ok: true, text, msgDiv };
+  }
+
+  // Tra cứu đối chiếu bài tập chuẩn xác trong cơ sở dữ liệu data/toan6 (669 bài tập)
+  function findRelevantToan6Exercise(query) {
+    if (!window.TOAN6_ALL_EXERCISES || !query) return null;
+    const qClean = query.trim().toLowerCase();
+
+    // 1. Tìm theo mã bài số học (VD: "bài 1.28", "1.28", "1.22", "6.1", "9.2")
+    const codeMatch = qClean.match(/(?:bài|bai)\s*(\d+\.\d+)/i) || qClean.match(/\b(\d+\.\d+)\b/);
+    if (codeMatch) {
+      const targetCode = codeMatch[1];
+      const found = window.TOAN6_ALL_EXERCISES.find(ex => ex.code === targetCode);
+      if (found) return found;
+    }
+
+    // 2. Tìm theo cấu trúc dạng "luyện tập ... trang ..." hoặc "vận dụng ... trang ..."
+    const ltMatch = qClean.match(/(luyện tập|luyen tap|câu hỏi|cau hoi|vận dụng|van dung|thử thách|thu thach|tranh luận)\s*(\d*)[^\d]*(?:trang|t\.)\s*(\d+)/i);
+    if (ltMatch) {
+      const subNum = ltMatch[2];
+      const pageNum = ltMatch[3];
+      const found = window.TOAN6_ALL_EXERCISES.find(ex => {
+        const t = ex.title.toLowerCase();
+        return t.includes(`trang ${pageNum}`) && (!subNum || t.includes(subNum));
+      });
+      if (found) return found;
+    }
+
+    // 3. Tìm theo các từ khóa đặc thù trong đề bài
+    const words = qClean
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’]/g, " ")
+      .split(/\s+/)
+      .filter(w => w.length >= 3 && !["thầy", "cô", "hướng", "dẫn", "giúp", "giải", "toán", "toán 6", "toan", "với", "nhé", "cho", "em"].includes(w));
+
+    if (words.length >= 2) {
+      let bestScore = 0;
+      let bestItem = null;
+      for (const ex of window.TOAN6_ALL_EXERCISES) {
+        const hay = (ex.title + " " + ex.question).toLowerCase();
+        let matchCount = 0;
+        for (const w of words) {
+          if (hay.includes(w)) matchCount++;
+        }
+        if (matchCount >= 2 && matchCount > bestScore) {
+          bestScore = matchCount;
+          bestItem = ex;
+        }
+      }
+      if (bestScore >= 2) return bestItem;
+    }
+
+    return null;
+  }
+
+  async function sendMessage() {
+    if (voiceState.listening) {
+      voiceState.finalText = "";
+      voiceState.recognition.abort();
+    }
+    const input = document.getElementById("user-input");
+    const text = input.value.trim();
+    const sendingImage = currentAttachedImage;
+
+    // Phải có ít nhất tin nhắn hoặc ảnh bài làm
+    if (!text && !sendingImage) return;
+
+    input.value = "";
+    removeAttachedImage(); // Reset UI xem trước
+
+    const userDisplayText = text || "*(Gửi ảnh bài làm để nhờ Thầy/Cô chấm và nhận xét)*";
+    addMessage("user", userDisplayText, sendingImage ? sendingImage.dataUrl : null);
+
+    // Xây dựng parts cho Gemini
+    const userParts = [];
+    if (sendingImage) {
+      userParts.push({
+        inlineData: {
+          mimeType: sendingImage.mimeType,
+          data: sendingImage.data
+        }
+      });
+    }
+    userParts.push({
+      text: text || "Em gửi ảnh chụp bài làm ở trên. Nhờ Thầy/Cô đọc bài, nhận xét đánh giá từng bước và chỉ ra điểm mấu chốt giúp em với ạ!"
+    });
+    chatHistory.push({ role: "user", parts: userParts });
+
+    const sendBtn = document.getElementById("send-btn");
+    sendBtn.disabled = true;
+
+    // Show typing indicator
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "message bot";
+    typingDiv.id = "typing-indicator";
+    typingDiv.innerHTML = `
+      <div class="msg-avatar">${currentRole.icon}</div>
+      <div class="msg-bubble">
+        <div class="typing-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    `;
+    document.getElementById("messages-area").appendChild(typingDiv);
+    document.getElementById("messages-area").scrollTop = document.getElementById("messages-area").scrollHeight;
+
+    const selectedModel = document.getElementById("model-select").value;
+    const apiKey = document.getElementById("api-key-input").value.trim();
+
+    try {
+      let reply = "";
+      let streamedDiv = null;
+
+      let systemText = `${currentRole.prompt}\n\nVui lòng trả lời bằng Tiếng Việt. Định dạng tất cả các công thức toán, biểu thức, biến số, tập hợp bằng chuẩn LaTeX kẹp giữa cặp dấu $ (ví dụ: $B$, $\\in$, $\\notin$, $0 \\dots B$, $\\mathbb{N}$) hoặc $$ cho công thức tách dòng riêng biệt. Với tập hợp, viết ngoặc nhọn dạng $\\{ a; b; c \\}$.`;
+
+      // Tra cứu đối chiếu dữ liệu chuẩn từ kho SGK Toán 6 (9 Chương)
+      let matchedEx = findRelevantToan6Exercise(text);
+      if (window.TEACH) matchedEx = TEACH.resolveExercise(text, matchedEx);
+      if (matchedEx) {
+        systemText += `\n\n[DỮ LIỆU ĐỀ BÀI VÀ LỜI GIẢI GỐC CHUẨN XÁC TỪ SGK TOÁN 6 KẾT NỐI TRI THỨC]:
+Tên bài: ${matchedEx.title}
+Chương: ${matchedEx.chapter}
+
+--- ĐỀ BÀI CHUẨN TỪ DỮ LIỆU SGK: ---
+${matchedEx.question}
+
+--- LỜI GIẢI CHUẨN BÁM SÁT SGK: ---
+${matchedEx.solution}
+
+QUY TẮC BẮT BUỘC KHI PHẢN HỒI:
+1. Bạn PHẢI bám sát 100% đề bài, câu hỏi và các con số ở trên. TUYỆT ĐỐI không được tự ý bịa số liệu hay nhầm sang bài toán khác.
+2. Dẫn dắt giải từng bước theo đúng phương pháp giải trong dữ liệu chuẩn của SGK Kết nối tri thức.`;
+      }
+
+      if (currentRole.id.startsWith("toan6") || currentRole.id === "math_teacher" || currentRole.id === "socratic" || currentRole.id === "teach_pedagogy") {
+        systemText += `\n\n[TRIẾT LÝ SƯ PHẠM DẠY HỌC ĐÁP ỨNG - TEACH FRAMEWORK]:
+Áp dụng 3 trụ cột Dạy học Đáp ứng học sinh (Cộng đồng Giáo viên Sáng tạo):
+1. 🎯 HIỂU NGƯỜI HỌC: Nhận diện chính xác mức độ hiểu bài, phong cách nhận thức, khó khăn hoặc hiểu lầm khái niệm của học sinh qua câu hỏi/ảnh bài làm gửi lên.
+2. 📐 THIẾT KẾ PHÙ HỢP: Hướng dẫn ngắn gọn, phân hóa theo từng bước vừa sức, bám sát SGK Toán 6 Kết nối tri thức. Đặt câu hỏi gợi mở tư duy thay vì làm hộ. Hỗ trợ giáo viên soạn bài và phiếu học tập phân hóa thích ứng.
+3. ⚡ PHẢN HỒI KỊP THỜI: Đánh giá ngay tại chỗ, khen ngợi động viên kịp thời và LUÔN LUÔN kết thúc bằng mục '🔑 **Điểm mấu chốt:**' để khắc sâu bản chất kiến thức.`;
+      }
+
+      // Hồ sơ người học, cách hướng dẫn và bài đang luyện theo lộ trình TEACH
+      if (window.TEACH) systemText += TEACH.getContext(matchedEx);
+
+      if (sendingImage) {
+        systemText += `\n\n[HƯỚNG DẪN ĐẶC BIỆT KHI CHẤM BÀI QUA ẢNH/VIẾT TAY]:
+Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đúng các bước:
+1. 📸 **Nhận diện bài làm:** Tóm tắt ngắn gọn các bước giải và phép tính mà học sinh đã viết trong ảnh.
+2. ✍️ **Nhận xét & Chấm điểm từng bước:**
+   - Khen ngợi những chỗ học sinh làm đúng và tư duy tốt.
+   - Nếu có lỗi sai (tính toán, nhầm lẫn đề bài, thiếu đơn vị), chỉ rõ dòng sai và giải thích lý do.
+3. 📝 **Lời giải chuẩn mực SGK:** Trình bày lại lời giải ngắn gọn, chuẩn SGK để học sinh đối chiếu.
+4. 🔑 **Điểm mấu chốt:** Nhắc nhở lưu ý quan trọng để không lặp lại sai sót.`;
+      }
+
+      if (apiKey && selectedModel !== "simulation") {
+        if (apiKey.startsWith("sk-")) {
+          // OpenAI API Call with Vision support
+          const openaiMessages = [
+            { role: "system", content: systemText }
+          ];
+          const recent = getRecentHistory();
+          recent.forEach(m => {
+            if (m.role === "model") {
+              openaiMessages.push({ role: "assistant", content: m.parts[0].text });
+            } else {
+              const textP = m.parts.find(p => p.text);
+              const imgP = m.parts.find(p => p.inlineData);
+              if (imgP) {
+                openaiMessages.push({
+                  role: "user",
+                  content: [
+                    { type: "text", text: textP ? textP.text : "Chấm bài giúp em trong ảnh này." },
+                    { type: "image_url", image_url: { url: `data:${imgP.inlineData.mimeType};base64,${imgP.inlineData.data}` } }
+                  ]
+                });
+              } else {
+                openaiMessages.push({ role: "user", content: textP ? textP.text : "" });
+              }
+            }
+          });
+
+          const res = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+              model: selectedModel.includes("gpt") ? selectedModel : "gpt-4o-mini",
+              messages: openaiMessages
+            })
+          });
+          const data = await res.json();
+          if (data.error) {
+            reply = `⚠️ **Lỗi OpenAI API:** ${data.error.message}`;
+          } else {
+            reply = data.choices?.[0]?.message?.content || "Không nhận được phản hồi.";
+          }
+        } else {
+          // Google Gemini API Call: streaming + Auto-Fallback
+          // Thứ tự dự phòng: mô hình đã chọn -> các bản Flash mới nhất -> bản ổn định cũ hơn
+          const modelCandidates = [
+            selectedModel,
+            "gemini-3.8-flash",
+            "gemini-3.7-flash",
+            "gemini-3.5-flash",
+            "gemini-2.5-flash",
+            "gemini-2.0-flash"
+          ].filter(Boolean);
+
+          const uniqueModels = [...new Set(modelCandidates)].filter(m => !unavailableModels.has(m));
+          const recentHistory = getRecentHistory();
+          let lastError = null;
+
+          for (const modelToTry of uniqueModels) {
+            const result = await streamGemini(modelToTry, apiKey, recentHistory, systemText);
+
+            if (result.ok) {
+              reply = result.text;
+              streamedDiv = result.msgDiv;
+              if (modelToTry !== selectedModel) {
+                showToast(`↪️ ${selectedModel} đang quá tải, đã tự động chuyển sang ${modelToTry}`);
+              }
+              break;
+            }
+
+            lastError = result.error;
+
+            // Specific leaked key detection
+            if (result.leaked) {
+              reply = `🔑 **Khóa API đã bị vô hiệu hóa do bảo mật (Leaked API Key):**\n\nGoogle AI Studio đã tự động khóa mã API Key này vì phát hiện bị lộ trên mạng hoặc ảnh chụp màn hình.\n\n👉 **Cách khắc phục cực nhanh (5 giây):**\n1. Truy cập: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)\n2. Bấm nút **"Create API key"** màu xanh để tạo một mã mới (miễn phí 100%).\n3. Dán mã mới vào ô **API Key** ở góc trái là xong!`;
+              break;
+            }
+
+            // Chỉ ghi nhớ mô hình KHÔNG TỒN TẠI (404); lỗi quá tải 503 là tạm thời nên lần sau vẫn thử lại
+            if (result.notFound) unavailableModels.add(modelToTry);
+
+            // If high demand (503) or not found (404) or server error, continue fallback
+            if (result.retryable) continue;
+
+            reply = `⚠️ **Lỗi Gemini API:** ${lastError}\n\n*Vui lòng kiểm tra lại API Key từ Google AI Studio.*`;
+            break;
+          }
+
+          if (!reply) {
+            if (lastError && /leaked|key not valid/i.test(lastError)) {
+              reply = `⚠️ **Lỗi API Key:** ${lastError}`;
+            } else {
+              showToast("⚡ Máy chủ Gemini quá tải (503), đã kích hoạt trợ lý mô phỏng thông minh.");
+              reply = generateSmartSimulation(currentRole, text, sendingImage);
+            }
+          }
+        }
+      } else {
+        // Simulation delay
+        await new Promise(r => setTimeout(r, 600));
+        reply = generateSmartSimulation(currentRole, text, sendingImage);
+      }
+
+      // TEACH: ghi Sổ lỗi sai / cập nhật mức độ từ phản hồi, rồi ẩn các dòng hệ thống
+      if (window.TEACH) {
+        TEACH.captureFromReply(reply);
+        reply = TEACH.stripMarkers(reply);
+      }
+
+      // Remove typing and add response (bỏ qua nếu đã hiển thị dạng streaming)
+      document.getElementById("typing-indicator")?.remove();
+      if (!streamedDiv) addMessage("bot", reply);
+      chatHistory.push({ role: "model", parts: [{ text: reply }] });
+
+    } catch (err) {
+      document.getElementById("typing-indicator")?.remove();
+      addMessage("bot", `❌ **Lỗi:** ${err.message}. Đã chuyển sang chế độ mô phỏng.`);
+    } finally {
+      sendBtn.disabled = false;
+    }
+  }
+
+  function generateSmartSimulation(role, query, sendingImage = null) {
+    if (sendingImage) {
+      return `### 📸 Thầy/Cô đã nhận được ảnh bài làm của em!
+
+*(Đang ở chế độ Mô phỏng Demo - Để AI đọc ảnh thật bằng mô hình đa phương thức Gemini 3.8 Flash Vision, em hãy dán Google Gemini API Key vào ô góc trái nhé!)*
+
+---
+
+#### 📝 Đánh giá sơ bộ bài làm học sinh:
+1. **Khả năng nhận diện:** Đã tiếp nhận rõ bài giải viết tay của em.
+2. **Khen ngợi & Ưu điểm:** 
+   - Trình bày tuần tự các bước, chữ viết rõ ràng.
+   - Đã xác định đúng yêu cầu của bài toán (nhân đôi, chia có dư, hoặc tìm tập hợp).
+3. **Lưu ý sư phạm khi trình bày vào vở:** 
+   - Đặt câu lời giải đầy đủ, rõ ràng trước mỗi phép tính.
+   - Nhớ ghi kèm đơn vị đo (ví dụ: *người, chiếc ghế, chuyến xe*) sau kết quả.
+
+---
+
+#### ✍️ Đối chiếu với lời giải chuẩn SGK:
+Em hãy kiểm tra lại kết quả của mình theo các bước:
+- **Bước 1:** Xác định phép tính chính xác giữa các đại lượng.
+- **Bước 2:** Với bài toán thực tế có dư: luôn nhớ cộng thêm $1$ đơn vị vào thương để giải quyết hết phần còn thừa!
+
+---
+
+🔑 **Điểm mấu chốt:**
+Khi làm bài kiểm tra, hãy luôn dành ra $1$ phút cuối để đọc lại câu hỏi của đề bài xem kết quả tìm được đã trả lời đúng trọng tâm hay chưa nhé! 🎉`;
+    }
+
+    // TEACH: khi không có API vẫn giao bài, gợi ý, chấm sơ bộ theo dữ liệu SGK
+    if (window.TEACH) {
+      const teachReply = TEACH.simulateReply(query);
+      if (teachReply) return teachReply;
+    }
+
+    const qLower = (query || "").toLowerCase();
+
+    // Xử lý Chuyên gia Sư phạm TEACH hoặc câu hỏi về Dạy học Đáp ứng
+    if (role.id === "teach_pedagogy" || qLower.includes("teach") || qLower.includes("dạy học đáp ứng") || qLower.includes("hiểu người học") || qLower.includes("phản hồi kịp thời")) {
+      return `### 💡 Chuyên gia Sư phạm: DẠY HỌC ĐÁP ỨNG HỌC SINH (Mô hình TEACH)
+*(Phát triển bởi Cộng đồng Giáo viên Sáng tạo Việt Nam - Giải pháp dạy học sát nhu cầu người học)*
+
+---
+
+#### 🌟 3 Trụ Cột Triển Khai Thực Tế Trong Giảng Dạy:
+
+1. 🎯 **1. HIỂU NGƯỜI HỌC (Nhận diện nhu cầu)**
+   - **Chẩn đoán đầu vào:** Nhận diện kiến thức nền và phong cách nhận thức của từng học sinh trước khi học.
+   - **Phát hiện hiểu lầm điển hình (Misconceptions):** Ví dụ trong Toán 6: nhầm lẫn từ *"kém"* nghĩa là làm phép trừ, hoặc quên cộng thêm $1$ trong bài toán chia có dư thực tế (xếp ghế, chở hàng).
+
+2. 📐 **2. THIẾT KẾ PHÙ HỢP (Tổ chức hoạt động thích ứng)**
+   - **Phân hóa 3 cấp độ:**
+     + **Mức 1 (Nhận biết):** Bài tập trực quan, củng cố định nghĩa, thao tác mẫu.
+     + **Mức 2 (Thông hiểu):** Câu hỏi gợi mở từng bước (Socratic), phân tích bản chất.
+     + **Mức 3 (Vận dụng thực tế):** Bài toán thực tế gắn liền với đời sống (SGK Kết nối tri thức).
+   - **Phiếu học tập thích ứng:** Chia nhỏ nhiệm vụ, có khung gợi ý từ khóa then chốt cho học sinh cần hỗ trợ.
+
+3. ⚡ **3. PHẢN HỒI KỊP THỜI (Đánh giá quá trình & Hỗ trợ)**
+   - **Phản hồi tức thì:** Nhận xét bài làm ngay khi học sinh nộp bài hoặc gửi ảnh bài làm.
+   - **Khen ngợi nỗ lực & Động viên:** Khen ngợi điểm làm tốt trước khi chỉ ra chỗ cần điều chỉnh.
+   - **Chốt Điểm mấu chốt:** Luôn có mục **🔑 Điểm mấu chốt** để học sinh tự đúc rút quy tắc tư duy.
+
+---
+
+> 📌 **Gợi ý dành cho Thầy/Cô và Học sinh:**
+> - **Dành cho Thầy/Cô:** Em có thể yêu cầu tôi: *"Thiết kế kế hoạch bài dạy phân hóa cho bài [Tên bài]"* hoặc *"Soạn phiếu bài tập 3 mức độ cho Toán 6 Chương 1"*.
+> - **Dành cho Học sinh:** Hãy gửi bất kỳ câu hỏi nào hoặc chụp ảnh bài làm để được hỗ trợ và phản hồi kịp thời!`;
+    }
+
+    // Xử lý các câu hỏi Toán / Toán 6 / Gia sư Socratic Toán
+    if (role.id.startsWith("toan6") || role.id === "math_teacher" || role.id === "socratic" || qLower.includes("tập hợp") || qLower.includes("bài") || qLower.includes("toán")) {
+      // 1. Tra cứu đối chiếu trực tiếp từ kho 669 bài tập Toán 6 SGK Kết Nối Tri Thức
+      const matchedEx = findRelevantToan6Exercise(query);
+      if (matchedEx) {
+        const cleanQ = matchedEx.question.replace(/\*\*/g, '').trim();
+        const cleanSol = matchedEx.solution.replace(/\*\*/g, '').trim();
+        return `### 📐 Hướng dẫn giải ${matchedEx.title.replace(/\*\*/g, '')}
+*(Dữ liệu chuẩn bám sát SGK Toán 6 Kết nối tri thức với cuộc sống - Chương ${matchedEx.chapter})*
+
+---
+
+#### 📄 **Đề bài:**
+${cleanQ}
+
+---
+
+#### 🎯 **Phân tích tư duy (Hiểu người học & Phương pháp sư phạm):**
+- **Yêu cầu cốt lõi:** Bám sát phương pháp giải chuẩn mực trong SGK Toán 6 Kết nối tri thức.
+- **Lưu ý thường gặp:** Đọc kỹ các từ khóa trong đề bài, xác định đúng phép tính và viết đầy đủ câu lời giải kèm đơn vị đo trước khi kết luận.
+
+---
+
+#### 📝 **Lời giải chuẩn mực bám sát SGK:**
+${cleanSol}
+
+---
+
+🔑 **Điểm mấu chốt:**
+Khi làm bài, hãy đối chiếu từng dòng tính toán với câu lời giải để đảm bảo bài làm chặt chẽ và đạt điểm tối đa! 🎉`;
+      }
+
+      // Dạng toán thực tế chia có dư tổng quát
+      if (qLower.includes("chia có dư") || qLower.includes("ít nhất bao nhiêu") || qLower.includes("chuyến xe") || qLower.includes("ghế băng")) {
+        return `### 📐 Phương pháp giải Dạng toán thực tế: Phép chia có dư (Toán 6):
+
+---
+
+#### 📌 2 Bước giải chuẩn mực bám sát SGK:
+1. **Bước 1:** Lấy tổng số lượng chia cho sức chứa của 1 đơn vị:
+   $$a : b = q \\text{ (dư } r\\text{, với } 0 < r < b)$$
+2. **Bước 2 (Lập luận thực tế):**
+   - Đã xếp đủ $q$ đơn vị (ghế / chuyến xe).
+   - Vì còn dư $r$ phần nên **bắt buộc cần dùng thêm 1 đơn vị nữa**.
+   - Vậy số đơn vị ít nhất cần dùng là:
+     $$q + 1$$
+
+---
+
+🔑 **Điểm mấu chốt:**
+- Đọc kỹ từ khóa **"để tất cả..."** hoặc **"chuyển hết..."**.
+- **Quy tắc vàng:** Khi phép chia có dư ($r > 0$), kết quả ít nhất cần tìm luôn bằng $\\text{Thương} + 1$. Tuyệt đối không được làm tròn xuống hay bỏ quên phần dư!`;
+      }
+
+      if (qLower.includes("tập hợp") || qLower.includes("1.1") || qLower.includes("1.2") || qLower.includes("số tự nhiên") || query.includes("\\in") || query.includes("\\notin")) {
+        return `### 📐 Hướng dẫn giải chi tiết chuẩn SGK Toán 6:
+
+Chào em! Dưới đây là phương pháp và lời giải chuẩn mực cho bài toán về **Tập hợp các số tự nhiên**:
+
+---
+
+#### 1. Phương pháp biểu diễn tập hợp
+Một tập hợp có thể được viết bằng 2 cách:
+- **Cách 1 (Liệt kê phần tử):** Các phần tử được viết trong dấu ngoặc nhọn $\\{ \\}$, ngăn cách bởi dấu chấm phẩy \`;\`, mỗi phần tử chỉ viết $1$ lần:
+  $$B = \\{0; 1; 2; 3; 4; 5; 6\\}$$
+- **Cách 2 (Chỉ ra tính chất đặc trưng):** Dùng biến số $x$ thuộc tập số tự nhiên $\\mathbb{N}$:
+  $$B = \\{x \\in \\mathbb{N} \\mid x < 7\\}$$
+
+---
+
+#### 2. Sử dụng ký hiệu thuộc ($\\in$) và không thuộc ($\\notin$)
+- Vì $0$ là số tự nhiên nhỏ hơn $7$, nên: $0 \\in B$
+- Vì $7$ không nhỏ hơn $7$, nên: $7 \\notin B$
+- Tương tự: $4 \\in B$ và $9 \\notin B$
+
+---
+
+🔑 **Điểm mấu chốt:**
+- Mỗi phần tử trong tập hợp chỉ được liệt kê **đúng một lần**.
+- Ký hiệu $\\in$ và $\\notin$ chỉ dùng giữa **phần tử** và **tập hợp** (không dùng giữa hai tập hợp).`;
+      }
+
+      return `### 📐 Hướng dẫn phương pháp từ Gia sư Toán 6:
+
+Thầy/cô đã tiếp nhận câu hỏi của em. Để giải bài toán này một cách chuẩn xác:
+
+---
+
+#### 📌 Các bước tư duy giải bài bám sát SGK:
+1. **Đọc kỹ đề bài & nhận diện từ khóa:** Xác định các đại lượng đã biết, đại lượng cần tìm và từ khóa then chốt (như *"kém"*, *"nhiều hơn"*, *"ít nhất bao nhiêu"*).
+2. **Thực hiện phép tính từng bước:** Trình bày rõ phép tính kèm theo đơn vị đo.
+3. **Lập luận thực tế & Kết luận:** Rút ra đáp số cuối cùng kèm giải thích.
+
+---
+
+🔑 **Điểm mấu chốt:**
+Luôn kiểm tra lại tính hợp lý của kết quả với thực tế (ví dụ: số người, số ghế, số chuyến xe luôn phải là số tự nhiên).`;
+    }
+
+    if (role.id === "english_teacher") {
+      return `### 🗣️ English Teacher Feedback:\n\n- **Your input:** "${query}"\n- **Natural suggestion:** *"Could you explain how to solve this step-by-step?"*\n\n**Question for you:** What is your main learning goal for today?`;
+    }
+    if (role.id === "python_dev") {
+      return `\`\`\`python\n# Giải pháp tối ưu theo yêu cầu của bạn:\ndef solve_problem(data: str) -> dict:\n    return {\n        "status": "success",\n        "result": data.strip().capitalize()\n    }\n\nif __name__ == "__main__":\n    print(solve_problem("test"))\n\`\`\`\n*Mã nguồn tuân thủ tiêu chuẩn PEP8.*`;
+    }
+    return `### ✨ Phản hồi từ [${role.title}]:\n\nTôi đã tiếp nhận yêu cầu của bạn.\n\nTheo vai trò của mình, tôi đã sẵn sàng hỗ trợ bạn giải quyết vấn đề này một cách chuyên sâu. Để kết nối mô hình LLM trực tiếp với câu trả lời thời gian thực, bạn chỉ cần dán Gemini API Key chuẩn ở góc trái!`;
+  }
+
+  function clearChat() {
+    chatHistory = [];
+    document.getElementById("messages-area").innerHTML = `
+      <div class="message bot">
+        <div class="msg-avatar">${currentRole.icon}</div>
+        <div class="msg-bubble">
+          Đã làm mới cuộc trò chuyện. Tôi là **${currentRole.title}**, hãy đặt câu hỏi cho tôi nhé!
+        </div>
+      </div>
+    `;
+    showToast("🗑️ Đã làm mới hội thoại!");
+    if (window.TEACH) TEACH.onClearChat();
+  }
+
+  function viewCurrentPrompt() {
+    document.getElementById("modal-role-title").innerText = `📜 System Prompt: ${currentRole.title}`;
+    document.getElementById("modal-prompt-content").innerText = currentRole.prompt;
+    document.getElementById("prompt-modal").classList.add("active");
+  }
+
+  function closeModal() {
+    document.getElementById("prompt-modal").classList.remove("active");
+  }
+
+  function copyPrompt() {
+    navigator.clipboard.writeText(currentRole.prompt).then(() => {
+      showToast("📋 Đã sao chép Prompt!");
+    });
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById("toast");
+    toast.innerText = msg;
+    toast.className = "toast show";
+    setTimeout(() => {
+      toast.className = "toast";
+    }, 2400);
+  }
+
+  // --- TOÁN 6 MODAL & INTEGRATION LOGIC ---
+  let selectedToan6ChapterIndex = 0;
+
+  function openToan6Modal() {
+    if (!window.TOAN6_DATA || window.TOAN6_DATA.length === 0) {
+      showToast("⚠️ Đang nạp dữ liệu Toán 6...");
+      return;
+    }
+    const sel = document.getElementById("toan6-chapter-select");
+    sel.innerHTML = "";
+    window.TOAN6_DATA.forEach((ch, idx) => {
+      const opt = document.createElement("option");
+      opt.value = idx;
+      opt.innerText = `${ch.title} (${ch.total_exercises} bài tập)`;
+      sel.appendChild(opt);
+    });
+    sel.value = selectedToan6ChapterIndex;
+    renderToan6Chapter(selectedToan6ChapterIndex);
+    document.getElementById("toan6-modal").classList.add("active");
+  }
+
+  function closeToan6Modal() {
+    document.getElementById("toan6-modal").classList.remove("active");
+  }
+
+  function filterToan6ChapterExercises(val) {
+    renderToan6Chapter(selectedToan6ChapterIndex, val);
+  }
+
+  function renderToan6Chapter(idx, filterKeyword = "") {
+    selectedToan6ChapterIndex = parseInt(idx, 10);
+    const ch = window.TOAN6_DATA[selectedToan6ChapterIndex];
+    if (!ch) return;
+
+    const kw = filterKeyword.trim().toLowerCase();
+    const filteredItems = kw
+      ? ch.sample_items.filter(item => {
+          return item.title.toLowerCase().includes(kw) || 
+                 item.content.toLowerCase().includes(kw) ||
+                 (item.code && item.code.includes(kw));
+        })
+      : ch.sample_items;
+
+    // Header metadata
+    document.getElementById("toan6-chapter-header").innerHTML = `
+      <div style="font-weight: 800; font-size: 1.1rem; color: #0f172a; margin-bottom: 6px;">
+        ${ch.title}
+      </div>
+      <div style="font-size: 0.9rem; color: #334155; margin-bottom: 6px;">
+        <strong>Chuyên đề chính:</strong> ${ch.topics}
+      </div>
+      <div style="font-size: 0.85rem; color: #64748b; display: flex; gap: 16px; flex-wrap: wrap;">
+        <span>📝 Tổng số bài tập & lời giải: <strong>${ch.total_exercises} bài</strong></span>
+        ${kw ? `<span>🔎 Kết quả tìm kiếm: <strong>${filteredItems.length} bài</strong></span>` : ''}
+        <span>📁 Tệp nguồn: <code>${ch.file}</code></span>
+      </div>
+    `;
+
+    // Render exercises
+    const container = document.getElementById("toan6-exercises-container");
+    container.innerHTML = "";
+
+    if (filteredItems.length === 0) {
+      container.innerHTML = `<div style="text-align: center; padding: 30px; color: #64748b; font-weight: 600;">Không tìm thấy bài tập nào khớp với từ khóa "${filterKeyword}". Hãy thử tìm theo số bài (VD: 1.28) hoặc từ khóa đề bài!</div>`;
+      return;
+    }
+
+    const itemsToShow = filteredItems.slice(0, 50); // Hiển thị 50 bài đầu để tốc độ cực nhanh
+
+    itemsToShow.forEach((item, itemIdx) => {
+      const originalIdx = ch.sample_items.indexOf(item);
+      const card = document.createElement("div");
+      card.style.cssText = "background: #fff; border: 2px solid var(--border-dark); border-radius: 10px; padding: 14px 16px; box-shadow: 2px 2px 0px var(--border-dark);";
+      
+      const renderedContent = renderMarkdownWithMath(item.content);
+
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+          <span style="font-weight: 700; color: #0d9488; font-size: 0.95rem;">${item.title.replace(/\*\*/g, '')}</span>
+          <button class="btn-neo" style="padding: 4px 10px; font-size: 0.8rem; background: #ccfbf1; font-weight: 700;" onclick="askToan6Exercise(${selectedToan6ChapterIndex}, ${originalIdx})">
+            💬 Hỏi bài này
+          </button>
+        </div>
+        <div style="font-size: 0.9rem; line-height: 1.5; color: #334155; max-height: 160px; overflow-y: auto; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 10px;">
+          ${renderedContent}
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+    if (filteredItems.length > 50) {
+      const moreInfo = document.createElement("div");
+      moreInfo.style.cssText = "text-align: center; padding: 12px; color: #64748b; font-size: 0.85rem; font-style: italic;";
+      moreInfo.textContent = `Đang hiển thị 50/${filteredItems.length} bài tập. Nhập từ khóa hoặc mã bài ở ô tìm kiếm trên để tìm chính xác bài bạn cần.`;
+      container.appendChild(moreInfo);
+    }
+
+    if (window.renderMathInElement) {
+      try {
+        renderMathInElement(container, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      } catch (e) {}
+    }
+  }
+
+  function activateCurrentChapterTutor() {
+    const ch = window.TOAN6_DATA[selectedToan6ChapterIndex];
+    if (!ch) return;
+    const personaId = `toan6_c${ch.chapter}`;
+    const found = PERSONAS.find(p => p.id === personaId);
+    if (found) {
+      selectRole(found);
+      closeToan6Modal();
+      showToast(`🎓 Đã chọn: ${found.title}`);
+    } else {
+      const master = PERSONAS.find(p => p.id === "toan6_all");
+      if (master) selectRole(master);
+      closeToan6Modal();
+    }
+  }
+
+  function askToan6Exercise(chapterIdx, itemIdx) {
+    const ch = window.TOAN6_DATA[chapterIdx];
+    if (!ch) return;
+    const item = ch.sample_items[itemIdx];
+    if (!item) return;
+
+    // Switch to corresponding tutor
+    const personaId = `toan6_c${ch.chapter}`;
+    const found = PERSONAS.find(p => p.id === personaId);
+    if (found && currentRole.id !== personaId) {
+      selectRole(found);
+    }
+
+    closeToan6Modal();
+
+    const input = document.getElementById("user-input");
+    const qClean = item.question ? item.question.replace(/\*\*/g, '').trim() : item.content.split('**Lời giải')[0].trim();
+    input.value = `Thầy/Cô hướng dẫn em giải bài toán này với ạ:\n\n${qClean}`;
+    input.focus();
+    showToast("📝 Đã nạp bài tập vào khung chat!");
+  }
+
+  // ===== Voice Input (Web Speech API) =====
+  const SpeechRecognitionApi = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const voiceState = { recognition: null, listening: false, baseText: "", finalText: "" };
+
+  function setVoiceUi(listening, statusText) {
+    const micBtn = document.getElementById("mic-btn");
+    const status = document.getElementById("voice-status");
+    micBtn.classList.toggle("listening", listening);
+    micBtn.title = listening ? "Dừng ghi âm (Ctrl + M)" : "Chat bằng giọng nói (Ctrl + M)";
+    status.classList.toggle("active", listening);
+    if (statusText) document.getElementById("voice-status-text").textContent = statusText;
+  }
+
+  function initVoiceInput() {
+    if (!SpeechRecognitionApi) {
+      const micBtn = document.getElementById("mic-btn");
+      micBtn.classList.add("unsupported");
+      micBtn.title = "Trình duyệt chưa hỗ trợ nhận diện giọng nói (hãy dùng Chrome hoặc Edge)";
+      return;
+    }
+
+    const rec = new SpeechRecognitionApi();
+    rec.lang = "vi-VN";
+    rec.continuous = true;
+    rec.interimResults = true;
+
+    rec.onresult = (event) => {
+      let interim = "";
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          voiceState.finalText += transcript;
+        } else {
+          interim += transcript;
+        }
+      }
+      const input = document.getElementById("user-input");
+      const spoken = (voiceState.finalText + interim).trim();
+      input.value = voiceState.baseText ? `${voiceState.baseText} ${spoken}` : spoken;
+      input.scrollTop = input.scrollHeight;
+      setVoiceUi(true, interim ? `Đang nghe: “${interim.trim()}”` : "Đang nghe... Hãy nói tiếp hoặc bấm 🎤 để dừng");
+    };
+
+    rec.onerror = (event) => {
+      const messages = {
+        "not-allowed": "🚫 Bạn chưa cấp quyền micro cho trang này.",
+        "service-not-allowed": "🚫 Trình duyệt chặn dịch vụ nhận diện giọng nói.",
+        "no-speech": "🤫 Không nghe thấy giọng nói, hãy thử lại.",
+        "audio-capture": "🎤 Không tìm thấy micro trên thiết bị.",
+        "network": "🌐 Lỗi mạng khi nhận diện giọng nói."
+      };
+      if (event.error !== "aborted") {
+        showToast(messages[event.error] || `Lỗi giọng nói: ${event.error}`);
+      }
+    };
+
+    rec.onend = () => {
+      const hadSpeech = voiceState.finalText.trim().length > 0;
+      voiceState.listening = false;
+      setVoiceUi(false);
+      const autoSend = document.getElementById("voice-auto-send").checked;
+      if (hadSpeech && autoSend) {
+        sendMessage();
+      } else {
+        document.getElementById("user-input").focus();
+      }
+    };
+
+    voiceState.recognition = rec;
+  }
+
+  function startVoiceInput() {
+    if (!voiceState.recognition) {
+      showToast("⚠️ Trình duyệt chưa hỗ trợ giọng nói. Hãy dùng Chrome hoặc Edge.");
+      return;
+    }
+    voiceState.baseText = document.getElementById("user-input").value.trim();
+    voiceState.finalText = "";
+    try {
+      voiceState.recognition.start();
+      voiceState.listening = true;
+      setVoiceUi(true, "Đang nghe... Hãy nói câu hỏi của bạn");
+    } catch (e) {
+      // start() throws if already started
+    }
+  }
+
+  function stopVoiceInput() {
+    if (voiceState.recognition && voiceState.listening) {
+      voiceState.recognition.stop();
+    }
+  }
+
+  function toggleVoiceInput() {
+    if (voiceState.listening) {
+      stopVoiceInput();
+    } else {
+      startVoiceInput();
+    }
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey && (e.key === "m" || e.key === "M")) {
+      e.preventDefault();
+      toggleVoiceInput();
+    }
+  });
+
+  initVoiceInput();
+</script>
+
+<script src="teach.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+#104
+$\frac{7}{16}$
+#105
+$\frac{1}{3} + \frac{1}{24} = \frac{1 \cdot 8}{3 \cdot 8} + \frac{1}{24} = \frac{8}{24} + \frac{1}{24} = \frac{8 + 1}{24} = \frac{9}{24} = \frac{9 : 3}{24 : 3} = \frac{3}{8}$ (phần)
+#106
+$\frac{3}{8} + \frac{7}{16} = \frac{3 \cdot 2}{8 \cdot 2} + \frac{7}{16} = \frac{6}{16} + \frac{7}{16} = \frac{6 + 7}{16} = \frac{13}{16}$ (phần)
+#107
+$1 - \frac{13}{16} = \frac{16}{16} - \frac{13}{16} = \frac{16 - 13}{16} = \frac{3}{16}$ (phần)
+#108
+$\frac{3}{8}$
+#109
+$\frac{3}{16}$
+#110
+a) $\frac{-2}{5} \cdot \frac{5}{4}$; b) $\frac{-7}{10} \cdot \frac{-9}{11}$.
+#111
+a) $\frac{-2}{5} \cdot \frac{5}{4} = \frac{(-2) \cdot 5}{5 \cdot 4} = \frac{-1}{2}$
+
+b) $\frac{-7}{10} \cdot \frac{-9}{11} = \frac{(-7) \cdot (-9)}{10 \cdot 11} = \frac{7 \cdot 9}{10 \cdot 11} = \frac{63}{110}$
+#112
+$\frac{9}{5}$
+#113
+$\frac{7}{3}$
+#114
+$\frac{1}{2} \cdot \frac{9}{5} \cdot \frac{7}{3} = \frac{1 \cdot 9 \cdot 7}{2 \cdot 5 \cdot 3} = \frac{3 \cdot 7}{2 \cdot 5} = \frac{21}{10}$ ($\text{cm}^2$)
+#115
+$\frac{21}{10}$ $\text{cm}^2$
+#116
+a) $\frac{6}{13} \cdot \frac{8}{7} \cdot \frac{-26}{3} \cdot \frac{-7}{8}$; b) $\frac{6}{5} \cdot \frac{3}{13} - \frac{6}{5} \cdot \frac{16}{13}$
+#117
+a) $\frac{6}{13} \cdot \frac{8}{7} \cdot \frac{-26}{3} \cdot \frac{-7}{8}$
+
+$= \frac{6}{13} \cdot \frac{-26}{3} \cdot \frac{8}{7} \cdot \frac{-7}{8}$ (tính chất giao hoán)
+
+$= \left(\frac{6}{13} \cdot \frac{-26}{3}\right) \cdot \left(\frac{8}{7} \cdot \frac{-7}{8}\right)$ (tính chất kết hợp)
+
+$= \left(\frac{6 \cdot (-26)}{13 \cdot 3}\right) \cdot \left(\frac{8 \cdot (-7)}{7 \cdot 8}\right)$
+
+$= (-4) \cdot (-1)$
+
+$= 4 \cdot 1$
+
+$= 4$
+#118
+b) $\frac{6}{5} \cdot \frac{3}{13} - \frac{6}{5} \cdot \frac{16}{13}$
+
+$= \frac{6}{5} \cdot \left(\frac{3}{13} - \frac{16}{13}\right)$
+
+$= \frac{6}{5} \cdot \frac{3 - 16}{13}$
+
+$= \frac{6}{5} \cdot \frac{(-13)}{13}$
+
+$= \frac{6}{5} \cdot (-1)$
+
+$= \frac{-6}{5}$
+#119
+a) $\frac{-8}{9} : \frac{4}{3}$; b) $(-2) : \frac{2}{5}$.
+#120
+a) $\frac{-8}{9} : \frac{4}{3} = \frac{-8}{9} \cdot \frac{3}{4} = \frac{(-8) \cdot 3}{9 \cdot 4} = \frac{-2}{3}$
+
+b) $(-2) : \frac{2}{5} = (-2) \cdot \frac{5}{2} = \frac{(-2) \cdot 5}{2} = -5$
+#121
+$\frac{3}{4} : 9 = \frac{3}{4} \cdot \frac{1}{9} = \frac{3 \cdot 1}{4 \cdot 9} = \frac{1}{4 \cdot 3} = \frac{1}{12}$ (phần)
+#122
+$6 \cdot \frac{1}{12} = \frac{6 \cdot 1}{12} = \frac{1}{2}$ (phần)
+#123
+| $a$ | $\frac{9}{25}$ | $12$ | $\frac{-5}{6}$ |
+| --- | --- | --- | --- |
+| $b$ | $1$ | $\frac{-9}{8}$ | $3$ |
+| $a \cdot b$ | ? | ? | ? |
+| $a : b$ | ? | ? | ? |
+#124
++) Với $a = \frac{9}{25}$, $b = 1$, ta có: $a \cdot b = \frac{9}{25} \cdot 1 = \frac{9}{25}$; $a : b = \frac{9}{25} : 1 = \frac{9}{25}$
+
++) Với $a = 12$, $b = \frac{-9}{8}$, ta có: $a \cdot b = 12 \cdot \frac{-9}{8} = \frac{12 \cdot (-9)}{8} = \frac{3 \cdot (-9)}{2} = \frac{-27}{2}$;
+
+$a : b = 12 : \frac{-9}{8} = 12 \cdot \frac{8}{-9} = \frac{12 \cdot 8}{-9} = \frac{(-4) \cdot 8}{3} = \frac{-32}{3}$
+
++) Với $a = \frac{-5}{6}$; $b = 3$, ta có: $a \cdot b = \frac{-5}{6} \cdot 3 = \frac{(-5) \cdot 3}{6} = \frac{-5}{2}$; $a : b = \frac{-5}{6} : 3 = \frac{-5}{6} \cdot \frac{1}{3} = \frac{(-5) \cdot 1}{6 \cdot 3} = \frac{-5}{18}$

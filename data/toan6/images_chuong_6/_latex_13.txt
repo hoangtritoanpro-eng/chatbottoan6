@@ -1,0 +1,34 @@
+#157
+Thay $b = \frac{9}{10}$ vào biểu thức B ta được:
+
+$B = \frac{1}{3} \cdot \frac{9}{10} + \frac{2}{9} \cdot \frac{9}{10} - \frac{9}{10} : \frac{9}{4}$
+
+$= \frac{9}{10} \cdot \frac{1}{3} + \frac{9}{10} \cdot \frac{2}{9} - \frac{9}{10} \cdot \frac{4}{9}$
+
+$= \frac{9}{10} \cdot \left(\frac{1}{3} + \frac{2}{9} - \frac{4}{9}\right)$
+
+$= \frac{9}{10} \cdot \left(\frac{1 \cdot 3}{3 \cdot 3} + \frac{2}{9} - \frac{4}{9}\right)$
+
+$= \frac{9}{10} \cdot \left(\frac{3}{9} + \frac{2}{9} - \frac{4}{9}\right)$
+
+$= \frac{9}{10} \cdot \frac{3 + 2 - 4}{9}$
+
+$= \frac{9}{10} \cdot \frac{1}{9}$
+
+$= \frac{9 \cdot 1}{10 \cdot 9}$
+
+$= \frac{1}{10}$
+#158
+Hình ảnh các phần bánh pizza tương ứng với các phân số: $\frac{1}{8}$, $\frac{3}{8}$, $\frac{4}{8}$
+#159
+Ta có: $\frac{1}{8} + \frac{3}{8} = \frac{4}{8} = \frac{4 : 4}{8 : 4} = \frac{1}{2}$
+
+Vậy Nam đã ăn hai phần bánh là $\frac{1}{8}$ và $\frac{3}{8}$.
+#160
+$150 : \frac{3}{5} = 150 \cdot \frac{5}{3} = \frac{150 \cdot 5}{3} = 50 \cdot 5 = 250$ (gam)
+#161
+$150 : \frac{3}{2} = 150 \cdot \frac{2}{3} = \frac{150 \cdot 2}{3} = 50 \cdot 2 = 100$ (gam)
+#162
+$12 \cdot \frac{1}{5} = \frac{12}{5}$ (km)
+#163
+$\frac{12}{5} : 5 = \frac{12}{5} \cdot \frac{1}{5} = \frac{12 \cdot 1}{5 \cdot 5} = \frac{12}{25}$ (giờ)

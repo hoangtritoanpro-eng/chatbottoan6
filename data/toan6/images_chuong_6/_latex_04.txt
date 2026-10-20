@@ -1,0 +1,86 @@
+#49
++) $\frac{3}{20} = \frac{3 \cdot 3}{20 \cdot 3} = \frac{9}{60}$
+
++) $\frac{6}{15} = \frac{6 \cdot 4}{15 \cdot 4} = \frac{24}{60}$
+
+Vì $9 < 24$ nên $\frac{9}{60} < \frac{24}{60}$ hay $\frac{3}{20} < \frac{6}{15}$.
+
+Vậy $\frac{3}{20} < \frac{6}{15}$.
+#50
+$10 \vdots 2$; $10 \vdots 5$
+#51
+Ta có: $\frac{4}{5} = \frac{4 \cdot 2}{5 \cdot 2} = \frac{8}{10}$
+
+$\frac{1}{2} = \frac{1 \cdot 5}{2 \cdot 5} = \frac{5}{10}$
+
+$\frac{7}{10}$
+
+Vì $5 < 7 < 8$ nên $\frac{5}{10} < \frac{7}{10} < \frac{8}{10}$ hay $\frac{1}{2} < \frac{7}{10} < \frac{4}{5}$
+#52
+a) Khối lượng nào lớn hơn: $\frac{5}{3}$ kg hay $\frac{15}{11}$ kg?
+
+b) Vận tốc nào nhỏ hơn: $\frac{5}{6}$ km/h hay $\frac{4}{5}$ km/h?
+#53
++) $\frac{5}{3} = \frac{5 \cdot 11}{3 \cdot 11} = \frac{55}{33}$
+
++) $\frac{15}{11} = \frac{15 \cdot 3}{11 \cdot 3} = \frac{45}{33}$
+
+Vì $55 > 45$ nên $\frac{55}{33} > \frac{45}{33}$ hay $\frac{5}{3} > \frac{15}{11}$
+
+Vậy $\frac{5}{3}$ kg $> \frac{15}{11}$ kg.
+#54
++) $\frac{5}{6} = \frac{5 \cdot 5}{6 \cdot 5} = \frac{25}{30}$
+
++) $\frac{4}{5} = \frac{4 \cdot 6}{5 \cdot 6} = \frac{24}{30}$
+
+Vì $25 > 24$ nên $\frac{25}{30} > \frac{24}{30}$ hay $\frac{5}{6} > \frac{4}{5}$, vì thế $\frac{4}{5} < \frac{5}{6}$
+
+Vậy $\frac{4}{5}$ km/h $< \frac{5}{6}$ km/h
+#55
+| Chuột chũi châu Âu | Dơi Kitti | Chuột túi có gai | Sóc chuột phương Đông |
+| --- | --- | --- | --- |
+| $\frac{5}{12}$ | $\frac{83}{100}$ | $\frac{1}{4}$ | $\frac{1}{3}$ |
+
+(Theo Scholastic Book of World Records)
+#56
++) $\frac{5}{12} = \frac{5 \cdot 25}{12 \cdot 25} = \frac{125}{300}$
+
++) $\frac{83}{100} = \frac{83 \cdot 3}{100 \cdot 3} = \frac{249}{300}$
+
++) $\frac{1}{4} = \frac{1 \cdot 75}{4 \cdot 75} = \frac{75}{300}$
+
++) $\frac{1}{3} = \frac{1 \cdot 100}{3 \cdot 100} = \frac{100}{300}$
+
+Vì $75 < 100 < 125 < 249$ nên $\frac{75}{300} < \frac{100}{300} < \frac{125}{300} < \frac{249}{300}$ hay $\frac{1}{4} < \frac{1}{3} < \frac{5}{12} < \frac{83}{100}$,
+
+vì thế $\frac{83}{100} > \frac{5}{12} > \frac{1}{3} > \frac{1}{4}$
+#57
+Mẹ có $15$ quả táo chia đều cho bốn anh em thì mỗi anh em sẽ được $\frac{15}{4}$ táo.
+
+Ta có: $\frac{15}{4} = 3 + \frac{3}{4} = 3\frac{3}{4}$
+
+Vậy mỗi anh em được $3$ quả và $\frac{3}{4}$ quả táo.
+#58
+$\frac{5}{7}; \ \frac{-3}{21}; \ \frac{-8}{15}$
+#59
++) $\frac{5}{7} = \frac{5 \cdot 15}{7 \cdot 15} = \frac{75}{105}$
+
++) $\frac{-3}{21} = \frac{-3 \cdot 5}{21 \cdot 5} = \frac{-15}{105}$
+
++) $\frac{-8}{15} = \frac{-8 \cdot 7}{15 \cdot 7} = \frac{-56}{105}$
+#60
+$\frac{4\,300\,000}{14\,600\,000} = \frac{4\,300\,000 : 100\,000}{14\,600\,000 : 100\,000} = \frac{43}{146}$ (phần)
+#61
+$\frac{43}{146}$
+#62
+a) $\frac{20}{30}$ và $\frac{30}{45}$
+
+b) $\frac{-25}{35}$ và $\frac{-55}{77}$
+#63
++) $\frac{20}{30} = \frac{20 : 10}{30 : 10} = \frac{2}{3}$
+
++) $\frac{30}{45} = \frac{30 : 15}{45 : 15} = \frac{2}{3}$
+
+Do đó $\frac{20}{30} = \frac{30}{45} \left(= \frac{2}{3}\right)$
+
+Vậy $\frac{20}{30} = \frac{30}{45}$.
