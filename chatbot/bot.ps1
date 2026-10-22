@@ -30,11 +30,10 @@ Write-Host "Nhap cau hoi toan hoac go lenh de bat dau tro chuyen:`n" -Foreground
 
 function Call-GeminiApi($prompt, $query, $key) {
     if (-not $key) {
-        Start-Sleep -Milliseconds 300
         return "[Mo phong] Phan hoi theo vai tro [$currentAct]: Toi da tiep nhan cau hoi '$query'. (De nhan cau tra loi LLM thuc te, ban co the go /key [GEMINI_API_KEY])"
     }
 
-    $models = @("gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash", "gemini-2.5-flash")
+    $models = @("gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
     $lastErr = ""
 
     foreach ($m in $models) {

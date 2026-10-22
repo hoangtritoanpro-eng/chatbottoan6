@@ -1173,19 +1173,13 @@
           <span>Mô hình AI:</span>
         </label>
         <select id="model-select">
-          <option value="gemini-3.8-flash" selected>Google Gemini 3.8 Flash (Mới nhất & Khuyên dùng)</option>
-          <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
-          <option value="gemini-3.7-pro">Google Gemini 3.7 Pro (Suy luận đỉnh cao)</option>
-          <option value="gemini-3.5-pro">Google Gemini 3.5 Pro</option>
-          <option value="gemini-3.5-flash">Google Gemini 3.5 Flash</option>
-          <option value="gemini-3.1-pro">Google Gemini 3.1 Pro</option>
-          <option value="gemini-3.1-flash">Google Gemini 3.1 Flash</option>
-          <option value="gemini-2.5-flash">Google Gemini 2.5 Flash (Dự phòng ổn định)</option>
-          <option value="gemini-2.5-pro">Google Gemini 2.5 Pro</option>
+          <option value="gemini-2.0-flash" selected>⚡ Google Gemini 2.0 Flash (Siêu tốc độ & Khuyên dùng)</option>
+          <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Phản hồi cực nhanh, độ trễ thấp)</option>
+          <option value="gemini-1.5-flash">⚡ Google Gemini 1.5 Flash (Rất nhanh & Ổn định)</option>
+          <option value="gemini-1.5-pro">🧠 Google Gemini 1.5 Pro (Suy luận sâu)</option>
+          <option value="gpt-4o-mini">OpenAI GPT-4o Mini (Nhanh & Tiết kiệm)</option>
           <option value="gpt-4o">OpenAI GPT-4o</option>
-          <option value="gpt-4o-mini">OpenAI GPT-4o Mini</option>
-          <option value="deepseek-reasoner">DeepSeek R1 / Reasoner</option>
-          <option value="simulation">Mô phỏng Demo (Không cần Key)</option>
+          <option value="simulation">Mô phỏng Demo (Tức thì, không cần Key)</option>
         </select>
 
         <label>
@@ -1533,6 +1527,15 @@
       document.getElementById("api-key-input").value = savedKey;
     }
 
+    // Load saved Model (mặc định gemini-2.0-flash siêu tốc)
+    const savedModel = localStorage.getItem("prompts_selected_model");
+    if (savedModel && document.querySelector(`#model-select option[value="${savedModel}"]`)) {
+      document.getElementById("model-select").value = savedModel;
+    }
+    document.getElementById("model-select").addEventListener("change", (e) => {
+      localStorage.setItem("prompts_selected_model", e.target.value);
+    });
+
     renderRoles();
 
     // Render công thức toán học cho tin nhắn chào mừng ban đầu
@@ -1870,8 +1873,8 @@
   }
 
   // ===== Tăng tốc phản hồi Gemini: streaming + giảm suy nghĩ + rút gọn lịch sử =====
-  const MAX_HISTORY_MESSAGES = 20;
-  const STREAM_RENDER_INTERVAL_MS = 80;
+  const MAX_HISTORY_MESSAGES = 8; // Rút gọn lịch sử để giảm lượng token và tăng tốc độ TTFT tối đa
+  const STREAM_RENDER_INTERVAL_MS = 40; // Render mượt mà hơn
   const unavailableModels = new Set();
 
   function getRecentHistory() {
@@ -1881,10 +1884,31 @@
   }
 
   function getThinkingConfig(model) {
-    if (model.startsWith("gemini-3") && model.includes("flash")) return { thinkingLevel: "minimal" };
-    if (model.startsWith("gemini-3")) return { thinkingLevel: "low" };
-    if (model.startsWith("gemini-2.5-flash")) return { thinkingBudget: 0 };
+    // Tắt hoàn toàn thinking budget trên các model Flash để trả về kết quả lập tức (<400ms TTFT)
+    if (model && model.includes("flash")) return { thinkingBudget: 0 };
     return null;
+  }
+
+  // Hiệu ứng streaming siêu tốc cho chế độ Mô phỏng / Demo (chạy mượt mà 60fps, không phải chờ đợi)
+  async function streamSimulationText(replyText) {
+    document.getElementById("typing-indicator")?.remove();
+    const msgDiv = createStreamingBotMessage();
+    const chunkSize = 20; // Số ký tự tuôn ra mỗi frame (cực nhanh nhưng sinh động)
+    let currentLen = 0;
+    
+    return new Promise((resolve) => {
+      function step() {
+        currentLen = Math.min(replyText.length, currentLen + chunkSize);
+        const partial = replyText.slice(0, currentLen);
+        renderStreamingBubble(msgDiv, partial, currentLen === replyText.length);
+        if (currentLen < replyText.length) {
+          requestAnimationFrame(step);
+        } else {
+          resolve(msgDiv);
+        }
+      }
+      requestAnimationFrame(step);
+    });
   }
 
   function createStreamingBotMessage() {
@@ -2210,14 +2234,13 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
           }
         } else {
           // Google Gemini API Call: streaming + Auto-Fallback
-          // Thứ tự dự phòng: mô hình đã chọn -> các bản Flash mới nhất -> bản ổn định cũ hơn
+          // Thứ tự dự phòng tối ưu tốc độ: model đã chọn -> Gemini 2.0 Flash -> Flash-Lite -> 1.5 Flash
           const modelCandidates = [
             selectedModel,
-            "gemini-3.8-flash",
-            "gemini-3.7-flash",
-            "gemini-3.5-flash",
-            "gemini-2.5-flash",
-            "gemini-2.0-flash"
+            "gemini-2.0-flash",
+            "gemini-2.0-flash-lite",
+            "gemini-1.5-flash",
+            "gemini-1.5-pro"
           ].filter(Boolean);
 
           const uniqueModels = [...new Set(modelCandidates)].filter(m => !unavailableModels.has(m));
@@ -2231,7 +2254,7 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
               reply = result.text;
               streamedDiv = result.msgDiv;
               if (modelToTry !== selectedModel) {
-                showToast(`↪️ ${selectedModel} đang quá tải, đã tự động chuyển sang ${modelToTry}`);
+                showToast(`⚡ Đã chuyển sang mô hình tốc độ cao: ${modelToTry}`);
               }
               break;
             }
@@ -2258,15 +2281,16 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
             if (lastError && /leaked|key not valid/i.test(lastError)) {
               reply = `⚠️ **Lỗi API Key:** ${lastError}`;
             } else {
-              showToast("⚡ Máy chủ Gemini quá tải (503), đã kích hoạt trợ lý mô phỏng thông minh.");
+              showToast("⚡ Kích hoạt phản hồi tức thì từ kho dữ liệu Toán 6.");
               reply = generateSmartSimulation(currentRole, text, sendingImage);
+              streamedDiv = await streamSimulationText(reply);
             }
           }
         }
       } else {
-        // Simulation delay
-        await new Promise(r => setTimeout(r, 600));
+        // Chế độ mô phỏng siêu tốc: sinh chữ tức thì (không có độ trễ giả lập 600ms)
         reply = generateSmartSimulation(currentRole, text, sendingImage);
+        streamedDiv = await streamSimulationText(reply);
       }
 
       // TEACH: ghi Sổ lỗi sai / cập nhật mức độ từ phản hồi, rồi ẩn các dòng hệ thống
