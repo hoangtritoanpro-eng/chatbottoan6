@@ -19,45 +19,85 @@ header_re = re.compile(
     re.IGNORECASE
 )
 
-def split_question_solution(curr_title, full_content, ch):
-    # Dọn dẹp lỗi \not\vdots từ nguồn cào web cũ, thay bằng chú thích hình vẽ
-    cleaned = re.sub(r'^[ \t]*\\not\\vdots[ \t]*\n?', '*(Hình vẽ minh họa trong SGK)*\n\n', full_content, flags=re.MULTILINE)
+SOL_STARTER_RES = [
+    re.compile(r'^(?:chu vi|diện tích|độ dài|chiều dài|chiều rộng|chiều cao|số điểm|số tiền|số cây|số học sinh|số viên|nhiệt độ|số phần|tổng số|kết quả|thương|tích|ước|bội)\s+.*(?:là|bằng)\s*:', re.IGNORECASE),
+    re.compile(r'^(?:chu vi|diện tích|độ dài|chiều dài|chiều rộng|chiều cao)\s+.*(?:là|bằng)\s*[\d\=]', re.IGNORECASE),
+    re.compile(r'^(?:ta có|ta thấy|ta nhận thấy|ta hiểu|ta được|dễ thấy|theo em|theo đề bài|theo giả thiết|giả sử)\b', re.IGNORECASE),
+    re.compile(r'^(?:vì|do đó|vậy|nên)\s+.*(?:nên|thì|=|là|<|>|\:)', re.IGNORECASE),
+    re.compile(r'^(?:dựa vào|quan sát)\s+(?:trục số|hình vẽ|bảng|đồ thị|hình)', re.IGNORECASE),
+    re.compile(r'^(?:đổi\s+\d+|bước\s*\d+|cách\s*\d+|trường hợp\s*\d+)\b', re.IGNORECASE),
+    re.compile(r'^(?:thay\s+[a-z]\s*=|lần lượt nhân|phác họa|vẽ hình\s+.*theo hướng dẫn|vẽ tam giác|cắt như hình|gập \d+ hình)', re.IGNORECASE),
+    re.compile(r'^\*\s*(?:cách\s*\d+|tìm các ước|tính)\s*:', re.IGNORECASE),
+    re.compile(r'^\+\)\s*.*(?:là\s*:|bằng\s*:|=)', re.IGNORECASE),
+    re.compile(r'^\d+\s*[\.\+\-\*\/]\s*\d+\s*=', re.IGNORECASE),
+    re.compile(r'^[a-d]\)\s*.*(?:là\s*:|bằng\s*:|=)', re.IGNORECASE),
+    re.compile(r'^\d+\.\s*.*(?:là\s*:|bằng\s*:|=)', re.IGNORECASE),
+]
 
-    # Đảm bảo đường dẫn ảnh trỏ đúng data/toan6/images_chuong_...
+def clean_text(s, ch):
+    if not s:
+        return ''
+    cleaned = re.sub(r'^[ \t]*\\not\\vdots[ \t]*\n?', '*(Hình vẽ minh họa trong SGK)*\n\n', s, flags=re.MULTILINE)
     cleaned = re.sub(r'!\[(.*?)\]\((images_chuong_\d+/[^)]+)\)', r'![\1](data/toan6/\2)', cleaned)
     cleaned = re.sub(r'\[\[IMG:(.*?)\]\]', rf'![Hình vẽ](data/toan6/images_chuong_{ch}/\1)', cleaned)
-
-    # Dọn dẹp các dấu ** dính liền vào số thứ tự và chữ (ví dụ: **1.**a) -> 1. a), **2.** -> 2.)
     cleaned = re.sub(r'\*\*(\d+)\.\*\*', r'\1. ', cleaned)
     cleaned = re.sub(r'\*\*([a-d])\)\*\*', r'\1) ', cleaned)
     cleaned = re.sub(r'\*\*(\d+)\)\*\*', r'\1) ', cleaned)
     cleaned = re.sub(r'\*\*(\d+)\*\*', r'\1. ', cleaned)
+    return cleaned.strip()
+
+def is_sol_line(line):
+    l = line.strip()
+    if not l:
+        return False
+    return any(r.search(l) for r in SOL_STARTER_RES)
+
+def split_question_solution(curr_title, inline_q, full_content, ch):
+    cleaned = clean_text(full_content, ch)
+    inline_q_clean = clean_text(inline_q, ch)
 
     # 1. Tách nếu có nhãn "Lời giải"
     parts = re.split(r'\n\*\*Lời giải:?\*\*|\nLời giải:?|\*\*Lời giải:?\*\*|Lời giải:', cleaned, maxsplit=1)
     if len(parts) > 1 and parts[1].strip():
-        q_text = parts[0].strip() or curr_title
+        q_before = parts[0].strip()
         sol_text = parts[1].strip()
+        if q_before:
+            if inline_q_clean:
+                q_text = f"{inline_q_clean}\n\n{q_before}"
+            else:
+                q_text = q_before
+        else:
+            q_text = inline_q_clean or curr_title
         return q_text, sol_text, cleaned
 
-    # 2. Không có nhãn "Lời giải" (Chương 3, 4, một số bài Chương 5)
+    # 2. Không có nhãn "Lời giải" (Chương 3, 4, một số bài)
     paragraphs = [p.strip() for p in cleaned.split('\n\n') if p.strip()]
-    if len(paragraphs) <= 1:
-        return curr_title, cleaned, cleaned
+
+    if not paragraphs:
+        return inline_q_clean or curr_title, "", cleaned
 
     seen_nums = set()
     seen_letters = set()
-    sol_idx = -1
 
+    # Thu thập số / chữ từ inline_q nếu có
+    if inline_q_clean:
+        for m_n in re.finditer(r'(?:^|\n)(\d+)\.\s*(?:([a-d])\))?', inline_q_clean):
+            seen_nums.add(m_n.group(1))
+            if m_n.group(2): seen_letters.add(m_n.group(2))
+        for m_l in re.finditer(r'(?:^|\n)([a-d])\)', inline_q_clean):
+            seen_letters.add(m_l.group(1))
+
+    sol_idx = -1
     for idx, p in enumerate(paragraphs):
         fl = p.splitlines()[0].strip()
-        # Bỏ qua nếu dòng đầu là tiêu đề bài trùng lặp
+        # Bỏ qua dòng tiêu đề lặp lại ở đầu
         if idx == 0 and fl.startswith('**') and 'trang' in fl.lower():
             continue
 
         m_num = re.match(r'^(\d+)\.\s*(?:([a-d])\))?', fl)
         m_let = re.match(r'^([a-d])\)', fl)
 
+        # Lặp lại số thứ tự (ví dụ: '1.' hoặc 'a)' xuất hiện lần thứ 2) -> điểm bắt đầu lời giải
         if m_num:
             num = m_num.group(1)
             letter = m_num.group(2)
@@ -66,6 +106,9 @@ def split_question_solution(curr_title, full_content, ch):
                 break
             seen_nums.add(num)
             if letter:
+                if letter in seen_letters:
+                    sol_idx = idx
+                    break
                 seen_letters.add(letter)
         elif m_let:
             letter = m_let.group(1)
@@ -74,26 +117,40 @@ def split_question_solution(curr_title, full_content, ch):
                 break
             seen_letters.add(letter)
 
-        p_lower = fl.lower()
-        sol_starters = (
-            'ta có', 'vì ', 'do đó', 'vậy ', 'dựa vào', 'đặc điểm chung',
-            'một số ', 'bước 1', 'nhiệt độ ', 'các tam giác', '+)', 'biểu diễn ',
-            'khi được hỏi', 'theo em', 'học sinh ', 'có nhiều cách', 'vẽ tam giác',
-            'vẽ hình', 'cắt như hình', 'gập 3 hình', 'dưới đây là', 'sắp xếp ',
-            '1. số dương', 'thay dấu', 'rút gọn', 'đổi 1 giờ', 'sau 10 phút',
-            'từ hoạt động', 'trục đối xứng', 'khi đặt thước', 'nhận thấy', 'giả sử',
-            'ba số ', 'số dương'
-        )
-        if any(p_lower.startswith(s) for s in sol_starters) and idx > 0:
-            sol_idx = idx
-            break
+        # Khớp mẫu mở đầu lời giải
+        if is_sol_line(fl):
+            if inline_q_clean or idx > 0:
+                sol_idx = idx
+                break
 
-    if sol_idx > 0:
-        q_text = '\n\n'.join(paragraphs[:sol_idx]).strip()
+    if sol_idx >= 0:
+        q_parts = []
+        if inline_q_clean:
+            q_parts.append(inline_q_clean)
+        if sol_idx > 0:
+            q_parts.extend(paragraphs[:sol_idx])
+        q_text = '\n\n'.join(q_parts).strip() or inline_q_clean or curr_title
         sol_text = '\n\n'.join(paragraphs[sol_idx:]).strip()
         return q_text, sol_text, cleaned
 
-    # Fallback an toàn: đoạn đầu là đề bài, phần còn lại là lời giải
+    # Nếu có inline_q_clean mà không có ranh giới rõ ràng trong body:
+    if inline_q_clean:
+        p0 = paragraphs[0]
+        if is_sol_line(p0.splitlines()[0]) or (p0.startswith('*(Hình vẽ') and len(paragraphs) > 1 and is_sol_line(paragraphs[1].splitlines()[0])):
+            q_text = inline_q_clean
+            sol_text = '\n\n'.join(paragraphs).strip()
+            return q_text, sol_text, cleaned
+
+        if p0.startswith('*(Hình vẽ') or re.match(r'^[a-d]\)', p0):
+            q_text = f"{inline_q_clean}\n\n{p0}"
+            sol_text = '\n\n'.join(paragraphs[1:]).strip() if len(paragraphs) > 1 else ""
+            return q_text, sol_text, cleaned
+        else:
+            q_text = inline_q_clean
+            sol_text = '\n\n'.join(paragraphs).strip()
+            return q_text, sol_text, cleaned
+
+    # Fallback khi KHÔNG có inline_q: đoạn đầu là đề bài, phần còn lại là lời giải
     q_text = paragraphs[0]
     sol_text = '\n\n'.join(paragraphs[1:]).strip() if len(paragraphs) > 1 else cleaned
     return q_text, sol_text, cleaned
@@ -113,15 +170,16 @@ for ch in range(1, 10):
 
     ex_list = []
     curr_title = None
+    curr_inline_q = None
     curr_body = []
 
     for line in lines:
         line_s = line.strip()
         m = header_re.match(line_s)
         if m:
-            if curr_title and curr_body:
+            if curr_title and (curr_body or curr_inline_q):
                 full_c = '\n'.join(curr_body).strip()
-                q_text, sol_text, clean_c = split_question_solution(curr_title, full_c, ch)
+                q_text, sol_text, clean_c = split_question_solution(curr_title, curr_inline_q, full_c, ch)
                 code_m = re.search(r'Bài\s+(\d+\.\d+)', curr_title, re.IGNORECASE)
                 code = code_m.group(1) if code_m else ''
 
@@ -136,15 +194,17 @@ for ch in range(1, 10):
                 ex_list.append(ex_obj)
                 all_exercises.append(ex_obj)
 
-            curr_title = m.group(0).strip()
-            rest = line_s[m.end():].strip()
-            curr_body = [rest] if rest else []
+            label = m.group(1).strip()
+            page = m.group(2).strip() if m.group(2) else ""
+            curr_title = f"**{label} {page}:**".replace('  ', ' ')
+            curr_inline_q = m.group(3).strip() if m.group(3) else ""
+            curr_body = []
         elif curr_title is not None:
             curr_body.append(line)
 
-    if curr_title and curr_body:
+    if curr_title and (curr_body or curr_inline_q):
         full_c = '\n'.join(curr_body).strip()
-        q_text, sol_text, clean_c = split_question_solution(curr_title, full_c, ch)
+        q_text, sol_text, clean_c = split_question_solution(curr_title, curr_inline_q, full_c, ch)
         code_m = re.search(r'Bài\s+(\d+\.\d+)', curr_title, re.IGNORECASE)
         code = code_m.group(1) if code_m else ''
         ex_obj = {
@@ -179,6 +239,7 @@ for ch in range(1, 10):
 
 print(f'Total exercises processed: {len(all_exercises)}')
 
+# 1. Ghi chatbot/toan6_data.js
 js_content = '// Multi-Persona AI Chatbot - Dữ liệu đầy đủ Toán 6 SGK Kết Nối Tri Thức (9 Chương)\n'
 js_content += 'window.TOAN6_DATA = ' + json.dumps(chapters_data, ensure_ascii=False) + ';\n\n'
 js_content += 'window.TOAN6_ALL_EXERCISES = (window.TOAN6_DATA || []).flatMap(function(c) { return c.sample_items || []; });\n'

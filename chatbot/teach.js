@@ -103,7 +103,8 @@
   }
 
   function questionBody(ex) {
-    let q = (ex.question || "").replace(/^\*\*[^*]+\*\*\s*/, "").trim();
+    let q = (ex.question || "").trim();
+    q = q.replace(/^\*\*(?:Bài|Luyện tập|Câu hỏi|Vận dụng|Thử thách|Tranh luận)[^*]+?:\*\*\s*/i, "");
     q = q.replace(/\*\*(\d+)\.\*\*/g, "$1. ")
          .replace(/\*\*([a-d])\)\*\*/g, "$1) ")
          .replace(/\*\*(\d+)\)\*\*/g, "$1) ")
