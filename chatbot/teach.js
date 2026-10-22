@@ -68,7 +68,13 @@
   function loadProfile() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return Object.assign(defaultProfile(), JSON.parse(raw));
+      if (raw) {
+        const p = Object.assign(defaultProfile(), JSON.parse(raw));
+        let ch = parseInt(p.chapter, 10);
+        if (isNaN(ch) || ch < 1 || ch > 9) ch = 1;
+        p.chapter = ch;
+        return p;
+      }
     } catch (e) { /* hồ sơ hỏng -> dùng mặc định */ }
     return defaultProfile();
   }
@@ -114,9 +120,12 @@
   }
 
   function chapterItems(ch) {
-    const numCh = parseInt(ch, 10);
-    const data = (window.TOAN6_DATA || []).find(c => c.chapter === numCh || c.chapter === ch);
-    if (!data || !data.sample_items) return [];
+    let numCh = parseInt(ch, 10);
+    if (isNaN(numCh) || numCh < 1 || numCh > 9) numCh = 1;
+    const data = (window.TOAN6_DATA || []).find(c => c.chapter === numCh);
+    if (!data || !data.sample_items || !data.sample_items.length) {
+      return (window.TOAN6_DATA && window.TOAN6_DATA[0] && window.TOAN6_DATA[0].sample_items) || [];
+    }
     const usable = data.sample_items.filter(isUsable);
     return usable.length ? usable : data.sample_items;
   }
@@ -420,22 +429,33 @@ Không thêm dòng này nếu em không mắc lỗi. Không giải thích về �
 
   // ---------- Hành động của HỌC SINH ----------
   function startDiagnostic() {
-    const ch = profile.chapter;
-    const items = [1, 2, 3].map(lv => pickExercises(ch, lv, 1)[0]).filter(Boolean);
+    let ch = parseInt(profile.chapter, 10);
+    if (isNaN(ch) || ch < 1 || ch > 9) { ch = 1; profile.chapter = 1; saveProfile(); }
+    let items = [1, 2, 3].map(lv => pickExercises(ch, lv, 1)[0]).filter(Boolean);
+    if (!items.length) {
+      const all = chapterItems(ch);
+      items = shuffle(all).slice(0, 3);
+    }
     if (!items.length) { showToast("⚠️ Chưa có dữ liệu bài tập cho chương này"); return; }
     active = items;
     activeMode = "diagnostic";
     const body = items.map((ex, i) =>
-      `**Câu ${i + 1} · ${LEVELS[levelOf(ex)]}** — *${shortTitle(ex)}*\n\n${questionBody(ex)}`
+      `**Câu ${i + 1} · ${LEVELS[levelOf(ex)] || "Bài tập"}** — *${shortTitle(ex)}*\n\n${questionBody(ex)}`
     ).join("\n\n---\n\n");
     postBot(`### 🩺 Kiểm tra nhanh đầu vào – Chương ${ch}\n*Bài lấy từ SGK, mỗi mức 1 câu. Em làm trung thực nhé: câu nào chưa biết cứ ghi **"chưa biết"**, không sao cả!*\n\n---\n\n${body}\n\n---\n\n👉 Trả lời theo mẫu: \`Câu 1: ...\`  \`Câu 2: ...\`  \`Câu 3: ...\` (ghi cả cách làm).`);
     renderChips();
   }
 
   function practice(delta) {
+    let ch = parseInt(profile.chapter, 10);
+    if (isNaN(ch) || ch < 1 || ch > 9) { ch = 1; profile.chapter = 1; }
     profile.level = Math.min(3, Math.max(1, profile.level + (delta || 0)));
     saveProfile();
-    const ex = pickExercises(profile.chapter, profile.level, 1)[0];
+    let ex = pickExercises(profile.chapter, profile.level, 1)[0];
+    if (!ex) {
+      const all = chapterItems(profile.chapter);
+      ex = all[0];
+    }
     if (!ex) { showToast("⚠️ Chưa có dữ liệu bài tập cho chương này"); return; }
     active = [ex];
     activeMode = "practice";
@@ -467,8 +487,13 @@ Không thêm dòng này nếu em không mắc lỗi. Không giải thích về �
   }
 
   function buildSurvey() {
-    const ch = profile.chapter;
-    const items = [...pickExercises(ch, 1, 2), ...pickExercises(ch, 2, 2), ...pickExercises(ch, 3, 1)];
+    let ch = parseInt(profile.chapter, 10);
+    if (isNaN(ch) || ch < 1 || ch > 9) { ch = 1; profile.chapter = 1; }
+    let items = [...pickExercises(ch, 1, 2), ...pickExercises(ch, 2, 2), ...pickExercises(ch, 3, 1)];
+    if (!items.length) {
+      const all = chapterItems(ch);
+      items = shuffle(all).slice(0, 5);
+    }
     if (!items.length) { showToast("⚠️ Chưa có dữ liệu bài tập cho chương này"); return; }
     const qs = items.map((ex, i) => `**Câu ${i + 1}** *(${LEVELS[levelOf(ex)]} · ${shortTitle(ex)})*\n\n${questionBody(ex)}`).join("\n\n");
     const assessRows = (TOPICS[ch] || []).map(t => `| ${t} | ☐ | ☐ | ☐ |`).join("\n");
@@ -837,7 +862,7 @@ Các nút dưới khung chat giúp thầy/cô làm nhanh từng việc.`;
   // ---------- Móc nối với chatbot ----------
   function onRoleChange(role) {
     const m = role && role.id.match(/^toan6_c(\d)$/);
-    if (m && profile.role === "student") {
+    if (m) {
       const ch = parseInt(m[1], 10);
       if (ch !== profile.chapter) {
         profile.chapter = ch;
