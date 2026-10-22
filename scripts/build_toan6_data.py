@@ -21,11 +21,17 @@ header_re = re.compile(
 
 def split_question_solution(curr_title, full_content, ch):
     # Dọn dẹp lỗi \not\vdots từ nguồn cào web cũ, thay bằng chú thích hình vẽ
-    cleaned = re.sub(r'\\not\\vdots\s*', '*(Hình vẽ minh họa trong SGK)*\n\n', full_content)
+    cleaned = re.sub(r'^[ \t]*\\not\\vdots[ \t]*\n?', '*(Hình vẽ minh họa trong SGK)*\n\n', full_content, flags=re.MULTILINE)
 
     # Đảm bảo đường dẫn ảnh trỏ đúng data/toan6/images_chuong_...
     cleaned = re.sub(r'!\[(.*?)\]\((images_chuong_\d+/[^)]+)\)', r'![\1](data/toan6/\2)', cleaned)
     cleaned = re.sub(r'\[\[IMG:(.*?)\]\]', rf'![Hình vẽ](data/toan6/images_chuong_{ch}/\1)', cleaned)
+
+    # Dọn dẹp các dấu ** dính liền vào số thứ tự và chữ (ví dụ: **1.**a) -> 1. a), **2.** -> 2.)
+    cleaned = re.sub(r'\*\*(\d+)\.\*\*', r'\1. ', cleaned)
+    cleaned = re.sub(r'\*\*([a-d])\)\*\*', r'\1) ', cleaned)
+    cleaned = re.sub(r'\*\*(\d+)\)\*\*', r'\1) ', cleaned)
+    cleaned = re.sub(r'\*\*(\d+)\*\*', r'\1. ', cleaned)
 
     # 1. Tách nếu có nhãn "Lời giải"
     parts = re.split(r'\n\*\*Lời giải:?\*\*|\nLời giải:?|\*\*Lời giải:?\*\*|Lời giải:', cleaned, maxsplit=1)
@@ -39,32 +45,46 @@ def split_question_solution(curr_title, full_content, ch):
     if len(paragraphs) <= 1:
         return curr_title, cleaned, cleaned
 
-    has_sub_questions = any(re.match(r'^[a-d]\)', p) for p in paragraphs[:3])
-    found_first_sub = False
+    seen_nums = set()
+    seen_letters = set()
     sol_idx = -1
 
     for idx, p in enumerate(paragraphs):
-        if idx == 0 and p.startswith('**'):
+        fl = p.splitlines()[0].strip()
+        # Bỏ qua nếu dòng đầu là tiêu đề bài trùng lặp
+        if idx == 0 and fl.startswith('**') and 'trang' in fl.lower():
             continue
-        if re.match(r'^[a-d]\)', p):
-            if has_sub_questions:
-                if not found_first_sub:
-                    found_first_sub = True
-                    continue
-                else:
-                    sol_idx = idx
-                    break
 
+        m_num = re.match(r'^(\d+)\.\s*(?:([a-d])\))?', fl)
+        m_let = re.match(r'^([a-d])\)', fl)
+
+        if m_num:
+            num = m_num.group(1)
+            letter = m_num.group(2)
+            if num in seen_nums:
+                sol_idx = idx
+                break
+            seen_nums.add(num)
+            if letter:
+                seen_letters.add(letter)
+        elif m_let:
+            letter = m_let.group(1)
+            if letter in seen_letters:
+                sol_idx = idx
+                break
+            seen_letters.add(letter)
+
+        p_lower = fl.lower()
         sol_starters = (
             'ta có', 'vì ', 'do đó', 'vậy ', 'dựa vào', 'đặc điểm chung',
             'một số ', 'bước 1', 'nhiệt độ ', 'các tam giác', '+)', 'biểu diễn ',
             'khi được hỏi', 'theo em', 'học sinh ', 'có nhiều cách', 'vẽ tam giác',
             'vẽ hình', 'cắt như hình', 'gập 3 hình', 'dưới đây là', 'sắp xếp ',
             '1. số dương', 'thay dấu', 'rút gọn', 'đổi 1 giờ', 'sau 10 phút',
-            'từ hoạt động', 'trục đối xứng'
+            'từ hoạt động', 'trục đối xứng', 'khi đặt thước', 'nhận thấy', 'giả sử',
+            'ba số ', 'số dương'
         )
-        p_lower = p.lower()
-        if any(p_lower.startswith(s) for s in sol_starters):
+        if any(p_lower.startswith(s) for s in sol_starters) and idx > 0:
             sol_idx = idx
             break
 
@@ -116,8 +136,9 @@ for ch in range(1, 10):
                 ex_list.append(ex_obj)
                 all_exercises.append(ex_obj)
 
-            curr_title = line_s
-            curr_body = [line]
+            curr_title = m.group(0).strip()
+            rest = line_s[m.end():].strip()
+            curr_body = [rest] if rest else []
         elif curr_title is not None:
             curr_body.append(line)
 

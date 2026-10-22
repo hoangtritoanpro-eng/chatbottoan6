@@ -103,7 +103,12 @@
   }
 
   function questionBody(ex) {
-    return (ex.question || "").replace(/^\*\*[^*]+\*\*\s*/, "").trim();
+    let q = (ex.question || "").replace(/^\*\*[^*]+\*\*\s*/, "").trim();
+    q = q.replace(/\*\*(\d+)\.\*\*/g, "$1. ")
+         .replace(/\*\*([a-d])\)\*\*/g, "$1) ")
+         .replace(/\*\*(\d+)\)\*\*/g, "$1) ")
+         .replace(/\*\*(\d+)\*\*/g, "$1. ");
+    return q.trim();
   }
 
   function levelOf(ex) {
