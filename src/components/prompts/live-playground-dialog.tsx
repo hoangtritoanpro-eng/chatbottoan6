@@ -59,7 +59,7 @@ export function LivePlaygroundDialog({
   trigger,
 }: LivePlaygroundDialogProps) {
   const [open, setOpen] = useState(false);
-  const [model, setModel] = useState("gemini-3.7-flash");
+  const [model, setModel] = useState("gemini-3.8-flash");
   const [apiKey, setApiKey] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -188,6 +188,8 @@ export function LivePlaygroundDialog({
                   <SelectValue placeholder="Chọn mô hình" />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="gemini-3.8-flash">Google Gemini 3.8 Flash (Mới nhất)</SelectItem>
+                  <SelectItem value="gemini-3.8-pro">Google Gemini 3.8 Pro</SelectItem>
                   <SelectItem value="gemini-3.7-flash">Google Gemini 3.7 Flash</SelectItem>
                   <SelectItem value="gemini-3.7-pro">Google Gemini 3.7 Pro</SelectItem>
                   <SelectItem value="gemini-3.5-pro">Gemini 3.5 Pro</SelectItem>
@@ -196,6 +198,8 @@ export function LivePlaygroundDialog({
                   <SelectItem value="gemini-3.1-flash">Gemini 3.1 Flash</SelectItem>
                   <SelectItem value="gemini-2.5-flash">Gemini 2.5 Flash</SelectItem>
                   <SelectItem value="gemini-2.5-pro">Gemini 2.5 Pro</SelectItem>
+                  <SelectItem value="gemini-2.0-flash">Gemini 2.0 Flash</SelectItem>
+                  <SelectItem value="gemini-2.0-flash-lite">Gemini 2.0 Flash-Lite</SelectItem>
                   <SelectItem value="gpt-4o">OpenAI GPT-4o</SelectItem>
                   <SelectItem value="deepseek-reasoner">DeepSeek R1 / Reasoner</SelectItem>
                   <SelectItem value="simulation">Mô phỏng Demo</SelectItem>

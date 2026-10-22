@@ -23,10 +23,18 @@ export const AI_MODELS = {
   "claude-3-5-sonnet": { name: "Claude 3.5 Sonnet", provider: "Anthropic" },
 
   // Google
+  "gemini-3.8-flash": { name: "Gemini 3.8 Flash", provider: "Google" },
+  "gemini-3.8-pro": { name: "Gemini 3.8 Pro", provider: "Google" },
+  "gemini-3.7-flash": { name: "Gemini 3.7 Flash", provider: "Google" },
+  "gemini-3.7-pro": { name: "Gemini 3.7 Pro", provider: "Google" },
   "gemini-3": { name: "Gemini 3", provider: "Google" },
   "gemini-3-pro": { name: "Gemini 3 Pro", provider: "Google" },
   "gemini-2-5-pro": { name: "Gemini 2.5 Pro", provider: "Google" },
   "gemini-2-5-flash": { name: "Gemini 2.5 Flash", provider: "Google" },
+  "gemini-2.0-flash": { name: "Gemini 2.0 Flash", provider: "Google" },
+  "gemini-2.0-flash-lite": { name: "Gemini 2.0 Flash-Lite", provider: "Google" },
+  "gemini-1.5-flash": { name: "Gemini 1.5 Flash", provider: "Google" },
+  "gemini-1.5-pro": { name: "Gemini 1.5 Pro", provider: "Google" },
 
   // xAI
   "grok-4": { name: "Grok 4", provider: "xAI" },

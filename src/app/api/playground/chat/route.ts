@@ -11,7 +11,7 @@ interface PlaygroundRequest {
 export async function POST(request: NextRequest) {
   try {
     const body: PlaygroundRequest = await request.json();
-    const { systemPrompt, userMessage, model = "gemini-2.0-flash", apiKey, temperature = 0.7 } = body;
+    const { systemPrompt, userMessage, model = "gemini-3.8-flash", apiKey, temperature = 0.7 } = body;
 
     if (!systemPrompt && !userMessage) {
       return NextResponse.json({ error: "System prompt or user message is required" }, { status: 400 });
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     // 1. Google Gemini
     if (model.startsWith("gemini") && effectiveGeminiKey) {
       try {
-        const geminiModelName = model || "gemini-3.7-flash";
+        const geminiModelName = model || "gemini-3.8-flash";
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${geminiModelName}:generateContent?key=${effectiveGeminiKey}`;
 
         const contents: any[] = [];

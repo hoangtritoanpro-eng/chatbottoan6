@@ -33,7 +33,7 @@ function Call-GeminiApi($prompt, $query, $key) {
         return "[Mo phong] Phan hoi theo vai tro [$currentAct]: Toi da tiep nhan cau hoi '$query'. (De nhan cau tra loi LLM thuc te, ban co the go /key [GEMINI_API_KEY])"
     }
 
-    $models = @("gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
+    $models = @("gemini-3.8-flash", "gemini-3.8-pro", "gemini-3.7-flash", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
     $lastErr = ""
 
     foreach ($m in $models) {

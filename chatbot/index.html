@@ -1173,10 +1173,17 @@
           <span>Mô hình AI:</span>
         </label>
         <select id="model-select">
-          <option value="gemini-2.0-flash" selected>⚡ Google Gemini 2.0 Flash (Siêu tốc độ & Khuyên dùng)</option>
-          <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Phản hồi cực nhanh, độ trễ thấp)</option>
-          <option value="gemini-1.5-flash">⚡ Google Gemini 1.5 Flash (Rất nhanh & Ổn định)</option>
-          <option value="gemini-1.5-pro">🧠 Google Gemini 1.5 Pro (Suy luận sâu)</option>
+          <option value="gemini-3.8-flash" selected>⚡ Google Gemini 3.8 Flash (Mới nhất & Siêu tốc)</option>
+          <option value="gemini-3.8-pro">🧠 Google Gemini 3.8 Pro (Suy luận sâu mới nhất)</option>
+          <option value="gemini-3.7-flash">⚡ Google Gemini 3.7 Flash (Tối ưu tốc độ cao)</option>
+          <option value="gemini-3.7-pro">🧠 Google Gemini 3.7 Pro (Tư duy chuyên sâu)</option>
+          <option value="gemini-2.5-flash">⚡ Google Gemini 2.5 Flash</option>
+          <option value="gemini-2.5-pro">🧠 Google Gemini 2.5 Pro</option>
+          <option value="gemini-2.0-flash">⚡ Google Gemini 2.0 Flash (Khuyên dùng ổn định)</option>
+          <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Độ trễ siêu thấp)</option>
+          <option value="gemini-2.0-flash-thinking-exp">🤔 Google Gemini 2.0 Flash Thinking</option>
+          <option value="gemini-1.5-flash">⚡ Google Gemini 1.5 Flash</option>
+          <option value="gemini-1.5-pro">🧠 Google Gemini 1.5 Pro</option>
           <option value="gpt-4o-mini">OpenAI GPT-4o Mini (Nhanh & Tiết kiệm)</option>
           <option value="gpt-4o">OpenAI GPT-4o</option>
           <option value="simulation">Mô phỏng Demo (Tức thì, không cần Key)</option>
@@ -2073,8 +2080,8 @@
   }
 
   function getThinkingConfig(model) {
-    // Tắt hoàn toàn thinking budget trên các model Flash để trả về kết quả lập tức (<400ms TTFT)
-    if (model && model.includes("flash")) return { thinkingBudget: 0 };
+    // Tắt hoàn toàn thinking budget trên các model Flash (trừ thinking models) để trả về kết quả lập tức (<400ms TTFT)
+    if (model && model.includes("flash") && !model.includes("thinking")) return { thinkingBudget: 0 };
     return null;
   }
 
@@ -2426,9 +2433,15 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
           }
         } else {
           // Google Gemini API Call: streaming + Auto-Fallback
-          // Thứ tự dự phòng tối ưu tốc độ: model đã chọn -> Gemini 2.0 Flash -> Flash-Lite -> 1.5 Flash
+          // Thứ tự dự phòng tối ưu tốc độ: model đã chọn -> Gemini 3.8 Flash -> 3.8 Pro -> 3.7 Flash -> 2.5 Flash -> 2.0 Flash -> Flash-Lite -> 1.5 Flash
           const modelCandidates = [
             selectedModel,
+            "gemini-3.8-flash",
+            "gemini-3.8-pro",
+            "gemini-3.7-flash",
+            "gemini-3.7-pro",
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite",
             "gemini-1.5-flash",
