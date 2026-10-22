@@ -1,12 +1,11 @@
-**Bài tập**
-
-**Giải Toán 6 trang 82 Tập 1**
-
 **Luyện tập trang 80 Toán lớp 6 Tập 1:**
 
 Cho hình lục giác đều như hình 4.6
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-trang-80-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Ta đã biết, 6 hình tam giác đều ghép lại thành hình lục giác đều, đó là những tam giác đều nào? Ngoài 6 tam giác đều đó, trong hình em còn thấy những tam giác đều nào khác?
 
@@ -18,7 +17,9 @@ Ta đã biết, 6 hình tam giác đều ghép lại thành hình lục giác đ
 
 Một số hình ảnh có dạng hình lục giác đều trong thực tế: Gạch lát ốp tường, khay đựng kẹo, đèn thả, mái đền, …
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/van-dung-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
 
 **Câu hỏi trang 81 Toán lớp 6 Tập 1:**
 
@@ -46,7 +47,9 @@ Bước 2. Dùng ê ke có góc   vẽ góc BAx bằng  .
 
 Bước 3. Vẽ góc ABy bằng  . Ta thấy Ax và By cắt nhau tại C, ta được tam giác đều ABC.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-2-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
 
 **Bài 4.3 trang 81 Toán lớp 6 Tập 1:** Vẽ hình vuông có cạnh bằng 5 cm.
 
@@ -58,45 +61,64 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Xác định đi
 
 Bước 4. Nối C với D ta được hình vuông ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-3-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
 
 **Bài 4.4 trang 81 Toán lớp 6 Tập 1:** Cắt và ghép để được một cái hộp có nắp theo hình gợi ý dưới đây:
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-4-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 1. Cắt như hình vẽ
 
 2.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-4-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-4-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 Gập 3 hình vuông 1, 2, 3, 4 theo cạnh kề với cạnh hình vuông 5 rồi gập hình vuông 6 sao cho có 1 cạnh kề với cạnh của hình vuông 1, 2, 3, 4 ta được hình lập phương.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-4-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-4-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
 
 **Bài 4.5 trang 81 Toán lớp 6 Tập 1:** Có nhiều cách để trang trí một hình vuông, chẳng hạn như hình dưới. Em hãy vẽ một hình vuông trên tờ giấy A4 và trang trí theo cách của mình.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-5-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Học sinh được thoải mái trang trí hình vuông theo ý tưởng của mình.
 
 Dưới đây là một hình trang trí minh họa:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-5-trang-81-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Bài 4.6 trang 82 Toán lớp 6 Tập 1:** Quan sát hình dưới và chỉ ra ít nhất hai cách, để một con kiến bò từ A đến B theo đường chéo của các hình vuông nhỏ?
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-6-trang-82-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Có nhiều cách để con kiến bò từ A đến B theo đường chéo của hình vuông.
 
 Dưới đây là ba cách:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-6-trang-82-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Bài 4.7 trang 82 Toán lớp 6 Tập 1:** Gấp và cắt hình tam giác đều từ một tờ giấy hình vuông theo hướng dẫn sau
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-7-trang-82-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Học sinh gấp và cắt theo hướng dẫn.
 
@@ -112,7 +134,10 @@ Vị trí đặt trạm biến áp là giao điểm các đường chéo chính 
 
 Gọi hình lục giác đều là ABCDEF, O là giao điểm của các đường chéo chính. Khi đó ta có 6 tam giác đều là: AOB, BOC, COD, DOE, EOF, AOF.  Do đó mà OA = OB = OC = OD = OE = OF hay O cách đều các đỉnh của hình lục giác đều
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-8-trang-82-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Vậy trạm biến áp đặt ở điểm O thì để khoảng cách từ trạm biến áp đến sáu ngôi nhà bằng nhau vì 6 ngôi nhà đặt ở các đỉnh của hình lục giác đều.
 
@@ -129,7 +154,10 @@ Vậy trạm biến áp đặt ở điểm O thì để khoảng cách từ tr�
 
 Quan sát hình vẽ:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/cau-hoi-trang-85-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Hãy tìm điểm E trên đoạn thẳng BC, điểm F trên đoạn thẳng AD để tứ giác ABEF là hình thoi.
 
@@ -159,23 +187,31 @@ Bước 2:
 
 Từ đó nối các điểm lại với nhau ta được hình thoi ABEF như hình vẽ dưới.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/cau-hoi-trang-85-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Vận dụng trang 86 Toán lớp 6 Tập 1:**
 
 Em hãy vẽ đường trang trí theo mẫu dưới đây rồi tô màu tùy ý
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/van-dung-trang-86-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Học sinh thoải mái ý tưởng để vẽ hình
 
 Dưới đây là một hình minh họa
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/van-dung-trang-86-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Luyện tập trang 88 Toán lớp 6 Tập 1:** Hình nào trong các hình đã cho là hình thang cân? Hãy cho biết tên hình thang cân đó
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-trang-88-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Hình thang cân trong các hình là hình thang HKIJ vì có HJ = KI.
 
@@ -193,7 +229,9 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Trên đường 
 
 Bước 4. Nối D với C ta được hình chữ nhật ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-9-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
 
 **Bài 4.10 trang 89 Toán lớp 6 Tập 1:** Vẽ hình thoi có cạnh 4 cm.
 
@@ -209,9 +247,18 @@ Bước 3. Vẽ đường thẳng đi qua C và song song với cạnh AB. Vẽ 
 
 Bước 4. Hai đường thẳng này cắt nhau tại D, ta được hình thoi ABCD.
 
-\not\vdots 
 
-\not\vdots 
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-10-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-10-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-10-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-10-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Bài 4.11 trang 89 Toán lớp 6 Tập 1:** Vẽ hình bình hành có độ dài một cạnh bằng 6 cm, một cạnh bằng 3 cm.
 
@@ -225,19 +272,23 @@ BC = 3 cm.
 
 Bước 3. Vẽ đường thẳng đi qua A và song song với BC, đường thẳng qua C và song song với AB. Hai đường thẳng này cắt nhau tại D, ta được hình bình hành ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-11-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
 
 **Bài 4.12 trang 89 Toán lớp 6 Tập 1:** Hãy kể tên các hình thang cân, hình chữ nhật có trong hình lục giác đều sau:
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-12-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 +) Các hình thang cân: ABCD, BCDE, CDEF, DEFA, EFAB, FABC
 
-+) Các hình chữ nhật: ABDE, BCEF, CDFA. 
++) Các hình chữ nhật: ABDE, BCEF, CDFA.
 
 **Bài 4.13 trang 89 Toán lớp 6 Tập 1:** Cho hình bình hành ABCD, hai đường chéo AC và BD cắt nhau tại điểm I. Sử dụng compa hoặc thước thẳng kiểm tra xem điểm I có là trung điểm của hai đường chéo AC và BD không?
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-13-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Sử dụng thước thẳng đo đoạn thẳng hoặc compa ta nhận thấy ID = IB; IC = IA
 
@@ -247,15 +298,25 @@ Do đó I là trung điểm của hai đường chéo AC và BD.
 
 +) Cắt tờ giấy hình thoi thành 4 mảnh được minh họa:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-14-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-14-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 
 +) Sau đó ghép lại để được hình chữ nhật như sau:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-14-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-14-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Bài 4.15 trang 89 Toán lớp 6 Tập 1:** “Bàn làm việc đa năng”. Hãy cắt 6 hình thang cân giống nhau rồi ghép thành hình mặt chiếc bàn làm việc như hình dưới đây.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-15-trang-89-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Cắt 6 hình thang giống hết nhau rồi ghép lại như hình vẽ:
 
@@ -272,7 +333,14 @@ Cắt 6 hình thang giống hết nhau rồi ghép lại như hình vẽ:
 
 **1.**Một người thợ phải làm các khung thép hình chữ nhật có chiều dài 35 cm, chiều rộng 30 cm để làm đai cho cột bê tông cốt thép. Nếu dùng 260 m dây thép thì người đó sẽ làm được bao nhiêu khung thép như vậy?
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-1-trang-91-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-1-trang-91-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-1-trang-91-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 **2**. Một chiếc bàn khung thép được thiết kế như hình bên. Mặt bàn là hình thang cân có hai đáy lần lượt là 1 200 mm, 600 mm và cạnh bên 600 mm. Chiều cao bàn là 730 mm. Hỏi làm một chiếc khung bàn nói trên cần bao nhiêu mét thép (coi mối hàn không đáng kể)?
 
@@ -332,7 +400,8 @@ Vậy thửa ruộng đó thu hoạch được 920 kilogam thóc.
 
 **Luyện tập 2 trang 93 Toán lớp 6 Tập 1:** Trên một mảnh đất hình chữ nhật có chiều dài 12m, chiều rộng 10m, người ta phân chia khu vực để trồng hoa, trồng cỏ như hình bên. Hoa sẽ được trồng ở trong khu vực hình bình hành AMCN, cỏ sẽ trồng ở phần đất còn lại. Tiền công để trả cho mỗi mét vuông trồng hoa là 50 000 đồng, trồng cỏ là 40 000 đồng. Tính số tiền công cần chi trả để trồng hoa và cỏ.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-2-trang-93-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Dễ thấy trong hình bình hành AMCN chiều cao tương ứng của cạnh AN là MN và      MN = AB = 10m
 
@@ -364,13 +433,17 @@ Vậy số tiền công cần để chi trả trồng hoa và cỏ là 5 400 000
 
 **Luyện tập 3 trang 94 Toán lớp 6 Tập 1:** Trong mảnh vườn hình chữ nhật có chiều dài 8 m, chiều rộng 5 m, người ta trồng hoa hồng trong một mảnh đất hình thoi như hình bên. Nếu mỗi mét vuông trồng 4 cây hoa thì cần bao nhiêu cây hoa để trồng trên mảnh đất hình thoi đó?
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/luyen-tap-3-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Dễ thấy độ dài hai đường chéo hình thoi là chiều dài và chiều rộng của hình chữ nhật
 
 Diện tích hình thoi là:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-luyen-tap-3-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Cần số cây hoa trồng trên mảnh đất hình thoi đó là:
 
@@ -400,9 +473,10 @@ Chu vi hình thoi MNPQ là:     
 
 Vậy chu vi hình thoi MNPQ là 24 cm.
 
-**Bài 4.18 trang 94 Toán lớp 6 Tập 1:** Một khu vườn hình chữ nhật có chiều dài 15m, chiều rộng 10 m như hình dưới, cổng vào có độ rộng $bằng \not\vdots chiều$ dài, phần còn lại là hàng rào. Hỏi hàng rào của khu vườn dài bao nhiêu mét?
+**Bài 4.18 trang 94 Toán lớp 6 Tập 1:** Một khu vườn hình chữ nhật có chiều dài 15 m, chiều rộng 10 m như hình dưới, cổng vào có độ rộng bằng $\frac{1}{3}$ chiều dài, phần còn lại là hàng rào. Hỏi hàng rào của khu vườn dài bao nhiêu mét?
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-18-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Chu vi của khu vườn hình chữ nhật là:     
 
@@ -410,7 +484,7 @@ Chu vi của khu vườn hình chữ nhật là:     
 
 Chiều dài của cổng vào là:     
 
-15.$\not\vdots$   = 5 (m)
+$15 \cdot \frac{1}{3} = 5$ (m)
 
 Chiều dài của hàng rào là:     
 
@@ -422,7 +496,10 @@ Vậy chiều dài của hàng rào là 45m.
 
 Một mảnh ruộng hình thang có kích thước như hình dưới. Biết năng suất lúa là 0,8 kg/m2.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-19-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 a) Tính diện tích mảnh ruộng.
 
@@ -430,7 +507,10 @@ b) Hỏi mảnh ruộng cho sản lượng là bao nhiêu kilogam thóc?
 
 a) Diện tích mảnh ruộng hình thang là:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-bai-4-19-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 b) Sản lượng của mảnh ruộng là:
 
@@ -440,7 +520,8 @@ Vậy diện tích mảnh ruộng là 200 m2 và sản lượng 160 kg thóc.
 
 **Bài 4.20 trang 94 Toán lớp 6 Tập 1:** Mặt sàn của một ngôi nhà được thiết kế như hình dưới (đơn vị m). Hãy tính diện tích mặt sàn.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-20-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 *Cách 1:*
 
@@ -488,7 +569,10 @@ Vậy diện tích mặt sàn của ngôi nhà là 112 m2.
 
 Tính diện tích mảnh đất hình thang ABCD như hình dưới, biết AB = 10 m; DC = 25 m và hình chữ nhật ABED có diện tích là 150m2.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-21-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Chiều dài của đoạn AD là:   
 
@@ -496,7 +580,10 @@ Chiều dài của đoạn AD là:   
 
 Diện tích mảnh đất là:     
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-bai-4-21-trang-94-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Vậy diện tích mảnh đất hình thang ABCD là 262, 5 m2.
 
@@ -545,7 +632,14 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Xác định đi
 
 Bước 4. Nối C với D ta được hình vuông ABCD
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 b) Vẽ hình chữ nhật ABCD có một cạnh bằng 4 cm, một cạnh bằng 2 cm theo hướng dẫn sau:
 
@@ -557,7 +651,14 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Trên đường 
 
 Bước 4. Nối D với C ta được hình chữ nhật ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 c) Vẽ tam giác đều ABC cạnh 3cm theo hướng dẫn sau:
 
@@ -567,13 +668,22 @@ Bước 2. Dùng ê ke có góc 60o vẽ góc BAx bằng 60o.
 
 Bước 3. Vẽ góc ABy bằng 60o. Ta thấy Ax và By cắt nhau tại C, ta được tam giác đều ABC.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-23-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
 
 **Bài 4.24 trang 96 Toán lớp 6 Tập 1:**
 
 Cho hình thoi MPNQ như hình dưới với MN = 8 cm; PQ = 6 cm
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-24-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 a) Tính diện tích hình thoi MPNQ.
 
@@ -581,7 +691,10 @@ b) Biết MP = 5 cm, tính chu vi của hình thoi MPNQ.
 
 a) Diện tích hình thoi MPNQ là:      
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-bai-4-24-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 b) Chu vi hình thoi MPNQ là:       
 
@@ -605,7 +718,8 @@ Vậy chu vi của mảnh giấy đó là 40 cm.
 
 **Bài 4.26 trang 96 Toán lớp 6 Tập 1:** Một mảnh vườn hình vuông cạnh 20 m. Người ta làm một lối đi xung quanh vườn rộng 2 m thuộc đất của vườn. Phần đất còn lại dùng để trồng trọt. Tính diện tích trồng trọt của mảnh vườn.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-26-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Phần còn lại để trồng trọt là hình vuông có cạnh:     
 
@@ -617,13 +731,14 @@ Diện tích trồng trọt của mảnh vườn là:     
 
 Vậy diện tích trồng trọt của mảnh vườn là 256 m2
 
-**Bài 4.27 trang 96 Toán lớp 6 Tập 1:** Một mảnh vườn hình chữ nhật có chiều dài 25 m. Chiều rộng $bằng \not\vdots chiều$ dài. Người ta làm hai lối đi rộng 1 m như hình vẽ. Phần đất còn lại dùng để trồng cây. Tính diện tích đất dùng để trồng cây.
+**Bài 4.27 trang 96 Toán lớp 6 Tập 1:** Một mảnh vườn hình chữ nhật có chiều dài 25 m. Chiều rộng bằng $\frac{3}{5}$ chiều dài. Người ta làm hai lối đi rộng 1 m như hình vẽ. Phần đất còn lại dùng để trồng cây. Tính diện tích đất dùng để trồng cây.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-27-trang-96-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Chiều rộng của mảnh vườn là:    
 
-25.$\not\vdots$   = 15 (m)
+$25 \cdot \frac{3}{5} = 15$ (m)
 
 Nhìn vào hình vẽ ta thấy diện tích đất trồng cây là 4 mảnh đất hình chữ nhật nhỏ có kích thước như nhau.
 
@@ -658,11 +773,15 @@ Vậy diện tích đất để trồng cây là 336 m2.
 
 **Bài 4.28 trang 97 Toán lớp 6 Tập 1:** Hãy đếm xem trong hình bên có bao nhiêu hình vuông, bao nhiêu hình chữ nhật.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-28-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Đặt tên các điểm như hình vẽ dưới:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-28-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 
 +) Số hình vuông có trong hình bên là 5 hình gồm: hình vuông ABCD, APIM, PBNI, INCQ, MIQD. 
 
@@ -670,11 +789,15 @@ Vậy diện tích đất để trồng cây là 336 m2.
 
 **Bài 4.29 trang 97 Toán lớp 6 Tập 1:** Hãy đếm số hình tam giác đều, số hình thang cân và số hình thoi trong hình vẽ bên
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-29-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Đặt tên như hình vẽ dưới đây:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-29-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 
 Trong hình vẽ trên có:
 
@@ -702,7 +825,14 @@ Bước 2. Dùng ê ke có góc 60o vẽ góc BAx bằng 60o.
 
 Bước 3. Vẽ góc ABy bằng 60o . Ta thấy Ax và By cắt nhau tại C, ta được tam giác đều ABC.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 b) Vẽ hình vuông ABCD có cạnh 6 cm theo hướng dẫn sau:
 
@@ -714,7 +844,14 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Xác định đi
 
 Bước 4. Nối C với D ta được hình vuông ABCD
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 c) Vẽ hình chữ nhật ABCD có một cạnh bằng 4 cm, một cạnh bằng 3 cm theo hướng dẫn sau:
 
@@ -726,7 +863,13 @@ Bước 3. Vẽ đường thẳng vuông góc với AB tại B. Trên đường 
 
 Bước 4. Nối D với C ta được hình chữ nhật ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-30-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
 
 **Bài 4.31 trang 97 Toán lớp 6 Tập 1:**
 
@@ -744,7 +887,12 @@ BC = 3 cm.
 
 Bước 3. Vẽ đường thẳng đi qua A và song song với BC, đường thẳng qua C và song song với AB. Hai đường thẳng này cắt nhau tại D, ta được hình bình hành ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-31-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-31-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 
 b) Vẽ hình thoi ABCD có cạnh bằng 3 cm theo hướng dẫn sau:
 
@@ -758,7 +906,11 @@ Bước 3. Vẽ đường thẳng đi qua C và song song với cạnh AB. Vẽ 
 
 Bước 4. Hai đường thẳng này cắt nhau tại D, ta được hình thoi ABCD.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-31-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-31-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
 
 **Bài 4.32 trang 97 Toán lớp 6 Tập 1:** Tính chu vi và diện tích hình chữ nhật có chiều dài 6 cm, chiều rộng 5 cm.
 
@@ -774,7 +926,8 @@ Vậy chu vi và diện tích hình chữ nhật lần lượt là 22cm và 30 c
 
 **Bài 4.33 trang 97 Toán lớp 6 Tập 1:** Cho hình lục giác đều ABCDEF như hình sau, biết OA = 6 cm; BF = 10,4 cm.
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-33-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 a) Tính diện tích hình thoi ABOF.
 
@@ -782,7 +935,10 @@ b) Tính diện tích hình lục giác đều ABCDEF.
 
 a) Diện tích hình thoi ABOF là:     
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-bai-4-33-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 b) Ta thấy hình thoi ABOF được tạo từ 2 tam giác đều có cạnh OA = 6cm nên diện tích mỗi tam giác là: 31, 2 : 2 = 15,6 (cm2)
 
@@ -794,8 +950,14 @@ Vậy diện tích hình lục giác đều ABCDEF là 93,6 cm2.
 
 **Bài 4.34 trang 97 Toán lớp 6 Tập 1:** Một mảnh vườn có hình dạng như hình dưới đây. Tính diện tích mảnh vườn.
 
-\not\vdots 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-34-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-34-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-34-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 Ta nhận thấy tổng diện tích của hình 1, hình 2 và hình 3 bằng diện tích của hình chữ nhật ABCD trong đó diện tích hình 2 là diện tích của mảnh vườn cần tìm.
 
@@ -827,7 +989,12 @@ Vậy diện tích mảnh vườn là 69 m2.
 
 *Cách khác:* Cách chia hình: Ta chia mảnh vườn thành 3 hình như hình vẽ bên dưới thì diện tích mảnh vườn bằng tổng diện tích của ba hình chữ nhật 1, hình 2 và hình 3.
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-34-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-34-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 Diện tích của hình 3 là:
 
@@ -861,29 +1028,56 @@ Vậy diện tích mảnh vườn là 69 m2.
 
 **Bài 4.35 trang 97 Toán lớp 6 Tập 1:** Một hình chữ nhật có chiều dài gấp đôi chiều rộng. hãy cắt và ghép lại thành một hình vuông có diện tích tương đương
 
-\not\vdots 
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Bước 1: Lấy 1 điểm là trung điểm chiều dài rồi cắt như hình vẽ
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 Bước 2: Ghép lại thành như hình vẽ:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 
 Bước 3: Xoay hình tạo thành hình vuông:
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-35-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
 
 **Bài 4.36 trang 97 Toán lớp 6 Tập 1:**
 
 Bản thiết kế một hiên nhà được biểu thị ở hình sau. Nếu chi phí làm mỗi 9 dm2 hiên là 103 nghìn đồng thì chi phí của cả hiên nhà sẽ là bao nhiêu?
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/bai-4-36-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Diện tích của hiên nhà hình thang là:    
 
-\not\vdots 
+
+
+![Hình vẽ](data/toan6/images_chuong_4/a-bai-4-36-trang-97-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 Chi phí của cả hiên là:    
 
@@ -901,4 +1095,3 @@ Vậy chi phí của cả hiên là 32 445 000 đồng.
 
 * **Giải sgk Toán 6 Kết nối tri thức**
 * **Giải SBT Toán 6 Kết nối tri thức**
-

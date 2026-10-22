@@ -1,33 +1,3 @@
-**Bài tập**
-
-[**Giải Toán 6 trang 102 Tập 1**](../toan-6-ket-noi/giai-toan-6-tap-1-trang-102-ket-noi-tri-thuc.jsp)
-
-* [**Bài 5.1 trang 102 Toán lớp 6 Tập 1:** Hãy chỉ ra trục đối xứng của hình thang cân....](../toan-6-ket-noi/bai-5-1-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-  [*Xem lời giải*](../toan-6-ket-noi/bai-5-1-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-* [**Bài 5.2 trang 102 Toán lớp 6 Tập 1:** Hình lục giác đều có bao nhiêu trục đối xứng ....](../toan-6-ket-noi/bai-5-2-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-  [*Xem lời giải*](../toan-6-ket-noi/bai-5-2-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-* [**Bài 5.3 trang 102 Toán lớp 6 Tập 1:** Trong các hình dưới đây, hình nào có trục đối xứng ....](../toan-6-ket-noi/bai-5-3-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-  [*Xem lời giải*](../toan-6-ket-noi/bai-5-3-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-* [**Bài 5.4 trang 102 Toán lớp 6 Tập 1:** Quan sát những hình dưới đây và cho biết: a) Hình nào không có trục đối xứng ....](../toan-6-ket-noi/bai-5-4-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-  [*Xem lời giải*](../toan-6-ket-noi/bai-5-4-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.jsp)
-
-**Lời giải:**
-
-Khi hai cánh của con bướm gập lại, thì hai cánh của nó vừa đúng chồng khít nên nhau.
-
-**Lời giải:**
-
-Khi gấp đôi hình tròn theo một đường thẳng đi qua tâm, ta được hai nửa đường tròn chúng sẽ vừa đúng chồng khít lên nhau.
-
-**Lời giải:**
-
-Gấp đôi một tờ giấy (H.5.2a), dùng kéo cắt một đường như Hình 5.2b rồi mở ra, ta thấy hình được cắt có hai phần giống nhau.
-
 **Luyện tập 1 trang 99 Toán lớp 6 Tập 1:**
 
 **1.**Những chữ cái nào dưới đây có trục đối xứng? Hãy dự đoán trục đối xứng của chúng.
@@ -92,11 +62,20 @@ Phác họa trục đối xứng:
 
 **Bài 5.1 trang 102 Toán lớp 6 Tập 1:** Hãy chỉ ra trục đối xứng của hình thang cân
 
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-1-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+
 **Lời giải:**
 
 +) Trục đối xứng của hình thang cân là đường thẳng đi qua trung điểm của hai đáy.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-1-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.2 trang 102 Toán lớp 6 Tập 1:** Hình lục giác đều có bao nhiêu trục đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-2-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -104,7 +83,13 @@ Phác họa trục đối xứng:
 
 Vậy hình lục giác có 6 trục đối xứng.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-2-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.3 trang 102 Toán lớp 6 Tập 1:** Trong các hình dưới đây, hình nào có trục đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-3-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -112,7 +97,13 @@ Các hình a), c), d) có trục đối xứng.
 
 +) Phác họa trục đối xứng:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-3-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.4 trang 102 Toán lớp 6 Tập 1:** Quan sát những hình dưới đây và cho biết:
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-4-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -128,7 +119,17 @@ Quan sát chong chóng quay xung quanh điểm O như hình trên.
 
 Trong ba hình trên: hình tròn, hình chong chóng bốn cánh (hình a) và hình c)) có chung tính chất: Có điểm O sao cho khi quay chúng nửa vòng quanh O thì hình thu được chồng khít với chính nó ở vị trí ban đầu (trước khi quay).
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-4-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-4-trang-102-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 **Luyện tập 1 trang 104 Toán lớp 6 Tập 1:**
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-1-trang-104-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-1-trang-104-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 
 **1.**Đoạn thẳng là một hình có tâm đối xứng. Tâm đối xứng của nó là điểm nào?
 
@@ -150,7 +151,17 @@ Giao điểm của hai đường chéo là tâm đối xứng của hình bình 
 
 +) Tâm đối xứng của hình vuông là giao điểm của hai đường chéo.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-1-trang-104-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-1-trang-104-toan-lop-6-tap-1-ket-noi-tri-thuc-4.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-1-trang-104-toan-lop-6-tap-1-ket-noi-tri-thuc-5.png)
+
 **Luyện tập 2 trang 106 Toán lớp 6 Tập 1:** Vẽ lại các hình bên vào giấy kẻ ô vuông rồi vẽ thêm để được một hình nhận điểm O là tâm đối xứng.
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-2-trang-106-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -170,13 +181,25 @@ Dự đoán:
 
 +) Tâm đối xứng của ngôi sao sáu cánh là giao điểm 2 đường thẳng nối 2 điểm đối diện.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/luyen-tap-2-trang-106-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.5 trang 107 Toán lớp 6 Tập 1:** Trong các hình dưới đây, hình nào có tâm đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-5-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 Trong các hình trên, hình a), c), d) có tâm đối xứng:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-5-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.6 trang 107 Toán lớp 6 Tập 1:** Trong mỗi hình dưới đây, điểm O có phải là tâm đối xứng không?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-6-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -184,13 +207,22 @@ Những hình mà điểm O là tâm đối xứng là: a), c)
 
 **Bài 5.7 trang 107 Toán lớp 6 Tập 1:** Hình nào dưới đây có tâm đối xứng? Em hãy xác định tâm đối xứng (nếu có) của chúng.
 
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-7-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+
 **Lời giải:**
 
 Những hình có tâm đối xứng là: hình a) và hình b)
 
 Phác họa tâm đối xứng của các hình:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-7-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.8 trang 107 Toán lớp 6 Tập 1:** Em hãy trình bày các bước gấp và cắt giấy như trong Thực hành 2 (cắt hình cỏ bốn là) ở mục 2 để gấp và cắt hình bên.
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-8-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -198,7 +230,15 @@ Cắt hình theo hướng dẫn sau:
 
 **1.**Chuẩn bị một mảnh giấy hình vuông kích thước 4 cm x 4 cm. gấp đôi mảnh giấy hai lần sao cho các cạnh đối diện của nó trùng lên nhau như hình dưới.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-8-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc-1.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-8-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.9 trang 107 Toán lớp 6 Tập 1:** Vẽ lại các hình sau vào giấy kẻ ô vuông rồi vẽ thêm để được một hình nhận điểm O là tâm đối xứng.
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-9-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -206,7 +246,13 @@ Cắt hình theo hướng dẫn sau:
 
 Vẽ hình để mỗi hình nhận điểm O là tâm đối xứng:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-9-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.10 trang 107 Toán lớp 6 Tập 1:** An gấp những mảnh giấy kích thước 3 cm x 5 cm lần lượt theo chiều ngang và chiều dọc rồi cắt như những hình sau. Theo em, khi mở những mảnh giấy này, An sẽ nhận được chữ gì?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-10-trang-107-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -229,6 +275,9 @@ Tham khảo lời giải bài tập Toán lớp 6 Kết nối tri thức với c
 
 **Bài 5.11 trang 108 Toán lớp 6 Tập 1:**
 
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-11-trang-108-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
+
 Trong các hình bên, em hãy chỉ ra:
 
 a) Những hình có tâm đối xứng;
@@ -239,7 +288,15 @@ b) Những hình có trục đối xứng.
 
 a) Hình có tâm đối xứng: cánh quạt
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-11-trang-108-toan-lop-6-tap-1-ket-noi-tri-thuc-1.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-11-trang-108-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.12 trang 109 Toán lớp 6 Tập 1:** Trong các hình dưới đây, hình nào có trục đối xứng, hình nào có tâm đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-12-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -247,7 +304,13 @@ a) Hình có tâm đối xứng: cánh quạt
 
 +) Hình có trục đối xứng là: hình b); hình c)
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-12-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.13 trang 109 Toán lớp 6 Tập 1:** Vẽ các hình sau vào giấy kẻ ô vuông rồi vẽ thêm để được hình nhận đường thẳng d là trục đối xứng.
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-13-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
@@ -255,43 +318,91 @@ a) Hình có tâm đối xứng: cánh quạt
 
 Vẽ hình để được hình nhận đường thẳng d là trục đối xứng là:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-13-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.14 trang 109 Toán lớp 6 Tập 1:** Vẽ hình dưới đây vào giấy kẻ ô vuông rồi vẽ thêm để được hình nhận điểm O làm tâm đối xứng.
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-14-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 Hình vẽ nhận điểm O làm tâm đối xứng là:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-14-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.15 trang 109 Toán lớp 6 Tập 1:** Trong các hình sau, hình nào có trục đối xứng, hình nào có tâm đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-15-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 +) Hình a) có tâm đối xứng nhưng không có trục đối xứng (chữ S, chữ O có tâm đối xứng nhưng chữ S không có trục đối xứng). Vậy tâm đối xứng của hình a) là tâm của chữ O:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-15-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-1.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-15-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.16 trang 109 Toán lớp 6 Tập 1:** Hình gấp khúc dưới đây gồm bốn đoạn thẳng có độ dài bằng 1 cm. Em hãy vẽ thêm một đường gấp khúc có độ dài bằng 8 cm để được một hình có cả trục đối xứng và tâm đối xứng.
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-16-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 Có rất nhiều cách vẽ. Dưới đây là một số ví dụ
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-16-trang-109-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.17 trang 110 Toán lớp 6 Tập 1:** Em hãy vẽ các hình dưới đây vào giấy kẻ ô vuông rồi chỉ ra tất cả các trục đối xứng của chúng (nếu có)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-17-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 +) Hình a) có 1 trục đối xứng.
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-17-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-1.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-17-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-17-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-3.png)
+
 **Bài 5.18 trang 110 Toán lớp 6 Tập 1:** Hình nào dưới đây là hình có tâm đối xứng?
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-18-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 Hình b) có tâm đối xứng
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-18-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.19 trang 110 Toán lớp 6 Tập 1:** Vẽ các hình sau vào vở và vẽ thêm họa tiết để được hình mặt cười nhận đường thẳng d cho trước là trục đối xứng
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-19-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Lời giải:**
 
 Vẽ thêm họa tiết để được hình mặt cười nhận đường thẳng d cho trước là trục đối xứng là:
 
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-19-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
+
 **Bài 5.20 trang 110 Toán lớp 6 Tập 1:**
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-20-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc.png)
+
 
 **Vẽ chiếc lá**
 
@@ -300,3 +411,6 @@ Vẽ hình bên vào giấy kẻ ô vuông rồi vẽ thêm và trang trí để
 **Lời giải:**
 
 Vẽ thêm và trang trí để được hình chiếc lá nhận đường thẳng d là trục đối xứng.
+
+
+![Hình vẽ](data/toan6/images_chuong_5/bai-5-20-trang-110-toan-lop-6-tap-1-ket-noi-tri-thuc-2.png)
