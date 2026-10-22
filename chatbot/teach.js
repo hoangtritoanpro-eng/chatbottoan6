@@ -108,12 +108,17 @@
   }
 
   function isUsable(ex) {
-    return questionBody(ex).length >= 15 && (ex.solution || "").trim().length >= 15;
+    const q = questionBody(ex);
+    const s = (ex.solution || "").trim();
+    return (q.length >= 10 && s.length >= 10) || (ex.content && ex.content.length >= 25);
   }
 
   function chapterItems(ch) {
-    const data = (window.TOAN6_DATA || []).find(c => c.chapter === ch);
-    return data ? data.sample_items.filter(isUsable) : [];
+    const numCh = parseInt(ch, 10);
+    const data = (window.TOAN6_DATA || []).find(c => c.chapter === numCh || c.chapter === ch);
+    if (!data || !data.sample_items) return [];
+    const usable = data.sample_items.filter(isUsable);
+    return usable.length ? usable : data.sample_items;
   }
 
   function shuffle(arr) {
@@ -221,9 +226,11 @@
 
   // ---------- Ngữ cảnh gửi cho AI ----------
   function exerciseBlock(ex, idx) {
+    const q = questionBody(ex) || ex.content;
+    const s = (ex.solution || "").trim() || ex.content;
     return `${idx != null ? `Câu ${idx + 1} (${LEVELS[levelOf(ex)]}): ` : ""}${shortTitle(ex)}
-Đề bài: ${questionBody(ex)}
-Lời giải chuẩn SGK (chỉ để đối chiếu): ${ex.solution}`;
+Đề bài: ${q}
+Lời giải chuẩn SGK (chỉ để đối chiếu): ${s}`;
   }
 
   function getContext(alreadyIncludedEx) {
@@ -443,9 +450,10 @@ Không thêm dòng này nếu em không mắc lỗi. Không giải thích về �
 
   function showSolution() {
     if (!active.length) return;
-    const md = active.map((ex, i) =>
-      `**${active.length > 1 ? `Câu ${i + 1} – ` : ""}${shortTitle(ex)}**\n\n${ex.solution}`
-    ).join("\n\n---\n\n");
+    const md = active.map((ex, i) => {
+      const s = (ex.solution || "").trim() || ex.content;
+      return `**${active.length > 1 ? `Câu ${i + 1} – ` : ""}${shortTitle(ex)}**\n\n${s}`;
+    }).join("\n\n---\n\n");
     postBot(`### 📖 Lời giải chuẩn SGK\n\n${md}\n\n---\n\n👉 Em đối chiếu với bài làm của mình. Sai ở đâu thì ghi vào **📒 Sổ lỗi sai**, rồi bấm **✍️ Tự viết điểm mấu chốt** nhé!`);
   }
 
