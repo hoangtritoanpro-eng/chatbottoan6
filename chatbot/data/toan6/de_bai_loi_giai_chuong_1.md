@@ -1131,13 +1131,13 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 a) Viết kết quả phép nhân sau dưới dạng một lũy thừa của 7:
 
-72.73 = (7 . 7) . (7 . 7 . 7) = ?
+$7^2 \cdot 7^3 = (7 \cdot 7) \cdot (7 \cdot 7 \cdot 7) = ?$
 
 b) Nêu nhận xét về mối liên hệ giữa các số mũ của 7 trong hai thừa số và trong tích tìm được ở câu a).
 
 **Lời giải:**
 
-a)72.73 = (7.7).(7.7.7) = 7.7.7.7.7 = 75
+a) $7^2 \cdot 7^3 = (7 \cdot 7) \cdot (7 \cdot 7 \cdot 7) = 7 \cdot 7 \cdot 7 \cdot 7 \cdot 7 = 7^5$
 
 b) Ta thấy 2 + 3 = 5
 
@@ -1173,30 +1173,31 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 |  |  |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| a | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-| a2 | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| $a$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| $a^2$ | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 
 **Lời giải:**
 
-+) Với a = 1 thì a2 = 12 = 1.1 = 1
++) Với $a = 1$ thì $a^2 = 1^2 = 1 \cdot 1 = 1$
 
-+) Với a = 2 thì a2 = 22 = 2.2 = 4
++) Với $a = 2$ thì $a^2 = 2^2 = 2 \cdot 2 = 4$
 
-+) Với a = 3 thì a2 = 32 = 3.3 = 9
++) Với $a = 3$ thì $a^2 = 3^2 = 3 \cdot 3 = 9$
 
-+) Với a = 4 thì a2 = 42 = 4.4 = 16
++) Với $a = 4$ thì $a^2 = 4^2 = 4 \cdot 4 = 16$
 
-+) Với a = 5 thì a2 = 52 = 5.5 = 25
++) Với $a = 5$ thì $a^2 = 5^2 = 5 \cdot 5 = 25$
 
-+) Với a = 6 thì a2 = 62 = 6.6 = 36
++) Với $a = 6$ thì $a^2 = 6^2 = 6 \cdot 6 = 36$
 
-+) Với a = 7 thì a2 = 72 = 7.7 = 49
++) Với $a = 7$ thì $a^2 = 7^2 = 7 \cdot 7 = 49$
 
-+) Với a = 8 thì a2 = 82 = 8.8 = 64
++) Với $a = 8$ thì $a^2 = 8^2 = 8 \cdot 8 = 64$
 
-+) Với a = 9 thì a2 = 92 = 9.9 = 81
++) Với $a = 9$ thì $a^2 = 9^2 = 9 \cdot 9 = 81$
 
-+) Với a = 10 thì a2 = 102 = 10.10 = 100
++) Với $a = 10$ thì $a^2 = 10^2 = 10 \cdot 10 = 100$
 
 Ta có bảng sau:
 
@@ -1233,19 +1234,19 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 **Luyện tập 2 trang 23 Toán lớp 6 Tập 1:** Viết kết quả phép tính dưới dạng một lũy thừa:
 
-a) 53 . 57
+a) $5^3 \cdot 5^7$
 
-b) 24 . 25 . 29
+b) $2^4 \cdot 2^5 \cdot 2^9$
 
-c) 102 . 104 . 106 . 108
+c) $10^2 \cdot 10^4 \cdot 10^6 \cdot 10^8$
 
 **Lời giải:**
 
-a) 53 . 57 = 53 + 7 = 510
+a) $5^3 \cdot 5^7$ = 53 + 7 = 510
 
-b) 24 . 25 . 29 = 24 + 5 + 9 = 218
+b) $2^4 \cdot 2^5 \cdot 2^9$ = 24 + 5 + 9 = 218
 
-c) 102 . 104 . 106 . 108 = 102 + 4 + 6 + 8  = 1020 
+c) $10^2 \cdot 10^4 \cdot 10^6 \cdot 10^8$ = 102 + 4 + 6 + 8  = 1020 
 
 Lời giải bài tập Toán 6 Bài 6: Lũy thừa với số mũ tự nhiên hay, chi tiết khác:
 
@@ -1279,7 +1280,7 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 (2) Hãy viết mỗi số tự nhiên sau thành tổng giá trị các chữ số của nó bằng cách dùng các lũy thừa của 10 theo mẫu:
 
-4 257 = 4 . 103 + 2. 102 + 5 . 10 + 7.
+$4\,257 = 4 \cdot 10^3 + 2 \cdot 10^2 + 5 \cdot 10 + 7$.
 
 a) 23 917;
 
@@ -1289,15 +1290,15 @@ b) 203 184.
 
 (1) Số hạt thóc có trong ô thứ 7 của bàn cờ nói trong bài toán mở đầu:
 
-                             2 . 2 . 2 . 2 . 2 . 2 = 26 = 64 (hạt thóc)
+                             $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 2^6 = 64$ (hạt thóc)
 
 Vậy trong ô thứ 7 của bàn cờ vua nói trong bài toán mở đầu có 64 hạt thóc.
 
 (2) Theo mẫu đã cho, ta viết được như sau:
 
-a) 23 197 = 2 . 104 + 3 . 103 + 1 . 102 + 9 . 10 + 7.
+a) $23\,917 = 2 \cdot 10^4 + 3 \cdot 10^3 + 9 \cdot 10^2 + 1 \cdot 10 + 7$.
 
-b) 203 184 = 2 . 105 + 0 . 104 + 3 . 103 + 1 . 102 + 8 . 10 + 4.
+b) $203\,184 = 2 \cdot 10^5 + 0 \cdot 10^4 + 3 \cdot 10^3 + 1 \cdot 10^2 + 8 \cdot 10 + 4$.
 
 Lời giải bài tập Toán 6 Bài 6: Lũy thừa với số mũ tự nhiên hay, chi tiết khác:
 
@@ -1327,23 +1328,23 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 **Hoạt động 3 trang 24 Toán lớp 6 Tập 1:**
 
-a) Giải thích vì sao có thể viết 65 = 63 . 62
+a) Giải thích vì sao có thể viết $6^5 = 6^3 \cdot 6^2$
 
-b) Sử dụng câu a) để suy ra 65 : 63 = 62. Nêu nhận xét về mối liên hệ giữa các số mũ của 6 trong số bị chia, số chia và thương.
+b) Sử dụng câu a) để suy ra $6^5 : 6^3 = 6^2$. Nêu nhận xét về mối liên hệ giữa các số mũ của 6 trong số bị chia, số chia và thương.
 
-c) Viết thương của phép chia 107 : 104 dưới dạng lũy thừa của 10.
+c) Viết thương của phép chia $10^7 : 10^4$ dưới dạng lũy thừa của 10.
 
 **Lời giải:**
 
-a) Ta có: 63 . 62 = 63 + 2 = 65 nên có thể viết 65 = 63 . 62
+a) Ta có: $6^3 \cdot 6^2 = 6^{3 + 2} = 6^5$ nên có thể viết $6^5 = 6^3 \cdot 6^2$
 
-b) Ta có 65 = 63 . 62 nên 65 : 63 = 62
+b) Ta có $6^5 = 6^3 \cdot 6^2$ nên $6^5 : 6^3 = 6^2$
 
 Ta thấy 5 - 3 = 2
 
 Nên ta có nhận xét: Hiệu số mũ của 6 trong số bị chia và số chia bằng số mũ của 6 trong thương tìm được.
 
-c) Ta nhận thấy 107 = 104 + 3 = 104 . 103 nên 107 : 104 = 103
+c) Ta nhận thấy $10^7 = 10^{4 + 3} = 10^4 \cdot 10^3$ nên $10^7 : 10^4 = 10^3$
 
 Lời giải bài tập Toán 6 Bài 6: Lũy thừa với số mũ tự nhiên hay, chi tiết khác:
 
@@ -1375,15 +1376,15 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 Viết kết quả các phép tính dưới dạng một lũy thừa:
 
-a)   76 : 74
+a) $7^6 : 7^4$
 
-b)  1091100 : 1091100
+b) $109^{100} : 109^{100}$
 
 **Lời giải:**
 
-a) 76 : 74= 76-4= 72.
+a) $7^6 : 7^4 = 7^{6 - 4} = 7^2$.
 
-b) 1091100 : 1091100=1091100 - 100 = 10910 = 1 = 11
+b) $109^{100} : 109^{100} = 109^{100 - 100} = 109^0 = 1$.
 
 Lời giải bài tập Toán 6 Bài 6: Lũy thừa với số mũ tự nhiên hay, chi tiết khác:
 
@@ -1421,65 +1422,64 @@ d) a . a . a . a . a . a
 
 **Lời giải:**
 
-a) 9 . 9 . 9 . 9 . 9 = 95
+a) $9 \cdot 9 \cdot 9 \cdot 9 \cdot 9 = 9^5$
 
-b) 10 . 10 . 10 . 10 = 104
+b) $10 \cdot 10 \cdot 10 \cdot 10 = 10^4$
 
-c) 5 . 5 . 5 . 25 = 5 . 5 . 5 . 5 . 5 = 55
+c) $5 \cdot 5 \cdot 5 \cdot 25 = 5 \cdot 5 \cdot 5 \cdot 5 \cdot 5 = 5^5$
 
-d) a . a . a . a . a . a = a6
+d) $a \cdot a \cdot a \cdot a \cdot a \cdot a = a^6$
 
 **Bài 1.37 trang 24 Toán lớp 6 Tập 1:** Hoàn thành bảng sau vào vở:
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Lũy thừa | Cơ số | Số mũ | Giá trị của lũy thừa |
-| 43 | ? | ? | ? |
+| :---: | :---: | :---: | :---: |
+| $4^3$ | ? | ? | ? |
 | ? | 3 | 5 | ? |
 | ? | 2 | ? | 128 |
 
 **Lời giải:**
 
-+) Ta có 43 là lũy thừa với cơ số là 4 và số mũ là 3
++) Ta có $4^3$ là lũy thừa với cơ số là 4 và số mũ là 3:
 
-43 = 4 . 4 .  4 = 16 . 4 = 64
+$4^3 = 4 \cdot 4 \cdot 4 = 16 \cdot 4 = 64$
 
-+) Cơ số là 3, số mũ là 5 ta có lũy thừa là 35
++) Cơ số là 3, số mũ là 5 ta có lũy thừa là $3^5$:
 
-35 = 3 . 3 . 3 . 3 . 3 = 9 . 3 . 3 . 3 = 27 . 3 . 3 = 81 . 3 = 243
+$3^5 = 3 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 9 \cdot 3 \cdot 3 \cdot 3 = 27 \cdot 3 \cdot 3 = 81 \cdot 3 = 243$
 
 +) Với cơ số là 2 thì ta phân tích 128 thành tích của các thừa số 2, ta được:
 
-128 = 2 . 2 . 2 . 2 . 2 . 2 . 2 = 27
+$128 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 2^7$
 
 Vậy ta cần điền các số vào bảng như sau:
 
-|  |  |  |  |
-| --- | --- | --- | --- |
 | Lũy thừa | Cơ số | Số mũ | Giá trị của lũy thừa |
-| 43 | **4** | **3** | **64** |
-| 35 | 3 | 5 | **243** |
-| 27 | 2 | **7** | 128 |
+| :---: | :---: | :---: | :---: |
+| $4^3$ | **4** | **3** | **64** |
+| $3^5$ | 3 | 5 | **243** |
+| $2^7$ | 2 | **7** | 128 |
 
 **Bài 1.38 trang 24 Toán lớp 6 Tập 1:**
 
-Tính: a) 25
+Tính: 
+a) $2^5$
 
-b) 33
+b) $3^3$
 
-c) 52
+c) $5^2$
 
-d) 109
+d) $10^9$
 
 **Lời giải:**
 
-a) 25= 2.2.2.2.2 = 4.2.2.2 = 8.2.2 = 16.2 = 32
+a) $2^5 = 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 2 \cdot 2 \cdot 2 = 8 \cdot 2 \cdot 2 = 16 \cdot 2 = 32$
 
-b) 33 = 3.3.3 = 9.3 = 27
+b) $3^3 = 3 \cdot 3 \cdot 3 = 9 \cdot 3 = 27$
 
-c) 52 = 5 . 5 = 25.
+c) $5^2 = 5 \cdot 5 = 25$
 
-d) 109 = 10.10.10.10.10.10.10.10.10 = 1 000 000 000.
+d) $10^9 = 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 = 1\,000\,000\,000$
 
 (Chú ý: Lũy thừa với cơ số là 10 thì số chữ số 0 ở kết quả của lũy thừa chính bằng số mũ).
 
@@ -1487,51 +1487,51 @@ d) 109 = 10.10.10.10.10.10.10.10.10 = 1 000 000 000.
 
 **Lời giải:**
 
-+) 215 = 2. 102+ 1. 101+ 5
++) $215 = 2 \cdot 10^2 + 1 \cdot 10^1 + 5$
 
-+) 902 = 9. 102+ 0. 101+ 2
++) $902 = 9 \cdot 10^2 + 0 \cdot 10^1 + 2$
 
-+) 2 020 = 2. 103+ 0. 102+ 2. 101+ 0
++) $2\,020 = 2 \cdot 10^3 + 0 \cdot 10^2 + 2 \cdot 10^1 + 0$
 
-+) 883 001 = 8. 105+ 8. 104+ 3. 103+ 0. 102+ 0. 101+ 1
++) $883\,001 = 8 \cdot 10^5 + 8 \cdot 10^4 + 3 \cdot 10^3 + 0 \cdot 10^2 + 0 \cdot 10^1 + 1$
 
 **Bài 1.40 trang 24 Toán lớp 6 Tập 1:**
 
-Tính 112,1112. Từ đó hãy dự đoán kết quả của 11112.
+Tính $11^2, 111^2$. Từ đó hãy dự đoán kết quả của $1111^2$.
 
 **Lời giải:**
 
-+) 112 = 11.11 = 121
++) $11^2 = 11 \cdot 11 = 121$
 
-+) 1112 = 111.111 = 12321
++) $111^2 = 111 \cdot 111 = 12\,321$
 
-Dự đoán. 11112 = 1 234 321
+Dự đoán: $1111^2 = 1\,234\,321$
 
 **Bài 1.41 trang 24 Toán lớp 6 Tập 1:**
 
-Biết 210 = 1024. Tính 29 và 211.
+Biết $2^{10} = 1024$. Tính $2^9$ và $2^{11}$.
 
 **Lời giải:**
 
-Biết 210 = 1024
+Biết $2^{10} = 1024$
 
-Ta có:  29 = 210 – 1 = 210 : 2 = 1024 : 2 = 512.
+Ta có:  $2^9 = 2^{10 - 1} = 2^{10} : 2 = 1024 : 2 = 512$.
 
-            211 = 210 + 1 = 210 . 2 = 1024.2 = 2048
+            $2^{11} = 2^{10 + 1} = 2^{10} \cdot 2 = 1024 \cdot 2 = 2048$
 
 **Bài 1.42 trang 24 Toán lớp 6 Tập 1:**
 
-Tính: a) 57.53                      b) 58 : 54
+Tính: a) $5^7 \cdot 5^3$        b) $5^8 : 5^4$
 
 **Lời giải:**
 
-a) 57.53 = 57+3 = 510
+a) $5^7 \cdot 5^3 = 5^{7 + 3} = 5^{10}$
 
-b) 58 : 54 = 58-4 = 54
+b) $5^8 : 5^4 = 5^{8 - 4} = 5^4$
 
 **Bài 1.43 trang 24 Toán lớp 6 Tập 1:**
 
-Ta có: 1 + 3 + 5 = 9 = 32.
+Ta có: $1 + 3 + 5 = 9 = 3^2$.
 
 Viết các tổng sau dưới dạng bình phương của một số tự nhiên:
 
@@ -1541,27 +1541,27 @@ b) 1 + 3 + 5 + 7 + 9.
 
 **Lời giải:**
 
-a) Ta có: 1 + 3 + 5 + 7 = 16 = 4.4 = 42
+a) Ta có: $1 + 3 + 5 + 7 = 16 = 4 \cdot 4 = 4^2$
 
-b) Ta có: 1 + 3 + 5 + 7 + 9 = 25 = 5.5 = 52
+b) Ta có: $1 + 3 + 5 + 7 + 9 = 25 = 5 \cdot 5 = 5^2$
 
 **Bài 1.44 trang 24 Toán lớp 6 Tập 1:**
 
-Trái Đất có khối lượng khoảng 60.1020 tấn. Mỗi giây Mặt Trời tiêu thụ 6.106 tấn khí hydrogen (theo vnexpress.net). Hỏi Mặt Trời cần bao nhiêu giây để tiêu thụ một lượng khí hydrogen có khối lượng bằng khối lượng Trái Đất?
+Trái Đất có khối lượng khoảng $60 \cdot 10^{20}$ tấn. Mỗi giây Mặt Trời tiêu thụ $6 \cdot 10^6$ tấn khí hydrogen (theo vnexpress.net). Hỏi Mặt Trời cần bao nhiêu giây để tiêu thụ một lượng khí hydrogen có khối lượng bằng khối lượng Trái Đất?
 
 **Lời giải:**
 
 Thời gian để Mặt Trời tiêu thụ một lượng khí hdrogen có khối lượng bằng khối lượng Trái Đất là:
 
-(60. 1020) : ( 6. 106)
+$(60 \cdot 10^{20}) : (6 \cdot 10^6)$
 
-= (6.10.1020):(6.106) = 6.1021 : 6 : 106 = (6:6).(1021:106) = 1021-6 = 1015(giây)
+= $(6 \cdot 10 \cdot 10^{20}) : (6 \cdot 10^6) = (6 \cdot 10^{21}) : (6 \cdot 10^6) = (6 : 6) \cdot (10^{21} : 10^6) = 10^{21 - 6} = 10^{15}$ (giây)
 
-Vậy Mặt Trời cần 1015 giây để tiêu thụ một lượng khí hydrogen.
+Vậy Mặt Trời cần $10^{15}$ giây để tiêu thụ một lượng khí hydrogen.
 
 **Bài 1.45 trang 24 Toán lớp 6 Tập 1:**
 
-Theo các nhà khoa học, mỗi giây cơ thể con người trung bình tạo ra khoảng 25.105 tế bào hồng cầu (theowww.healthline.com). Hãy tính xem mỗi giờ, bao nhiêu tế bào hồng cầu được tạo ra?
+Theo các nhà khoa học, mỗi giây cơ thể con người trung bình tạo ra khoảng $25 \cdot 10^5$ tế bào hồng cầu (theowww.healthline.com). Hãy tính xem mỗi giờ, bao nhiêu tế bào hồng cầu được tạo ra?
 
 **Lời giải:**
 
@@ -1569,9 +1569,9 @@ Theo các nhà khoa học, mỗi giây cơ thể con người trung bình tạo 
 
 Vậy mỗi giờ số tế bào hồng cầu được tạo ra là:
 
-25.105. 3 600 = 3 600. 25. 105 = 36.10.10.25.105 = (36.25).107 = 900.107 = 9.102.107 = 9.109 (tế bào)
+$25 \cdot 10^5 \cdot 3\,600 = 36 \cdot 100 \cdot 25 \cdot 10^5 = 900 \cdot 10^7 = 9 \cdot 10^2 \cdot 10^7 = 9 \cdot 10^9$ (tế bào)
 
-Vậy mỗi giờ có 9.109 tế bào hồng cầu được tạo ra.
+Vậy mỗi giờ có $9 \cdot 10^9$ tế bào hồng cầu được tạo ra.
 
 **Video Giải Câu hỏi trang 25 SGK Toán 6 - Kết nối tri thức - Cô Xuân (Giáo viên VietJack)**
 
@@ -1619,15 +1619,15 @@ Giao bài, chấm điểm và thống kê kết quả ngay trên hệ thống.](
 
 Tính giá trị của các biểu thức sau:
 
-a) 25.23 – 32 + 125.
+a) $25 \cdot 2^3 - 3^2 + 125$.
 
-b) 2.32 + 5.(2 + 3).
+b) $2 \cdot 3^2 + 5 \cdot (2 + 3)$.
 
 **Lời giải:**
 
-a) 25.23 – 32 + 125 = 25.8 – 9 + 125 = 200 - 9 + 125 = 191 + 125 =316;
+a) $25 \cdot 2^3 - 3^2 + 125 = 25 \cdot 8 - 9 + 125 = 200 - 9 + 125 = 191 + 125 = 316$;
 
-b) 2.32 + 5.(2+3) = 2.9 + 5.5 = 18 + 25 = 43.
+b) $2 \cdot 3^2 + 5 \cdot (2 + 3) = 2 \cdot 9 + 5 \cdot 5 = 18 + 25 = 43$.
 
 Lời giải bài tập Toán 6 Bài 7: Thứ tự thực hiện các phép tính hay, chi tiết khác:
 
@@ -1759,17 +1759,17 @@ Tính:
 
 a) 235 + 78 - 142;
 
-b) 14 + 2 . 82;
+b) $14 + 2 \cdot 8^2$;
 
-c) {23+ [1 +(3-1)2]}:13.  
+c) $\{2^3 + [1 + (3 - 1)^2]\} : 13$.
 
 **Lời giải:**
 
 a) 235 + 78 - 142 = 313 – 142 = 171
 
-b) 14 + 2 . 82  = 14 + 2 . 64 = 14 + 128 = 142
+b) $14 + 2 \cdot 8^2 = 14 + 2 \cdot 64 = 14 + 128 = 142$
 
-c) {23+ [1 + (3-1)2]} : 13 = [8 + (1 + 22)] : 13 = [8 + (1 + 4)] : 13
+c) $\{2^3 + [1 + (3 - 1)^2]\} : 13 = [8 + (1 + 2^2)] : 13 = [8 + (1 + 4)] : 13$
 
 = (8 + 5) : 13 = 13 : 13 = 1
 
@@ -1777,15 +1777,15 @@ c) {23+ [1 + (3-1)2]} : 13 = [8 + (1 + 22)] : 13 = [8 + (1 + 4)] : 13
 
 Tính giá trị của biểu thức:
 
-1 + 2(a + b) – 43 khi a = 25; b = 9.
+$1 + 2(a + b) - 4^3$ khi $a = 25; b = 9$.
 
 **Lời giải:**
 
-Thay a = 25; b = 9 vào biểu thức 1 + 2(a + b) - 43 ta được:
+Thay $a = 25; b = 9$ vào biểu thức $1 + 2(a + b) - 4^3$ ta được:
 
-1 + 2(a + b) - 43 = 1 + 2. (25 + 9) - 43 = 1 + 2.34 – 64 = 1 + 68 – 64 = 69 – 64 = 5
+$1 + 2(a + b) - 4^3 = 1 + 2 \cdot (25 + 9) - 4^3 = 1 + 2 \cdot 34 - 64 = 1 + 68 - 64 = 69 - 64 = 5$
 
-Vậy 1 + 2(a + b) - 43= 5 khi a = 25; b = 9.
+Vậy $1 + 2(a + b) - 4^3 = 5$ khi $a = 25; b = 9$.
 
 **Bài 1.48 trang 26 Toán lớp 6 Tập 1:** Trong 8 tháng đầu năm, một cửa hàng bán được 1 264 chiếc ti vi. Trong 4 tháng cuối năm, trung bình mỗi tháng cửa hàng bán được 164 chiếc ti vi. Hỏi trong cả năm, trung bình mỗi tháng cửa hàng đó bán được bao nhiêu ti vi? Viết biểu thức tính kết quả.
 
@@ -1886,39 +1886,39 @@ Tính giá trị của biểu thức:
 
 a) 36 – 18:6;
 
-b) 2.32 + 24:6.2;
+b) $2 \cdot 3^2 + 24 : 6 \cdot 2$;
 
-c) 2.32 – 24:(6.2).
+c) $2 \cdot 3^2 - 24 : (6 \cdot 2)$.
 
 **Lời giải:**
 
 a) 36 – 18:6 = 36 – 3 = 33;
 
-b) 2.32 + 24:6.2 = 2.9 + 4.2 = 18 + 8 = 26;
+b) $2 \cdot 3^2 + 24 : 6 \cdot 2 = 2 \cdot 9 + 4 \cdot 2 = 18 + 8 = 26$;
 
-c) 2.32 – 24:(6.2) = 2 . 9 – 24 : 12 = 18 – 2 = 16.
+c) $2 \cdot 3^2 - 24 : (6 \cdot 2) = 2 \cdot 9 - 24 : 12 = 18 - 2 = 16$.
 
 **Bài 1.51 trang 27 Toán lớp 6 Tập 1:**
 
 Viết kết quả phép tính dưới dạng một lũy thừa:
 
-a) 33 : 32
+a) $3^3 : 3^2$
 
-b) 54 : 52
+b) $5^4 : 5^2$
 
-c) 83.82
+c) $8^3 \cdot 8^2$
 
-d) 54.53:52
+d) $5^4 \cdot 5^3 : 5^2$
 
 **Lời giải:**
 
-a) 33 : 32= 33-2 = 31
+a) $3^3 : 3^2 = 3^{3 - 2} = 3^1$
 
-b) 54 : 52 = 54-2 =52
+b) $5^4 : 5^2 = 5^{4 - 2} = 5^2$
 
-c) 83.82 = 83+2 = 85
+c) $8^3 \cdot 8^2 = 8^{3 + 2} = 8^5$
 
-d) 54.53:52= 54+3-2 = 55
+d) $5^4 \cdot 5^3 : 5^2 = 5^{4 + 3 - 2} = 5^5$
 
 **Bài 1.52 trang 27 Toán lớp 6 Tập 1:** Viết biểu thức tính diện tích toàn phần của hình hộp chữ nhật (hình dưới) theo a, b, c. Tính giá trị của biểu thức đó khi a = 5cm; b = 4cm; c = 3cm.
 
@@ -1938,23 +1938,23 @@ Vậy diện tích của hình hộp chữ nhật là 94 (cm2).
 
 **Bài 1.53 trang 27 Toán lớp 6 Tập 1:** Tính:
 
-a) 110 – 72 + 22 : 2
+a) $110 - 7^2 + 22 : 2$
 
-b) 9 . (82 – 15);
+b) $9 \cdot (8^2 - 15)$;
 
 c) 5 . 8 – ( 17 + 8 ) :5
 
-d) 75 : 3 + 6 . 92;
+d) $75 : 3 + 6 \cdot 9^2$;
 
 **Lời giải:**
 
-a) 110 – 72 + 22:2 = 110 – 49 + 11 = 61 + 11 = 72;
+a) $110 - 7^2 + 22 : 2 = 110 - 49 + 11 = 61 + 11 = 72$;
 
-b) 9.(82 – 15) = 9.(64 – 15 ) = 9.49 = 441;
+b) $9 \cdot (8^2 - 15) = 9 \cdot (64 - 15) = 9 \cdot 49 = 441$;
 
 c) 5.8 – (17 + 8):5 = 40 – 25:5 = 40 – 5 = 35;
 
-d) 75:3 + 6.92 = 25 + 6.81 = 25 + 486 = 511
+d) $75 : 3 + 6 \cdot 9^2 = 25 + 6 \cdot 81 = 25 + 486 = 511$.
 
 **Bài 1.54 trang 28 Toán lớp 6 Tập 1:**
 
@@ -2044,13 +2044,13 @@ Vậy thương của phép chia trên là 28 và số dư là 188.
 
 Tính giá trị của biểu thức:
 
-21.[ ( 1245 + 987) : 23 – 15.12 ] + 21
+$21 \cdot [(1\,245 + 987) : 2^3 - 15 \cdot 12] + 21$
 
 **Lời giải:**
 
-21.[ ( 1245 + 987) : 23 – 15.12 ] + 21
+$21 \cdot [(1\,245 + 987) : 2^3 - 15 \cdot 12] + 21$
 
-= 21.(2 232 : 8 - 180) + 21
+$= 21 \cdot (2\,232 : 8 - 180) + 21$
 
 = 21.(279 - 180) + 21
 

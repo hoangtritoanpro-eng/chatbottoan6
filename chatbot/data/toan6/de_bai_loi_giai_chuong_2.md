@@ -1325,7 +1325,7 @@ a) 36
 
 \not\vdots 
 
-Vậy  36 = 22.32
+Vậy  $36 = 2^2 \cdot 3^2$
 
 b) 105
 
@@ -1422,7 +1422,7 @@ a) 36
 
 \not\vdots 
 
-Vậy  36 = 22.32
+Vậy  $36 = 2^2 \cdot 3^2$
 
 b) 105
 
@@ -1510,11 +1510,11 @@ Vậy: Các số nguyên tố là: 89 ; 97 ; 541
 
          Các hợp số là: 125 ; 2 013; 2 018.
 
-**Bài 2.21 trang 42 Toán lớp 6 Tập 1:** Hãy phân tích A ra thừa số nguyên tố: A = 44.95
+**Bài 2.21 trang 42 Toán lớp 6 Tập 1:** Hãy phân tích A ra thừa số nguyên tố: $A = 4^4 \cdot 9^5$
 
 **Lời giải:**
 
-A = 44.95
+$A = 4^4 \cdot 9^5$
 
 \not\vdots 
 
@@ -1576,11 +1576,11 @@ Vậy: Các số nguyên tố là: 89 ; 97 ; 541
 
          Các hợp số là: 125 ; 2 013; 2 018.
 
-**Bài 2.21 trang 42 Toán lớp 6 Tập 1:** Hãy phân tích A ra thừa số nguyên tố: A = 44.95
+**Bài 2.21 trang 42 Toán lớp 6 Tập 1:** Hãy phân tích A ra thừa số nguyên tố: $A = 4^4 \cdot 9^5$
 
 **Lời giải:**
 
-A = 44.95
+$A = 4^4 \cdot 9^5$
 
 \not\vdots 
 
@@ -1961,13 +1961,13 @@ Số học sinh nam và nữ trong mỗi nhóm được cho như bảng dưới 
 |  |  |  |
 **Câu hỏi 2 trang 46 Toán lớp 6 Tập 1:**
 
-Tìm ƯCLN(45, 150) biết 45 = 32.5 và 150 = 2.3.52.
+Tìm ƯCLN(45, 150) biết $45 = 3^2 \cdot 5$ và 150 = 2.3.52.
 
 **Lời giải:**
 
 +) Phân tích các số 45, 150 ra thừa số nguyên tố:
 
-               45 = 32.5
+               $45 = 3^2 \cdot 5$
 
                150 = 2.3.52
 
@@ -1985,7 +1985,7 @@ Vậy ƯCLN(45, 150) = 3. 5 = 15.
 
 Phân tích các số 36 và 84 ra thừa số nguyên tố ta được:
 
-  36= 22.32;                          84 = 22.3.784;
+  36= 22.32;                          8$4 = 2^2$.3.784;
 
 Ta thấy 2 và 3 là các thừa số nguyên tố chung của 36 và 84. Số mũ nhỏ nhất của 2 là 2, số mũ nhỏ nhất của 3 là 1 nên ƯCLN(36, 84) = 22.3 = 12
 
@@ -2003,9 +2003,9 @@ Ta có:
 
 24 = 23.3
 
-28 = 22.7
+$28 = 2^2 \cdot 7$
 
-36 = 22.32
+$36 = 2^2 \cdot 3^2$
 
 Ta thấy 2 là thừa số nguyên tố chung của 24; 28 và 36. Số mũ nhỏ nhất của 2 là 2 nên ƯCLN(24; 28; 36) = 22 = 4
 
@@ -2025,13 +2025,13 @@ Xem thêm lời giải bài tập Toán lớp 6 Kết nối tri thức hay, chi 
 
 **Câu hỏi 2 trang 46 Toán lớp 6 Tập 1:**
 
-Tìm ƯCLN(45, 150) biết 45 = 32.5 và 150 = 2.3.52.
+Tìm ƯCLN(45, 150) biết $45 = 3^2 \cdot 5$ và 150 = 2.3.52.
 
 **Lời giải:**
 
 +) Phân tích các số 45, 150 ra thừa số nguyên tố:
 
-               45 = 32.5
+               $45 = 3^2 \cdot 5$
 
                150 = 2.3.52
 
@@ -2049,7 +2049,7 @@ Vậy ƯCLN(45, 150) = 3. 5 = 15.
 
 Phân tích các số 36 và 84 ra thừa số nguyên tố ta được:
 
-  36= 22.32;                          84 = 22.3.784;
+  36= 22.32;                          8$4 = 2^2$.3.784;
 
 Ta thấy 2 và 3 là các thừa số nguyên tố chung của 36 và 84. Số mũ nhỏ nhất của 2 là 2, số mũ nhỏ nhất của 3 là 1 nên ƯCLN(36, 84) = 22.3 = 12
 
@@ -2067,9 +2067,9 @@ Ta có:
 
 24 = 23.3
 
-28 = 22.7
+$28 = 2^2 \cdot 7$
 
-36 = 22.32
+$36 = 2^2 \cdot 3^2$
 
 Ta thấy 2 là thừa số nguyên tố chung của 24; 28 và 36. Số mũ nhỏ nhất của 2 là 2 nên ƯCLN(24; 28; 36) = 22 = 4
 
@@ -2124,7 +2124,7 @@ Phân số $\not\vdots$
 
 **Lời giải:**
 
-Ta có: 16 = 24 ;   10 = 2.5
+Ta có: $16 = 2^4$ ;   10 = 2.5
 
 +) Thừa số nguyên tố chung là: 2 với số mũ nhỏ nhất là 2 nên ƯCLN(16, 10) = 2
 
@@ -2146,7 +2146,7 @@ Phân số $\not\vdots$
 
 **Lời giải:**
 
-Ta có: 16 = 24 ;   10 = 2.5
+Ta có: $16 = 2^4$ ;   10 = 2.5
 
 +) Thừa số nguyên tố chung là: 2 với số mũ nhỏ nhất là 2 nên ƯCLN(16, 10) = 2
 
@@ -2164,7 +2164,7 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 90 = 2.33.5;  27 = 33
+a) Ta có: 90 = 2.33.5;  $27 = 3^3$
 
 +) Thừa số nguyên tố chung là: 3 với số mũ nhỏ nhất là 2 nên ƯCLN(90, 27) = 32 = 9
 
@@ -2198,7 +2198,7 @@ b) 42 và 70.
 
 a) Phân tích các số 30 và 45 ra thừa số nguyên tố:
 
-30 = 2.3.5;           45 = 32.5
+30 = 2.3.5;           $45 = 3^2 \cdot 5$
 
 +) Ta chọn ra các thừa số nguyên tố chung là: 3 và 5.
 
@@ -2341,7 +2341,7 @@ Vì 6 = 2.3; 35 = 5.7. Hai số này không có thừa số nguyên tố chung n
 
 +) 10 và 27
 
-Vì 10 = 2.5; 27 = 33. Hai số này không có thừa số nguyên tố chung nên ƯCLN bằng 1 nhưng 10 chia hết cho 2 nên 10 là hợp số; 27 chia hết cho 3 nên 27 là hợp số.
+Vì 10 = 2.5; $27 = 3^3$. Hai số này không có thừa số nguyên tố chung nên ƯCLN bằng 1 nhưng 10 chia hết cho 2 nên 10 là hợp số; 27 chia hết cho 3 nên 27 là hợp số.
 
 Lời giải bài tập Toán lớp 6 Bài 11: Ước chung. Ước chung lớn nhất hay khác:
 
@@ -2354,7 +2354,7 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 90 = 2.33.5;  27 = 33
+a) Ta có: 90 = 2.33.5;  $27 = 3^3$
 
 +) Thừa số nguyên tố chung là: 3 với số mũ nhỏ nhất là 2 nên ƯCLN(90, 27) = 32 = 9
 
@@ -2388,7 +2388,7 @@ b) 42 và 70.
 
 a) Phân tích các số 30 và 45 ra thừa số nguyên tố:
 
-30 = 2.3.5;           45 = 32.5
+30 = 2.3.5;           $45 = 3^2 \cdot 5$
 
 +) Ta chọn ra các thừa số nguyên tố chung là: 3 và 5.
 
@@ -2531,7 +2531,7 @@ Vì 6 = 2.3; 35 = 5.7. Hai số này không có thừa số nguyên tố chung n
 
 +) 10 và 27
 
-Vì 10 = 2.5; 27 = 33. Hai số này không có thừa số nguyên tố chung nên ƯCLN bằng 1 nhưng 10 chia hết cho 2 nên 10 là hợp số; 27 chia hết cho 3 nên 27 là hợp số.
+Vì 10 = 2.5; $27 = 3^3$. Hai số này không có thừa số nguyên tố chung nên ƯCLN bằng 1 nhưng 10 chia hết cho 2 nên 10 là hợp số; 27 chia hết cho 3 nên 27 là hợp số.
 
 **Bài 2.45 trang 55 Toán lớp 6 Tập 1:**
 
@@ -2564,7 +2564,7 @@ a.b = 120. 70 = 8 400.
 
 +) Ở cột thứ tư:
 
-a = 15 =3.5;   b = 28 = 22.7
+a = 15 =3.5;   b = $28 = 2^2 \cdot 7$
 
 ⇒ ƯCLN(a; b) = 1 ;  BCNN(a; b) =  
 
@@ -2675,7 +2675,7 @@ a) Ta có: 9 =32;   15 =3.5 nên BCNN(9, 15) = 32.5 = 45. Do đó ta có thể c
 
 \not\vdots 
 
-b) Ta có: 12 =22.3;   15 = 3.5 ; 27 = 33 nên BCNN(12, 15, 27) = 22.33.5 = 540. Do đó ta có thể chọn mẫu chung là 540.
+b) Ta có: 12 =22.3;   15 = 3.5 ; $27 = 3^3$ nên BCNN(12, 15, 27) = 22.33.5 = 540. Do đó ta có thể chọn mẫu chung là 540.
 
 \not\vdots 
 
@@ -2766,7 +2766,7 @@ a.b = 120. 70 = 8 400.
 
 +) Ở cột thứ tư:
 
-a = 15 =3.5;   b = 28 = 22.7
+a = 15 =3.5;   b = $28 = 2^2 \cdot 7$
 
 ⇒ ƯCLN(a; b) = 1 ;  BCNN(a; b) =  
 
@@ -2877,7 +2877,7 @@ a) Ta có: 9 =32;   15 =3.5 nên BCNN(9, 15) = 32.5 = 45. Do đó ta có thể c
 
 \not\vdots 
 
-b) Ta có: 12 =22.3;   15 = 3.5 ; 27 = 33 nên BCNN(12, 15, 27) = 22.33.5 = 540. Do đó ta có thể chọn mẫu chung là 540.
+b) Ta có: 12 =22.3;   15 = 3.5 ; $27 = 3^3$ nên BCNN(12, 15, 27) = 22.33.5 = 540. Do đó ta có thể chọn mẫu chung là 540.
 
 \not\vdots 
 
@@ -3025,11 +3025,11 @@ Vậy sau ít nhất 18 tháng nữa thì hai máy được bảo dưỡng cùng
 
 **Câu hỏi 2 trang 51 Toán lớp 6 Tập 1:**
 
-Tìm bội chung nhỏ nhất của 9 và 15, biết: 9 = 32 và 15 = 3.5.
+Tìm bội chung nhỏ nhất của 9 và 15, biết: $9 = 3^2$ và 15 = 3.5.
 
 **Lời giải:**
 
-Ta có: 9 = 32;                            15 = 3.5.
+Ta có: $9 = 3^2$;                            15 = 3.5.
 
 +) Thừa số nguyên tố chung là 3 và riêng là 5.
 
@@ -3095,11 +3095,11 @@ Vậy sau ít nhất 18 tháng nữa thì hai máy được bảo dưỡng cùng
 
 **Câu hỏi 2 trang 51 Toán lớp 6 Tập 1:**
 
-Tìm bội chung nhỏ nhất của 9 và 15, biết: 9 = 32 và 15 = 3.5.
+Tìm bội chung nhỏ nhất của 9 và 15, biết: $9 = 3^2$ và 15 = 3.5.
 
 **Lời giải:**
 
-Ta có: 9 = 32;                            15 = 3.5.
+Ta có: $9 = 3^2$;                            15 = 3.5.
 
 +) Thừa số nguyên tố chung là 3 và riêng là 5.
 
@@ -3117,7 +3117,7 @@ Khi đó BCNN(9, 15) =32. 5 = 45.
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Khi đó: BCNN(15; 54) = 2.33.5 = 270
+Khi đó: BCNN(15; 54) = $2 \cdot 3^3 \cdot 5 = 270$
 
 Do đó BC(15; 54) = B(270) = {0; 270; 540; 810; 1080; ...} nên bội chung nhỏ hơn 1000 của 15 và 54 là 0; 270; 540; 810.
 
@@ -3128,7 +3128,7 @@ Lịch xuất bến của một số xe buýt tại bến xe Mỹ Đình (Hà N�
 |  |  |
 **Lời giải:**
 
-Ta có: 9 = 32;       10 = 2. 5         15 = 3.5.
+Ta có: $9 = 3^2$;       10 = 2. 5         15 = 3.5.
 
 Thừa số nguyên tố chung là 3 và riêng là 2 và 5.
 
@@ -3150,7 +3150,7 @@ Tương tự như vậy thì 10 giờ 35 phút đến 22 giờ các xe xuất b�
 
 **Lời giải:**
 
-Ta có: 9 = 32;    15 = 3. 5 nên BCNN(9, 15) = 32.5 = 45.
+Ta có: $9 = 3^2$;    15 = 3. 5 nên BCNN(9, 15) = 32.5 = 45.
 
 Ta có thể lấy mẫu chung của hai phân số trên là 45. Do đó:
 
@@ -3170,7 +3170,7 @@ Xem thêm lời giải bài tập Toán lớp 6 Kết nối tri thức hay, chi 
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Khi đó: BCNN(15; 54) = 2.33.5 = 270
+Khi đó: BCNN(15; 54) = $2 \cdot 3^3 \cdot 5 = 270$
 
 Do đó BC(15; 54) = B(270) = {0; 270; 540; 810; 1080; ...} nên bội chung nhỏ hơn 1000 của 15 và 54 là 0; 270; 540; 810.
 
@@ -3178,7 +3178,7 @@ Do đó BC(15; 54) = B(270) = {0; 270; 540; 810; 1080; ...} nên bội chung nh�
 
 **Lời giải:**
 
-Ta có: 9 = 32;    15 = 3. 5 nên BCNN(9, 15) = 32.5 = 45.
+Ta có: $9 = 3^2$;    15 = 3. 5 nên BCNN(9, 15) = 32.5 = 45.
 
 Ta có thể lấy mẫu chung của hai phân số trên là 45. Do đó:
 
@@ -3194,7 +3194,7 @@ $(2) Thực hiện các phép tính sau:        a) \not\vdots(2) Thực hiện c
 
 $(1) a) \not\vdots$ 
 
-Ta có: 12 = 22.3;    15 = 3. 5 nên BCNN(12, 15) = 22.3.5 = 60
+Ta có: $12 = 2^2 \cdot 3$;    15 = 3. 5 nên BCNN(12, 15) = $2^2 \cdot 3 \cdot 5 = 60$
 
 Ta có thể lấy mẫu chung của hai phân số trên là 60. Do đó:
 
@@ -3202,7 +3202,7 @@ Ta có thể lấy mẫu chung của hai phân số trên là 60. Do đó:
 
 $b) \not\vdots$ 
 
-Ta có: 7 = 7;    9 = 32;      12 = 22.3 nên BCNN(7, 9, 12) = 22.32.7 = 252.  Ta có thể lấy mẫu chung của hai phân số trên là 252
+Ta có: 7 = 7;    $9 = 3^2$;      $12 = 2^2 \cdot 3$ nên BCNN(7, 9, 12) = $2^2 \cdot 3^2 \cdot 7 = 252$.  Ta có thể lấy mẫu chung của hai phân số trên là 252
 
 \not\vdots 
 
@@ -3214,7 +3214,7 @@ Vì $24 \vdots 8$ nên BCNN(8, 24) = 24. Do đó ta có thể lấy mẫu chung 
 
 $b) \not\vdots$ ;
 
-Ta có: 16 = 24; 12 = 22.3 nên BCNN(16, 12) = 24.3 = 48. Do đó ta có thể lấy mẫu chung của hai phân số là 48
+Ta có: $16 = 2^4$; $12 = 2^2 \cdot 3$ nên BCNN(16, 12) = $2^4 \cdot 3 = 48$. Do đó ta có thể lấy mẫu chung của hai phân số là 48
 
 \not\vdots 
 
@@ -3236,7 +3236,7 @@ Vì bội chung nhỏ hơn 200 nên bội chung của 5 và 7 là: 0; 35; 70; 10
 
 Vậy bội chung nhỏ hơn 200 của 5 và 7 là: 0; 35; 70; 105; 140; 175.
 
-b) Ta có: 3 = 3;             4 = 22               10 = 2. 5.
+b) Ta có: 3 = 3;             $4 = 2^2$               10 = 2. 5.
 
 Thừa số nguyên tố chung là 2 và riêng là 3 và 5.
 
@@ -3254,19 +3254,19 @@ Vậy bội chung nhỏ hơn 200 của 3, 4 và 10 là 0; 60; 120; 180.
 
 Tìm BCNN của:
 
-a) 2.33 và 3.5
+a) $2 \cdot 3^3$ và $3 \cdot 5$
 
-b) 2.5.72 và 3.52.7
+b) $2 \cdot 5 \cdot 7^2$ và $3 \cdot 5^2 \cdot 7$
 
 **Lời giải:**
 
-a) 2.33 và 3.5
+a) $2 \cdot 3^3$ và $3 \cdot 5$
 
 +) Ta thấy các thừa số nguyên tố chung là 3 và thừa số nguyên tố riêng là 1 và 5
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN cần tìm là 2.33.5 = 270.
+Vậy BCNN cần tìm là $2 \cdot 3^3 \cdot 5 = 270$.
 
 b) 2.5.72   và 3.52.7
 
@@ -3290,25 +3290,25 @@ a) 30 và 45
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-             30 = 2.3.5;  45 = 32.5
+             30 = 2.3.5;  $45 = 3^2 \cdot 5$
 
 +) Ta thấy thừa số nguyên tố chung là 3 và 5; thừa số nguyên tố riêng là 2
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 2, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN(30; 45) = 2.32.5 = 90.
+Vậy BCNN(30; 45) = $2 \cdot 3^2 \cdot 5 = 90$.
 
 b) 18, 27 và 45
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-            18 = 2.32  ;  27 = 33  ;  45 = 32.5
+            $18 = 2 \cdot 3^2$  ;  $27 = 3^3$  ;  $45 = 3^2 \cdot 5$
 
 +) Ta thấy thừa số nguyên tố chung là 3; thừa số nguyên tố riêng là 2 và 5
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN(30; 45) = 2.33.5 = 270.
+Vậy BCNN(30; 45) = $2 \cdot 3^3 \cdot 5 = 270$.
 
 **Bài 2.39 trang 53 Toán lớp 6 Tập 1:** Tìm số tự nhiên a nhỏ nhất khác 0 biết rằng a $\vdots 28$ vàa $\vdots 32$
 
@@ -3320,13 +3320,13 @@ Do đó a là BCNN(28; 32)
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-               28 = 22.7;                32 = 25
+               $28 = 2^2 \cdot 7$;                $32 = 2^5$
 
 +) Ta thấy thừa số nguyên tố chung là 2; thừa số nguyên tố riêng là 7
 
 +) Số mũ lớn nhất của 2 là 5, số mũ lớn nhất của 7 là 1
 
-nên a = BCNN(28; 32) = 25.7 = 224
+nên a = BCNN(28; 32) = $2^5 \cdot 7 = 224$
 
 Vậy số tự nhiên a cần tìm là 224.
 
@@ -3338,13 +3338,13 @@ Học sinh lớp 6A khi xếp thành 3 hàng, 4 hàng hay 9 hàng đều vừa �
 
 Nên số học sinh của lớp 6A là BC(3; 4; 9)
 
-Ta có: 3 = 3;  4 = 22;   9 = 32
+Ta có: 3 = 3;  $4 = 2^2$;   $9 = 3^2$
 
 Ta thấy thừa số nguyên tố riêng là 2 và 3, không có thừa số nguyên tố chung
 
 Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 2
 
-Khi đó: BCNN(3; 4; 9) = 22.32 = 36
+Khi đó: BCNN(3, 4, 9) = $2^2 \cdot 3^2 = 36$
 
 Do đó BC(3; 4; 9) = B(36) = {0; 36; 72; ...}
 
@@ -3388,11 +3388,11 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 12.22.3; nên BCNN(12, 15) = 22.3.5 = 60. Do đó ta có thể chọn mẫu chung là 60.
+a) Ta có: 12.22.3; nên BCNN(12, 15) = $2^2 \cdot 3 \cdot 5 = 60$. Do đó ta có thể chọn mẫu chung là 60.
 
 \not\vdots 
 
-b) Ta có: 10 = 2.5; 4 = 22; 14 = 2. 7 nên BCNN(10, 4, 14) = 22.5.7 = 140. Do đó ta có thể chọn mẫu chung là 140
+b) Ta có: 10 = 2.5; $4 = 2^2$; 14 = 2. 7 nên BCNN(10, 4, 14) = $2^2 \cdot 5 \cdot 7 = 140$. Do đó ta có thể chọn mẫu chung là 140
 
 \not\vdots 
 
@@ -3410,7 +3410,7 @@ a) Ta có: 11 = 11;   7 = 7 nên BCNN(11, 7) = 11.7 = 77. Ta có thể chọn m�
 
 \not\vdots 
 
-b) Ta có: 20 = 22.5; 15 =3.5 nên BCNN(20,15) = 22.3.5 = 60. Ta có thể chọn mẫu chung là 60.
+b) Ta có: $20 = 2^2 \cdot 5$; 15 =3.5 nên BCNN(20, 15) = $2^2 \cdot 3 \cdot 5 = 60$. Ta có thể chọn mẫu chung là 60.
 
 \not\vdots 
 
@@ -3428,7 +3428,7 @@ $(2) Thực hiện các phép tính sau:        a) \not\vdots(2) Thực hiện c
 
 $(1) a) \not\vdots$ 
 
-Ta có: 12 = 22.3;    15 = 3. 5 nên BCNN(12, 15) = 22.3.5 = 60
+Ta có: $12 = 2^2 \cdot 3$;    15 = 3. 5 nên BCNN(12, 15) = $2^2 \cdot 3 \cdot 5 = 60$
 
 Ta có thể lấy mẫu chung của hai phân số trên là 60. Do đó:
 
@@ -3436,7 +3436,7 @@ Ta có thể lấy mẫu chung của hai phân số trên là 60. Do đó:
 
 $b) \not\vdots$ 
 
-Ta có: 7 = 7;    9 = 32;      12 = 22.3 nên BCNN(7, 9, 12) = 22.32.7 = 252.  Ta có thể lấy mẫu chung của hai phân số trên là 252
+Ta có: 7 = 7;    $9 = 3^2$;      $12 = 2^2 \cdot 3$ nên BCNN(7, 9, 12) = $2^2 \cdot 3^2 \cdot 7 = 252$.  Ta có thể lấy mẫu chung của hai phân số trên là 252
 
 \not\vdots 
 
@@ -3448,7 +3448,7 @@ Vì $24 \vdots 8$ nên BCNN(8, 24) = 24. Do đó ta có thể lấy mẫu chung 
 
 $b) \not\vdots$ ;
 
-Ta có: 16 = 24; 12 = 22.3 nên BCNN(16, 12) = 24.3 = 48. Do đó ta có thể lấy mẫu chung của hai phân số là 48
+Ta có: $16 = 2^4$; $12 = 2^2 \cdot 3$ nên BCNN(16, 12) = $2^4 \cdot 3 = 48$. Do đó ta có thể lấy mẫu chung của hai phân số là 48
 
 \not\vdots 
 
@@ -3470,7 +3470,7 @@ Vì bội chung nhỏ hơn 200 nên bội chung của 5 và 7 là: 0; 35; 70; 10
 
 Vậy bội chung nhỏ hơn 200 của 5 và 7 là: 0; 35; 70; 105; 140; 175.
 
-b) Ta có: 3 = 3;             4 = 22               10 = 2. 5.
+b) Ta có: 3 = 3;             $4 = 2^2$               10 = 2. 5.
 
 Thừa số nguyên tố chung là 2 và riêng là 3 và 5.
 
@@ -3488,19 +3488,19 @@ Vậy bội chung nhỏ hơn 200 của 3, 4 và 10 là 0; 60; 120; 180.
 
 Tìm BCNN của:
 
-a) 2.33 và 3.5
+a) $2 \cdot 3^3$ và $3 \cdot 5$
 
-b) 2.5.72 và 3.52.7
+b) $2 \cdot 5 \cdot 7^2$ và $3 \cdot 5^2 \cdot 7$
 
 **Lời giải:**
 
-a) 2.33 và 3.5
+a) $2 \cdot 3^3$ và $3 \cdot 5$
 
 +) Ta thấy các thừa số nguyên tố chung là 3 và thừa số nguyên tố riêng là 1 và 5
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN cần tìm là 2.33.5 = 270.
+Vậy BCNN cần tìm là $2 \cdot 3^3 \cdot 5 = 270$.
 
 b) 2.5.72   và 3.52.7
 
@@ -3524,25 +3524,25 @@ a) 30 và 45
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-             30 = 2.3.5;  45 = 32.5
+             30 = 2.3.5;  $45 = 3^2 \cdot 5$
 
 +) Ta thấy thừa số nguyên tố chung là 3 và 5; thừa số nguyên tố riêng là 2
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 2, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN(30; 45) = 2.32.5 = 90.
+Vậy BCNN(30; 45) = $2 \cdot 3^2 \cdot 5 = 90$.
 
 b) 18, 27 và 45
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-            18 = 2.32  ;  27 = 33  ;  45 = 32.5
+            $18 = 2 \cdot 3^2$  ;  $27 = 3^3$  ;  $45 = 3^2 \cdot 5$
 
 +) Ta thấy thừa số nguyên tố chung là 3; thừa số nguyên tố riêng là 2 và 5
 
 +) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 3, số mũ lớn nhất của 5 là 1
 
-Vậy BCNN(30; 45) = 2.33.5 = 270.
+Vậy BCNN(30; 45) = $2 \cdot 3^3 \cdot 5 = 270$.
 
 **Bài 2.39 trang 53 Toán lớp 6 Tập 1:** Tìm số tự nhiên a nhỏ nhất khác 0 biết rằng a $\vdots 28$ vàa $\vdots 32$
 
@@ -3554,13 +3554,13 @@ Do đó a là BCNN(28; 32)
 
 +) Phân tích các số ra thừa số nguyên tố:
 
-               28 = 22.7;                32 = 25
+               $28 = 2^2 \cdot 7$;                $32 = 2^5$
 
 +) Ta thấy thừa số nguyên tố chung là 2; thừa số nguyên tố riêng là 7
 
 +) Số mũ lớn nhất của 2 là 5, số mũ lớn nhất của 7 là 1
 
-nên a = BCNN(28; 32) = 25.7 = 224
+nên a = BCNN(28; 32) = $2^5 \cdot 7 = 224$
 
 Vậy số tự nhiên a cần tìm là 224.
 
@@ -3572,13 +3572,13 @@ Học sinh lớp 6A khi xếp thành 3 hàng, 4 hàng hay 9 hàng đều vừa �
 
 Nên số học sinh của lớp 6A là BC(3; 4; 9)
 
-Ta có: 3 = 3;  4 = 22;   9 = 32
+Ta có: 3 = 3;  $4 = 2^2$;   $9 = 3^2$
 
 Ta thấy thừa số nguyên tố riêng là 2 và 3, không có thừa số nguyên tố chung
 
 Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 2
 
-Khi đó: BCNN(3; 4; 9) = 22.32 = 36
+Khi đó: BCNN(3, 4, 9) = $2^2 \cdot 3^2 = 36$
 
 Do đó BC(3; 4; 9) = B(36) = {0; 36; 72; ...}
 
@@ -3622,11 +3622,11 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 12.22.3; nên BCNN(12, 15) = 22.3.5 = 60. Do đó ta có thể chọn mẫu chung là 60.
+a) Ta có: 12.22.3; nên BCNN(12, 15) = $2^2 \cdot 3 \cdot 5 = 60$. Do đó ta có thể chọn mẫu chung là 60.
 
 \not\vdots 
 
-b) Ta có: 10 = 2.5; 4 = 22; 14 = 2. 7 nên BCNN(10, 4, 14) = 22.5.7 = 140. Do đó ta có thể chọn mẫu chung là 140
+b) Ta có: 10 = 2.5; $4 = 2^2$; 14 = 2. 7 nên BCNN(10, 4, 14) = $2^2 \cdot 5 \cdot 7 = 140$. Do đó ta có thể chọn mẫu chung là 140
 
 \not\vdots 
 
@@ -3644,7 +3644,7 @@ a) Ta có: 11 = 11;   7 = 7 nên BCNN(11, 7) = 11.7 = 77. Ta có thể chọn m�
 
 \not\vdots 
 
-b) Ta có: 20 = 22.5; 15 =3.5 nên BCNN(20,15) = 22.3.5 = 60. Ta có thể chọn mẫu chung là 60.
+b) Ta có: $20 = 2^2 \cdot 5$; 15 =3.5 nên BCNN(20, 15) = $2^2 \cdot 3 \cdot 5 = 60$. Ta có thể chọn mẫu chung là 60.
 
 \not\vdots 
 
@@ -3702,19 +3702,19 @@ Vậy giá trị của x thỏa mãn là 108, 189.
 
 Thực hiện phép tính sau rồi phân tích kết quả ra thừa số nguyên tố
 
-a)142 + 52 + 22;
+a)$14^2 + 5^2 + 2^2$;
 
 b) 400 : 5 + 40.
 
 **Lời giải:**
 
-a) 142 + 52 + 22= 196 + 25 + 4 = 225 
+a) $14^2 + 5^2 + 2^2$= 196 + 25 + $4 = 2^2$5 
 
 Phân tích 225 ra thừa số nguyên tố:
 
 \not\vdots 
 
-Vậy 142 + 52 + 22 = 225 = 32.52
+Vậy $14^2 + 5^2 + 2^2$ = 225 = 32.52
 
 b) 400 : 5 + 40 = 80 + 40 = 120
 
@@ -3722,7 +3722,7 @@ Phân tích 120 ra thừa số nguyên tố
 
 \not\vdots 
 
-Vậy 400 : 5 + 40 = 120 =  23.3.5.
+Vậy 400 : 5 + 40 = $120 = 2^3 \cdot 3 \cdot 5$.
 
 **Bài 2.55 trang 56 Toán lớp 6 Tập 1:**
 
@@ -3734,25 +3734,25 @@ b) 36 và 54.
 
 **Lời giải:**
 
-a) Ta có: 21 = 3.7;    98 = 2.72
+a) Ta có: 21 = 3.7;    $98 = 2 \cdot 7^2$
 
 +) Thừa số nguyên tố chung là 7, thừa số nguyên tố riêng là 2 và 3
 
 +) Số mũ nhỏ nhất của 7 là 1 nên ƯCLN(21, 98) = 7
 
-+) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 1, số mũ lớn nhất của 7 là 2 nên BCNN(21, 98) = 2.3.72= 294
++) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 1, số mũ lớn nhất của 7 là 2 nên BCNN(21, 98) = $2 \cdot 3 \cdot 7^2 = 294$
 
-Vậy ƯCLN(21, 98) = 7 ; BCNN(21, 98) = 2.3.72= 294.
+Vậy ƯCLN(21, 98) = 7 ; BCNN(21, 98) = $2 \cdot 3 \cdot 7^2 = 294$.
 
-b) Ta có: 36 = 22.32;    54 = 2.33
+b) Ta có: $36 = 2^2 \cdot 3^2$;    $54 = 2 \cdot 3^3$
 
 +) Thừa số nguyên tố chung là 2 và 3, không có thừa số nguyên tố riêng
 
-+) Số mũ nhỏ nhất của 2 là 1, số mũ nhỏ nhất của 3 là 2 nên ƯCLN(36, 54) =  2.32 = 18
++) Số mũ nhỏ nhất của 2 là 1, số mũ nhỏ nhất của 3 là 2 nên ƯCLN(36, 54) = $2 \cdot 3^2 = 18$
 
-+) Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 3 nên BCNN(36, 54) = 2.32 = 108
++) Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 3 nên BCNN(36, 54) = $2^2 \cdot 3^3 = 108$
 
-Vậy ƯCLN(36, 54) =  2.32 = 18; BCNN(36, 54) = 2.32 = 108.
+Vậy ƯCLN(36, 54) = $2 \cdot 3^2 = 18$; BCNN(36, 54) = $2^2 \cdot 3^3 = 108$.
 
 **Bài 2.56 trang 56 Toán lớp 6 Tập 1:**
 
@@ -3764,7 +3764,7 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 27 = 33;    123 = 3.41
+a) Ta có: $27 = 3^3$;    123 = 3.41
 
 +) Thừa số nguyên tố chung là 3
 
@@ -3790,11 +3790,11 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 12 = 22.3;  16 = 24 nên BCNN(12, 16) = 24.3 = 48 nên ta có thể chọn mẫu chung là 48.
+a) Ta có: $12 = 2^2 \cdot 3$;  $16 = 2^4$ nên BCNN(12, 16) = 24.3 = 48 nên ta có thể chọn mẫu chung là 48.
 
 \not\vdots 
 
-b) Ta có: 15 = 3.5;    9 = 32 nên BCNN(15, 9) = 32.5 = 45 nên ta có thể chọn mẫu chung là 45.
+b) Ta có: 15 = 3.5;    $9 = 3^2$ nên BCNN(15, 9) = $3^2 \cdot 5 = 45$ nên ta có thể chọn mẫu chung là 45.
 
 \not\vdots 
 
@@ -3808,9 +3808,9 @@ các túi sao cho mỗi túi đều có cam, xoài, bơ.  Hỏi Mai có thể ch
 
 Số túi quà nhiều nhất mà Mai chia được là ƯCLN(12, 18, 30)
 
-Ta có: 12 = 22.3
+Ta có: $12 = 2^2 \cdot 3$
 
-           18 = 2.32
+           $18 = 2 \cdot 3^2$
 
            30 = 2.3.5
 
@@ -3844,13 +3844,13 @@ Vì  mỗi số nguyên tố chỉ có ước là 1 và chính nó mà 79 và 97
 
 **Bài 2.61 trang 56 Toán lớp 6 Tập 1:**
 
-Biết hai số 3a.52 và 33.5b có ƯCLN là 33.52 và BCNN là 34.53. Tìm a và b.
+Biết hai số $3^a \cdot 5^2$ và $3^3 \cdot 5^b$ có ƯCLN là $3^3 \cdot 5^2$ và BCNN là $3^4 \cdot 5^3$. Tìm a và b.
 
 **Lời giải:**
 
-ƯCLN (3a.52; 33.5b). BCNN = (3a.52; 33.5b) = ( 33.53).(34.53)
+ƯCLN ($3^a \cdot 5^2; 3^3 \cdot 5^b$). BCNN = ($3^a \cdot 5^2; 3^3 \cdot 5^b$) = ($3^3 \cdot 5^2) \cdot (3^4 \cdot 5^3)$
 
-= (33.34).(52.53) = 33+4.52+3= 37.55
+= (33.34).(52.53) = $3^{3+4} \cdot 5^{2+3} = 3^7 \cdot 5^5$
 
 Tích của 2 số đã cho:(3a.52).(33.5b) = ( 3a.33).(52.5b) = 3a+3.5b+2
 
@@ -3980,19 +3980,19 @@ Vậy giá trị của x thỏa mãn là 108, 189.
 
 Thực hiện phép tính sau rồi phân tích kết quả ra thừa số nguyên tố
 
-a)142 + 52 + 22;
+a)$14^2 + 5^2 + 2^2$;
 
 b) 400 : 5 + 40.
 
 **Lời giải:**
 
-a) 142 + 52 + 22= 196 + 25 + 4 = 225 
+a) $14^2 + 5^2 + 2^2$= 196 + 25 + $4 = 2^2$5 
 
 Phân tích 225 ra thừa số nguyên tố:
 
 \not\vdots 
 
-Vậy 142 + 52 + 22 = 225 = 32.52
+Vậy $14^2 + 5^2 + 2^2$ = 225 = 32.52
 
 b) 400 : 5 + 40 = 80 + 40 = 120
 
@@ -4000,7 +4000,7 @@ Phân tích 120 ra thừa số nguyên tố
 
 \not\vdots 
 
-Vậy 400 : 5 + 40 = 120 =  23.3.5.
+Vậy 400 : 5 + 40 = $120 = 2^3 \cdot 3 \cdot 5$.
 
 **Bài 2.55 trang 56 Toán lớp 6 Tập 1:**
 
@@ -4012,25 +4012,25 @@ b) 36 và 54.
 
 **Lời giải:**
 
-a) Ta có: 21 = 3.7;    98 = 2.72
+a) Ta có: 21 = 3.7;    $98 = 2 \cdot 7^2$
 
 +) Thừa số nguyên tố chung là 7, thừa số nguyên tố riêng là 2 và 3
 
 +) Số mũ nhỏ nhất của 7 là 1 nên ƯCLN(21, 98) = 7
 
-+) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 1, số mũ lớn nhất của 7 là 2 nên BCNN(21, 98) = 2.3.72= 294
++) Số mũ lớn nhất của 2 là 1, số mũ lớn nhất của 3 là 1, số mũ lớn nhất của 7 là 2 nên BCNN(21, 98) = $2 \cdot 3 \cdot 7^2 = 294$
 
-Vậy ƯCLN(21, 98) = 7 ; BCNN(21, 98) = 2.3.72= 294.
+Vậy ƯCLN(21, 98) = 7 ; BCNN(21, 98) = $2 \cdot 3 \cdot 7^2 = 294$.
 
-b) Ta có: 36 = 22.32;    54 = 2.33
+b) Ta có: $36 = 2^2 \cdot 3^2$;    $54 = 2 \cdot 3^3$
 
 +) Thừa số nguyên tố chung là 2 và 3, không có thừa số nguyên tố riêng
 
-+) Số mũ nhỏ nhất của 2 là 1, số mũ nhỏ nhất của 3 là 2 nên ƯCLN(36, 54) =  2.32 = 18
++) Số mũ nhỏ nhất của 2 là 1, số mũ nhỏ nhất của 3 là 2 nên ƯCLN(36, 54) = $2 \cdot 3^2 = 18$
 
-+) Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 3 nên BCNN(36, 54) = 2.32 = 108
++) Số mũ lớn nhất của 2 là 2, số mũ lớn nhất của 3 là 3 nên BCNN(36, 54) = $2^2 \cdot 3^3 = 108$
 
-Vậy ƯCLN(36, 54) =  2.32 = 18; BCNN(36, 54) = 2.32 = 108.
+Vậy ƯCLN(36, 54) = $2 \cdot 3^2 = 18$; BCNN(36, 54) = $2^2 \cdot 3^3 = 108$.
 
 **Bài 2.56 trang 56 Toán lớp 6 Tập 1:**
 
@@ -4042,7 +4042,7 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 27 = 33;    123 = 3.41
+a) Ta có: $27 = 3^3$;    123 = 3.41
 
 +) Thừa số nguyên tố chung là 3
 
@@ -4068,11 +4068,11 @@ $b) \not\vdots$
 
 **Lời giải:**
 
-a) Ta có: 12 = 22.3;  16 = 24 nên BCNN(12, 16) = 24.3 = 48 nên ta có thể chọn mẫu chung là 48.
+a) Ta có: $12 = 2^2 \cdot 3$;  $16 = 2^4$ nên BCNN(12, 16) = 24.3 = 48 nên ta có thể chọn mẫu chung là 48.
 
 \not\vdots 
 
-b) Ta có: 15 = 3.5;    9 = 32 nên BCNN(15, 9) = 32.5 = 45 nên ta có thể chọn mẫu chung là 45.
+b) Ta có: 15 = 3.5;    $9 = 3^2$ nên BCNN(15, 9) = $3^2 \cdot 5 = 45$ nên ta có thể chọn mẫu chung là 45.
 
 \not\vdots 
 
@@ -4086,9 +4086,9 @@ các túi sao cho mỗi túi đều có cam, xoài, bơ.  Hỏi Mai có thể ch
 
 Số túi quà nhiều nhất mà Mai chia được là ƯCLN(12, 18, 30)
 
-Ta có: 12 = 22.3
+Ta có: $12 = 2^2 \cdot 3$
 
-           18 = 2.32
+           $18 = 2 \cdot 3^2$
 
            30 = 2.3.5
 
@@ -4122,13 +4122,13 @@ Vì  mỗi số nguyên tố chỉ có ước là 1 và chính nó mà 79 và 97
 
 **Bài 2.61 trang 56 Toán lớp 6 Tập 1:**
 
-Biết hai số 3a.52 và 33.5b có ƯCLN là 33.52 và BCNN là 34.53. Tìm a và b.
+Biết hai số $3^a \cdot 5^2$ và $3^3 \cdot 5^b$ có ƯCLN là $3^3 \cdot 5^2$ và BCNN là $3^4 \cdot 5^3$. Tìm a và b.
 
 **Lời giải:**
 
-ƯCLN (3a.52; 33.5b). BCNN = (3a.52; 33.5b) = ( 33.53).(34.53)
+ƯCLN ($3^a \cdot 5^2; 3^3 \cdot 5^b$). BCNN = ($3^a \cdot 5^2; 3^3 \cdot 5^b$) = ($3^3 \cdot 5^2) \cdot (3^4 \cdot 5^3)$
 
-= (33.34).(52.53) = 33+4.52+3= 37.55
+= (33.34).(52.53) = $3^{3+4} \cdot 5^{2+3} = 3^7 \cdot 5^5$
 
 Tích của 2 số đã cho:(3a.52).(33.5b) = ( 3a.33).(52.5b) = 3a+3.5b+2
 

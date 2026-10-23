@@ -40,10 +40,10 @@ def clean_text(s, ch):
     cleaned = re.sub(r'^[ \t]*\\not\\vdots[ \t]*\n?', '*(Hình vẽ minh họa trong SGK)*\n\n', s, flags=re.MULTILINE)
     cleaned = re.sub(r'!\[(.*?)\]\((images_chuong_\d+/[^)]+)\)', r'![\1](data/toan6/\2)', cleaned)
     cleaned = re.sub(r'\[\[IMG:(.*?)\]\]', rf'![Hình vẽ](data/toan6/images_chuong_{ch}/\1)', cleaned)
-    cleaned = re.sub(r'\*\*(\d+)\.\*\*', r'\1. ', cleaned)
+    cleaned = re.sub(r'(?m)^\*\*(\d+)\.\*\*', r'\1. ', cleaned)
     cleaned = re.sub(r'\*\*([a-d])\)\*\*', r'\1) ', cleaned)
     cleaned = re.sub(r'\*\*(\d+)\)\*\*', r'\1) ', cleaned)
-    cleaned = re.sub(r'\*\*(\d+)\*\*', r'\1. ', cleaned)
+    cleaned = re.sub(r'(?m)^\*\*(\d+)\*\*', r'\1. ', cleaned)
     return cleaned.strip()
 
 def is_sol_line(line):

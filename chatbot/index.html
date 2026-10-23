@@ -20,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
   <!-- Dữ liệu Toán 6 SGK KNTT (Chương 1 - 9) -->
-  <script src="toan6_data.js?v=20261022_tikz_visual"></script>
+  <script src="toan6_data.js?v=20261023_powers"></script>
 
   <!-- Lớp dạy học TEACH (Hồ sơ người học, luyện tập phân hóa, Sổ lỗi sai) -->
   <link rel="stylesheet" href="teach.css?v=20261022_tikz_visual">
@@ -587,6 +587,35 @@
       border: 2px solid var(--border-dark);
       background: #ffffff;
       box-shadow: 3px 3px 0px var(--border-dark);
+    }
+
+    /* Table Styling for Markdown Tables */
+    .msg-bubble table {
+      width: auto;
+      max-width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 0.95rem;
+      background: #ffffff;
+      border: 2px solid var(--border-dark);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 3px 3px 0px var(--border-dark);
+    }
+    .msg-bubble th,
+    .msg-bubble td {
+      border: 1px solid var(--border-dark);
+      padding: 8px 14px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .msg-bubble th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .msg-bubble tr:nth-child(even) td {
+      background: #f8fafc;
     }
 
     /* KaTeX Math Polish */
@@ -2114,6 +2143,23 @@
       }
       const key = `@@MATH_INLINE_${mathPlaceholders.length}@@`;
       mathPlaceholders.push({ key, raw: rawMath, display: false });
+      return key;
+    });
+
+    // 3b. Tự động nhận diện và bọc KaTeX cho các biểu thức lũy thừa có dấu ^ hoặc số mũ Unicode
+    // Ví dụ: 7^6, a^2, 10^{100}, (3-1)^2, 2^5, 3^3, cm^2, 10²
+    const unicodeSuperscripts = {'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9'};
+    cleanText = cleanText.replace(/([a-zA-Z0-9\(\)]+)([⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (match, b, sups) => {
+      const exp = sups.split('').map(ch => unicodeSuperscripts[ch] || ch).join('');
+      const key = `@@MATH_INLINE_${mathPlaceholders.length}@@`;
+      mathPlaceholders.push({ key, raw: `${b}^{${exp}}`, display: false });
+      return key;
+    });
+
+    cleanText = cleanText.replace(/([a-zA-Z0-9\(\)]+)\^(\{?[0-9a-zA-Z\+\-]+\}?)/g, (match, base, expRaw) => {
+      const exp = expRaw.replace(/^\{|\}$/g, '');
+      const key = `@@MATH_INLINE_${mathPlaceholders.length}@@`;
+      mathPlaceholders.push({ key, raw: `${base}^{${exp}}`, display: false });
       return key;
     });
 
