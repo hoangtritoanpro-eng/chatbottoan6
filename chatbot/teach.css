@@ -253,3 +253,47 @@
 .teach-guide th, .teach-guide td { border: 1.5px solid var(--border-dark); padding: 6px 8px; text-align: left; vertical-align: top; }
 .teach-guide th { background: var(--header-yellow); }
 .teach-guide ul, .teach-guide ol { padding-left: 20px; margin: 4px 0 8px; }
+
+@media (max-width: 768px) {
+  .teach-chips {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .teach-chips::-webkit-scrollbar {
+    display: none;
+  }
+  .teach-chip {
+    flex-shrink: 0;
+    font-size: 0.76rem;
+    padding: 5px 10px;
+  }
+  #teach-modal .modal-content {
+    width: 96% !important;
+    max-height: 92vh !important;
+    max-height: 92dvh !important;
+  }
+  .teach-tabs {
+    padding: 8px 12px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 4px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .teach-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .teach-tab {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+  .teach-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
