@@ -105,11 +105,18 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         try:
             import google.generativeai as genai
             genai.configure(api_key=GEMINI_API_KEY)
-            model = genai.GenerativeModel(
-                model_name="gemini-3.7-flash",
-                system_instruction=persona["prompt"]
-            )
-            response = model.generate_content(user_text)
+            try:
+                model = genai.GenerativeModel(
+                    model_name="gemini-2.5-flash",
+                    system_instruction=persona["prompt"] + "\nVui lòng trả lời trực diện, súc tích bằng Tiếng Việt."
+                )
+                response = model.generate_content(user_text)
+            except Exception:
+                model = genai.GenerativeModel(
+                    model_name="gemini-2.0-flash",
+                    system_instruction=persona["prompt"] + "\nVui lòng trả lời trực diện, súc tích bằng Tiếng Việt."
+                )
+                response = model.generate_content(user_text)
             reply_text = response.text
         except Exception as e:
             reply_text = f"⚠️ Lỗi gọi Gemini API: {str(e)}"

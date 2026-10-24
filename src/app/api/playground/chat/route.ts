@@ -11,7 +11,7 @@ interface PlaygroundRequest {
 export async function POST(request: NextRequest) {
   try {
     const body: PlaygroundRequest = await request.json();
-    const { systemPrompt, userMessage, model = "gemini-3.8-flash", apiKey, temperature = 0.7 } = body;
+    const { systemPrompt, userMessage, model = "gemini-2.5-flash", apiKey, temperature = 0.5 } = body;
 
     if (!systemPrompt && !userMessage) {
       return NextResponse.json({ error: "System prompt or user message is required" }, { status: 400 });
@@ -24,8 +24,8 @@ export async function POST(request: NextRequest) {
     // 1. Google Gemini
     if (model.startsWith("gemini") && effectiveGeminiKey) {
       try {
-        const geminiModelName = model || "gemini-3.8-flash";
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${geminiModelName}:generateContent?key=${effectiveGeminiKey}`;
+        const modelsToTry = [model, "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
+        const uniqueModels = [...new Set(modelsToTry)];
 
         const contents: any[] = [];
         if (userMessage) {
@@ -54,20 +54,23 @@ export async function POST(request: NextRequest) {
           };
         }
 
-        const res = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-
-        if (res.ok) {
-          const data = await res.json();
-          const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Không nhận được phản hồi từ mô hình.";
-          return NextResponse.json({
-            reply,
-            model,
-            mode: "live"
+        for (const m of uniqueModels) {
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${effectiveGeminiKey}`;
+          const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
           });
+
+          if (res.ok) {
+            const data = await res.json();
+            const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Không nhận được phản hồi từ mô hình.";
+            return NextResponse.json({
+              reply,
+              model: m,
+              mode: "live"
+            });
+          }
         }
       } catch (err) {
         console.error("Gemini API error:", err);

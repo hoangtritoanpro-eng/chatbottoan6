@@ -1566,16 +1566,12 @@
           <span>Mô hình AI:</span>
         </label>
         <select id="model-select">
-          <option value="gemini-3.8-flash" selected>⚡ Google Gemini 3.8 Flash (Mới nhất & Siêu tốc)</option>
-          <option value="gemini-3.8-pro">🧠 Google Gemini 3.8 Pro (Suy luận sâu mới nhất)</option>
-          <option value="gemini-3.7-flash">⚡ Google Gemini 3.7 Flash (Tối ưu tốc độ cao)</option>
-          <option value="gemini-3.7-pro">🧠 Google Gemini 3.7 Pro (Tư duy chuyên sâu)</option>
-          <option value="gemini-2.5-flash">⚡ Google Gemini 2.5 Flash</option>
-          <option value="gemini-2.5-pro">🧠 Google Gemini 2.5 Pro</option>
-          <option value="gemini-2.0-flash">⚡ Google Gemini 2.0 Flash (Khuyên dùng ổn định)</option>
-          <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Độ trễ siêu thấp)</option>
-          <option value="gemini-2.0-flash-thinking-exp">🤔 Google Gemini 2.0 Flash Thinking</option>
+          <option value="gemini-2.5-flash" selected>⚡ Google Gemini 2.5 Flash (Tốc độ cao nhất & Đề xuất)</option>
+          <option value="gemini-2.0-flash">⚡ Google Gemini 2.0 Flash (Ổn định, phản hồi tức thì)</option>
+          <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Độ trễ thấp nhất)</option>
           <option value="gemini-1.5-flash">⚡ Google Gemini 1.5 Flash</option>
+          <option value="gemini-2.5-pro">🧠 Google Gemini 2.5 Pro (Suy luận sâu)</option>
+          <option value="gemini-2.0-flash-thinking-exp">🤔 Google Gemini 2.0 Flash Thinking</option>
           <option value="gemini-1.5-pro">🧠 Google Gemini 1.5 Pro</option>
           <option value="gpt-4o-mini">OpenAI GPT-4o Mini (Nhanh & Tiết kiệm)</option>
           <option value="gpt-4o">OpenAI GPT-4o</option>
@@ -2568,14 +2564,14 @@
       html = html.split(item.key).join(item.html);
     });
 
-    // 6. Biên dịch KaTeX vào vị trí placeholder
+    // 6. Biên dịch KaTeX vào vị trí placeholder (tối ưu hóa: throwOnError: false để không ném Exception làm chậm luồng)
     mathPlaceholders.forEach(item => {
       let rendered;
       if (typeof katex !== "undefined") {
         try {
           rendered = katex.renderToString(item.raw, {
             displayMode: item.display,
-            throwOnError: true,
+            throwOnError: false,
             strict: false
           });
         } catch (e1) {
@@ -2583,19 +2579,11 @@
           try {
             rendered = katex.renderToString(autoCleaned, {
               displayMode: item.display,
-              throwOnError: true,
+              throwOnError: false,
               strict: false
             });
           } catch (e2) {
-            try {
-              rendered = katex.renderToString(autoCleaned, {
-                displayMode: item.display,
-                throwOnError: false,
-                strict: false
-              });
-            } catch (e3) {
-              rendered = `<code>${item.raw}</code>`;
-            }
+            rendered = `<code>${item.raw}</code>`;
           }
         }
       } else {
@@ -2660,10 +2648,24 @@
     } catch (e) {}
   }
 
-  // ===== Tăng tốc phản hồi Gemini: streaming + giảm suy nghĩ + rút gọn lịch sử =====
+  // ===== Tăng tốc phản hồi Gemini: streaming + triệt tiêu độ trễ suy nghĩ + rút gọn lịch sử =====
   const MAX_HISTORY_MESSAGES = 8; // Rút gọn lịch sử để giảm lượng token và tăng tốc độ TTFT tối đa
-  const STREAM_RENDER_INTERVAL_MS = 40; // Render mượt mà hơn
-  const unavailableModels = new Set();
+  const STREAM_RENDER_INTERVAL_MS = 75; // 75ms (~13 fps) cân bằng tối ưu giữa độ mượt của chữ và tải CPU trình duyệt
+
+  // Cache danh sách model không hỗ trợ/không tồn tại để tránh thử lại làm mất thời gian round-trip
+  let savedUnavailable = [];
+  try {
+    savedUnavailable = JSON.parse(sessionStorage.getItem("prompts_unavailable_models") || "[]");
+  } catch (e) {}
+  const unavailableModels = new Set(savedUnavailable);
+
+  // Các model Flash chuẩn của Google KHÔNG có thinkingConfig (sẽ lỗi 400 nếu truyền vào)
+  const modelsWithoutThinking = new Set([
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-lite",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro"
+  ]);
 
   function getRecentHistory() {
     const recent = chatHistory.slice(-MAX_HISTORY_MESSAGES);
@@ -2672,8 +2674,11 @@
   }
 
   function getThinkingConfig(model) {
-    // Tắt hoàn toàn thinking budget trên các model Flash (trừ thinking models) để trả về kết quả lập tức (<400ms TTFT)
-    if (model && model.includes("flash") && !model.includes("thinking")) return { thinkingBudget: 0 };
+    if (!model || modelsWithoutThinking.has(model)) return null;
+    // gemini-2.5-flash hỗ trợ tắt thinkingBudget về 0 để phản hồi siêu tốc ngay lập tức (<300ms TTFT)
+    if (model.includes("2.5") || model.includes("thinking")) {
+      return { thinkingBudget: 0 };
+    }
     return null;
   }
 
@@ -2728,8 +2733,16 @@
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse`;
     const thinkingConfig = getThinkingConfig(model);
     const doFetch = (withThinking) => {
-      const body = { contents, systemInstruction: { parts: [{ text: systemText }] } };
-      if (withThinking && thinkingConfig) body.generationConfig = { thinkingConfig };
+      const currentThinking = withThinking ? getThinkingConfig(model) : null;
+      const body = {
+        contents,
+        systemInstruction: { parts: [{ text: systemText }] },
+        generationConfig: {
+          temperature: 0.4,
+          maxOutputTokens: 2048,
+          ...(currentThinking ? { thinkingConfig: currentThinking } : {})
+        }
+      };
       return fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
@@ -2740,10 +2753,13 @@
     let res;
     try {
       res = await doFetch(true);
-      // Một số mô hình không hỗ trợ cấu hình thinking -> gửi lại không kèm thinkingConfig
+      // Một số mô hình không hỗ trợ cấu hình thinking -> ghi nhớ vào Set để không bị lỗi 400 lần sau
       if (res.status === 400 && thinkingConfig) {
         const errText = await res.clone().text();
-        if (/thinking/i.test(errText)) res = await doFetch(false);
+        if (/thinking/i.test(errText)) {
+          modelsWithoutThinking.add(model);
+          res = await doFetch(false);
+        }
       }
     } catch (e) {
       return { ok: false, retryable: true, error: e.message };
@@ -2938,7 +2954,7 @@
       let reply = "";
       let streamedDiv = null;
 
-      let systemText = `${currentRole.prompt}\n\nVui lòng trả lời bằng Tiếng Việt. Định dạng tất cả các công thức toán, biểu thức, biến số, tập hợp bằng chuẩn LaTeX kẹp giữa cặp dấu $ (ví dụ: $B$, $\\in$, $\\notin$, $0 \\dots B$, $\\mathbb{N}$) hoặc $$ cho công thức tách dòng riêng biệt. Với tập hợp, viết ngoặc nhọn dạng $\\{ a; b; c \\}$.`;
+      let systemText = `${currentRole.prompt}\n\nVui lòng trả lời bằng Tiếng Việt. Trả lời trực diện, chuẩn xác, cô đọng, đi thẳng vào trọng tâm, tránh dài dòng lan man. Định dạng tất cả các công thức toán, biểu thức, biến số, tập hợp bằng chuẩn LaTeX kẹp giữa cặp dấu $ (ví dụ: $B$, $\\in$, $\\notin$, $0 \\dots B$, $\\mathbb{N}$) hoặc $$ cho công thức tách dòng riêng biệt. Với tập hợp, viết ngoặc nhọn dạng $\\{ a; b; c \\}$.`;
 
       // Tra cứu đối chiếu dữ liệu chuẩn từ kho SGK Toán 6 (9 Chương)
       let matchedEx = findRelevantToan6Exercise(text);
@@ -3027,18 +3043,16 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
           }
         } else {
           // Google Gemini API Call: streaming + Auto-Fallback
-          // Thứ tự dự phòng tối ưu tốc độ: model đã chọn -> Gemini 3.8 Flash -> 3.8 Pro -> 3.7 Flash -> 2.5 Flash -> 2.0 Flash -> Flash-Lite -> 1.5 Flash
+          // Thứ tự ưu tiên tối ưu tốc độ: Model đã chọn -> Model vừa dùng thành công -> Gemini 2.5 Flash -> 2.0 Flash -> 2.0 Flash-Lite -> 1.5 Flash
+          const lastWorking = localStorage.getItem("prompts_last_working_model");
           const modelCandidates = [
             selectedModel,
-            "gemini-3.8-flash",
-            "gemini-3.8-pro",
-            "gemini-3.7-flash",
-            "gemini-3.7-pro",
+            lastWorking,
             "gemini-2.5-flash",
-            "gemini-2.5-pro",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite",
             "gemini-1.5-flash",
+            "gemini-2.5-pro",
             "gemini-1.5-pro"
           ].filter(Boolean);
 
@@ -3052,8 +3066,11 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
             if (result.ok) {
               reply = result.text;
               streamedDiv = result.msgDiv;
+              try {
+                localStorage.setItem("prompts_last_working_model", modelToTry);
+              } catch(e) {}
               if (modelToTry !== selectedModel) {
-                showToast(`⚡ Đã chuyển sang mô hình tốc độ cao: ${modelToTry}`);
+                showToast(`⚡ Tối ưu tốc độ với: ${modelToTry}`);
               }
               break;
             }
@@ -3066,8 +3083,13 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
               break;
             }
 
-            // Chỉ ghi nhớ mô hình KHÔNG TỒN TẠI (404); lỗi quá tải 503 là tạm thời nên lần sau vẫn thử lại
-            if (result.notFound) unavailableModels.add(modelToTry);
+            // Ghi nhớ mô hình KHÔNG TỒN TẠI (404) vào sessionStorage để không bị lãng phí thêm round-trip nào
+            if (result.notFound) {
+              unavailableModels.add(modelToTry);
+              try {
+                sessionStorage.setItem("prompts_unavailable_models", JSON.stringify([...unavailableModels]));
+              } catch(e) {}
+            }
 
             // If high demand (503) or not found (404) or server error, continue fallback
             if (result.retryable) continue;

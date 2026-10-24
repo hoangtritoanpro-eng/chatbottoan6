@@ -33,7 +33,11 @@ function Call-GeminiApi($prompt, $query, $key) {
         return "[Mo phong] Phan hoi theo vai tro [$currentAct]: Toi da tiep nhan cau hoi '$query'. (De nhan cau tra loi LLM thuc te, ban co the go /key [GEMINI_API_KEY])"
     }
 
-    $models = @("gemini-3.8-flash", "gemini-3.8-pro", "gemini-3.7-flash", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
+    # Uu tien model vua thanh cong va cac model Flash sieu toc thuc te
+    $candidates = @()
+    if ($global:WorkingGeminiModel) { $candidates += $global:WorkingGeminiModel }
+    $candidates += @("gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
+    $models = $candidates | Select-Object -Unique
     $lastErr = ""
 
     foreach ($m in $models) {
@@ -47,12 +51,17 @@ function Call-GeminiApi($prompt, $query, $key) {
                     }
                 )
                 systemInstruction = @{
-                    parts = @(@{ text = "$prompt`nVui long luon tra loi bang Tieng Viet, giu dung phong cach va vai tro duoc chi dinh." })
+                    parts = @(@{ text = "$prompt`nVui long tra loi truc dien, ngan gon bang Tieng Viet, giu dung phong cach va vai tro duoc chi dinh." })
+                }
+                generationConfig = @{
+                    temperature = 0.4
+                    maxOutputTokens = 2048
                 }
             }
             $bodyJson = $bodyObj | ConvertTo-Json -Depth 10
             $res = Invoke-RestMethod -Uri $url -Method Post -Body $bodyJson -ContentType "application/json; charset=utf-8"
             if ($res.candidates -and $res.candidates[0].content.parts[0].text) {
+                $global:WorkingGeminiModel = $m
                 return $res.candidates[0].content.parts[0].text
             }
         } catch {
