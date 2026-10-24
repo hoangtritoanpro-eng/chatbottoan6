@@ -36,13 +36,20 @@ function Call-GeminiApi($prompt, $query, $key) {
     # Uu tien model vua thanh cong va cac model Flash sieu toc thuc te
     $candidates = @()
     if ($global:WorkingGeminiModel) { $candidates += $global:WorkingGeminiModel }
-    $candidates += @("gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
+    $candidates += @("gemini-3.8-flash", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-flash")
     $models = $candidates | Select-Object -Unique
     $lastErr = ""
 
     foreach ($m in $models) {
         try {
             $url = "https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=$key"
+            $genConfig = @{
+                temperature = 0.3
+                maxOutputTokens = 2048
+            }
+            if ($m -like "*3.8*" -or $m -like "*2.5*") {
+                $genConfig["thinkingConfig"] = @{ thinkingBudget = 0 }
+            }
             $bodyObj = @{
                 contents = @(
                     @{
@@ -53,10 +60,7 @@ function Call-GeminiApi($prompt, $query, $key) {
                 systemInstruction = @{
                     parts = @(@{ text = "$prompt`nVui long tra loi truc dien, ngan gon bang Tieng Viet, giu dung phong cach va vai tro duoc chi dinh." })
                 }
-                generationConfig = @{
-                    temperature = 0.4
-                    maxOutputTokens = 2048
-                }
+                generationConfig = $genConfig
             }
             $bodyJson = $bodyObj | ConvertTo-Json -Depth 10
             $res = Invoke-RestMethod -Uri $url -Method Post -Body $bodyJson -ContentType "application/json; charset=utf-8"

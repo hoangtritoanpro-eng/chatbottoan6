@@ -1566,11 +1566,13 @@
           <span>Mô hình AI:</span>
         </label>
         <select id="model-select">
-          <option value="gemini-2.5-flash" selected>⚡ Google Gemini 2.5 Flash (Tốc độ cao nhất & Đề xuất)</option>
+          <option value="gemini-3.8-flash" selected>⚡ Google Gemini 3.8 Flash (Mới nhất & Siêu tốc)</option>
+          <option value="gemini-3.8-pro">🧠 Google Gemini 3.8 Pro (Suy luận sâu)</option>
+          <option value="gemini-2.5-flash">⚡ Google Gemini 2.5 Flash (Tối ưu tốc độ cao)</option>
           <option value="gemini-2.0-flash">⚡ Google Gemini 2.0 Flash (Ổn định, phản hồi tức thì)</option>
           <option value="gemini-2.0-flash-lite">🚀 Google Gemini 2.0 Flash-Lite (Độ trễ thấp nhất)</option>
           <option value="gemini-1.5-flash">⚡ Google Gemini 1.5 Flash</option>
-          <option value="gemini-2.5-pro">🧠 Google Gemini 2.5 Pro (Suy luận sâu)</option>
+          <option value="gemini-2.5-pro">🧠 Google Gemini 2.5 Pro</option>
           <option value="gemini-2.0-flash-thinking-exp">🤔 Google Gemini 2.0 Flash Thinking</option>
           <option value="gemini-1.5-pro">🧠 Google Gemini 1.5 Pro</option>
           <option value="gpt-4o-mini">OpenAI GPT-4o Mini (Nhanh & Tiết kiệm)</option>
@@ -1932,10 +1934,12 @@
       document.getElementById("api-key-input").value = savedKey;
     }
 
-    // Load saved Model (mặc định gemini-2.0-flash siêu tốc)
+    // Load saved Model (mặc định gemini-3.8-flash siêu tốc)
     const savedModel = localStorage.getItem("prompts_selected_model");
     if (savedModel && document.querySelector(`#model-select option[value="${savedModel}"]`)) {
       document.getElementById("model-select").value = savedModel;
+    } else {
+      document.getElementById("model-select").value = "gemini-3.8-flash";
     }
     document.getElementById("model-select").addEventListener("change", (e) => {
       localStorage.setItem("prompts_selected_model", e.target.value);
@@ -2675,8 +2679,8 @@
 
   function getThinkingConfig(model) {
     if (!model || modelsWithoutThinking.has(model)) return null;
-    // gemini-2.5-flash hỗ trợ tắt thinkingBudget về 0 để phản hồi siêu tốc ngay lập tức (<300ms TTFT)
-    if (model.includes("2.5") || model.includes("thinking")) {
+    // Gemini 3.8 Flash & Gemini 2.5 Flash: Tắt thinking budget về 0 để triệt tiêu thời gian suy nghĩ, bắt đầu phản hồi tức thì (<200ms TTFT)
+    if (model.includes("3.8") || model.includes("2.5") || model.includes("thinking")) {
       return { thinkingBudget: 0 };
     }
     return null;
@@ -2738,7 +2742,7 @@
         contents,
         systemInstruction: { parts: [{ text: systemText }] },
         generationConfig: {
-          temperature: 0.4,
+          temperature: 0.3,
           maxOutputTokens: 2048,
           ...(currentThinking ? { thinkingConfig: currentThinking } : {})
         }
@@ -3043,20 +3047,26 @@ Học sinh vừa gửi ảnh chụp bài làm. Bạn hãy thực hiện theo đ�
           }
         } else {
           // Google Gemini API Call: streaming + Auto-Fallback
-          // Thứ tự ưu tiên tối ưu tốc độ: Model đã chọn -> Model vừa dùng thành công -> Gemini 2.5 Flash -> 2.0 Flash -> 2.0 Flash-Lite -> 1.5 Flash
+          // Thứ tự ưu tiên tối ưu tốc độ:
+          // 1. Model đã chọn (Gemini 3.8 Flash)
+          // 2. Model đã từng kết nối thành công trước đó (last working model)
+          // 3. Fallback siêu tốc: Gemini 3.8 Flash -> 2.5 Flash -> 2.0 Flash -> 2.0 Flash-Lite -> 1.5 Flash
           const lastWorking = localStorage.getItem("prompts_last_working_model");
           const modelCandidates = [
             selectedModel,
+            "gemini-3.8-flash",
             lastWorking,
             "gemini-2.5-flash",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite",
             "gemini-1.5-flash",
+            "gemini-3.8-pro",
             "gemini-2.5-pro",
             "gemini-1.5-pro"
           ].filter(Boolean);
 
-          const uniqueModels = [...new Set(modelCandidates)].filter(m => !unavailableModels.has(m));
+          // Luôn luôn thử selectedModel trước tiên kể cả khi từng bị đánh dấu unavailable ở phiên trước
+          const uniqueModels = [...new Set(modelCandidates)].filter(m => m === selectedModel || !unavailableModels.has(m));
           const recentHistory = getRecentHistory();
           let lastError = null;
 

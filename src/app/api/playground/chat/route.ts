@@ -11,7 +11,7 @@ interface PlaygroundRequest {
 export async function POST(request: NextRequest) {
   try {
     const body: PlaygroundRequest = await request.json();
-    const { systemPrompt, userMessage, model = "gemini-2.5-flash", apiKey, temperature = 0.5 } = body;
+    const { systemPrompt, userMessage, model = "gemini-3.8-flash", apiKey, temperature = 0.3 } = body;
 
     if (!systemPrompt && !userMessage) {
       return NextResponse.json({ error: "System prompt or user message is required" }, { status: 400 });
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     // 1. Google Gemini
     if (model.startsWith("gemini") && effectiveGeminiKey) {
       try {
-        const modelsToTry = [model, "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
+        const modelsToTry = [model, "gemini-3.8-flash", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
         const uniqueModels = [...new Set(modelsToTry)];
 
         const contents: any[] = [];
@@ -40,21 +40,22 @@ export async function POST(request: NextRequest) {
           });
         }
 
-        const payload: any = {
-          contents,
-          generationConfig: {
-            temperature,
-            maxOutputTokens: 2048,
-          }
-        };
-
-        if (systemPrompt) {
-          payload.systemInstruction = {
-            parts: [{ text: systemPrompt }]
-          };
-        }
-
         for (const m of uniqueModels) {
+          const payload: any = {
+            contents,
+            generationConfig: {
+              temperature,
+              maxOutputTokens: 2048,
+              ...(m.includes("3.8") || m.includes("2.5") || m.includes("thinking") ? { thinkingConfig: { thinkingBudget: 0 } } : {})
+            }
+          };
+
+          if (systemPrompt) {
+            payload.systemInstruction = {
+              parts: [{ text: systemPrompt }]
+            };
+          }
+
           const url = `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${effectiveGeminiKey}`;
           const res = await fetch(url, {
             method: "POST",
